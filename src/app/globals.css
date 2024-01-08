@@ -1,27 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://db.onlinewebfonts.com/c/e3d4d88f7ba46cfbdfb4045368826129?family=Visby+Regular);
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-accent: #FF867A;
+  --secondary-accent: #374852;
+  --background-color: #ffffff;
+  --background-color-2: #F5F5F7;
+  --primary-black: #2C2C2C;
+  --secondary-black: #4D4D4D;
+  --tertiary-black: #7A7A7A;
+  --max-width: 1164px;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Visby Regular";
+
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Visby Regular";
 }
