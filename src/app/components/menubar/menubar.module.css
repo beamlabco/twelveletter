@@ -9,8 +9,8 @@
 
 .label span {
     background: var(--secondary-accent);
-    border-radius: 12px;
-    height: 3.5px;
+    border-radius: 2px;
+    height: 4px;
     margin: 3px 0;
     transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
@@ -57,6 +57,6 @@
 .label input[type="checkbox"]:checked~span:nth-of-type(3) {
     transform-origin: bottom;
     width: 50%;
-    transform: translate(18.5px, -3px) rotatez(45deg);
+    transform: translate(18px, -3.5px) rotatez(45deg);
 
 }

@@ -11,7 +11,8 @@
   --primary-black: #2C2C2C;
   --secondary-black: #4D4D4D;
   --tertiary-black: #7A7A7A;
-  --max-width: 1164px;
+  --max-width: 1480px;
+  --ct-margin: 40px;
 
 }
 
@@ -29,7 +30,22 @@ body {
 
 }
 
+.container-margin {
+  width: 1480px;
+  max-width: calc(100% - var(--ct-margin));
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   font-family: "Visby Regular";
 }
+
+@media screen and (min-width: 640px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1280px) {}

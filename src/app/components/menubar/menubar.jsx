@@ -4,7 +4,7 @@ import MenuBarCSS from "./menubar.module.css";
 import FullscreenMenu from "./fullscreenMenu";
 
 export default function Menubar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);
@@ -13,12 +13,12 @@ export default function Menubar() {
   return (
     <div
       style={{ backgroundColor: !isOpen ? "#fff" : "#374852" }}
-      className="flex justify-center items-center top-0  w-full h-24  bg-[#fff]"
+      className="flex justify-center items-center top-0  w-full h-24 bg-[#fff] "
     >
-      <div className="relative z-50 flex justify-between items-center w-full max-w-[1450px]">
+      <div className="container-margin z-50 flex justify-between h-full items-center w-full">
         <picture>
           <img
-            className="w-[180px]"
+            className="w-[190px]"
             src={isOpen ? "/LogoWhite.png" : "/Logo.png"}
           />
         </picture>
@@ -30,7 +30,7 @@ export default function Menubar() {
         </label>
       </div>
       {isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-secondary-accent z-40 flex justify-center items-center">
+        <div className="absolute top-20 left-0 w-full pt-6 pb-12  bg-secondary-accent z-40 flex justify-center items-center">
           <FullscreenMenu />
         </div>
       )}

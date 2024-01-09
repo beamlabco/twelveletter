@@ -4,16 +4,18 @@ import {
   faLocationDot,
   faPhone,
   faEnvelope,
-  faX,
 } from "@fortawesome/free-solid-svg-icons";
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import ArrowIcon from "../Icons/arrowIcon";
+
 import {
-  faFacebook,
   faFacebookF,
   faInstagram,
-  faLinkedin,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+import FullMenuCSS from "./fullscreenMenu.module.css";
 
 const menuData = [
   {
@@ -57,27 +59,39 @@ const socialInfo = [
     title: "Instagram",
     link: "https://www.instagram.com/twelveletter.company/",
   },
-  { icon: faFacebookF, title: "Facebook", link: "#" },
   { icon: faLinkedinIn, title: "Linkedin", link: "#" },
-  { icon: faX, title: "X", link: "#" },
+  { icon: faFacebookF, title: "Facebook", link: "#" },
+  { icon: faXTwitter, title: "X", link: "#" },
 ];
 
 export default function FullscreenMenu() {
   return (
-    <div className="flex justify-evenly w-full ">
-      {/* Service Info */}
-      <div className="flex gap-40">
+    <div className="container-margin  overflow-visible flex flex-col w-full h-full gap-8">
+      {/* Service & company Info */}
+      <div className="flex flex-col gap-8">
         {menuData.map((category) => (
-          <div key={category.title} className="flex flex-col gap-5">
-            <p className="text-col text-zinc-50 font-bold text-3xl">
+          <div key={category.title} className="flex flex-col gap-4">
+            <p className="text-col text-zinc-50 font-bold text-2xl">
               {category.title}
             </p>
             <nav>
-              <ul className="list-none p-0 text-zinc-50 flex flex-col gap-4 text-lg font-medium">
+              <ul className="list-none p-0 text-zinc-50 flex flex-col gap-4 font-medium">
                 {category.items.map((item) => (
-                  <li key={item.title} className="flex gap-3 items-center">
-                    <ArrowIcon />
-                    <a href={item.link}>{item.title}</a>
+                  <li key={item.title}>
+                    <a
+                      href={item.link}
+                      className={`${FullMenuCSS.list}  w-fit  flex items-center gap-3  text-lg hover:scale-105 hover:text-primary-accent  transition-all duration-200`}
+                    >
+                      <FontAwesomeIcon
+                        className={`${FullMenuCSS.arrow} text-base`}
+                        color="#FF7062"
+                        icon={faRightLong}
+                      />
+                      {/*   <span>
+                        <ArrowIcon className="text-3xl" color="#FF7062" />
+                      </span> */}
+                      {item.title}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -85,31 +99,37 @@ export default function FullscreenMenu() {
           </div>
         ))}
       </div>
-      {/* Company Info */}
+      {/* Collaboration Info */}
       <div className="flex flex-col gap-5">
-        <h4 className="text-col text-zinc-50 font-bold text-3xl">
+        <h4 className="text-col text-zinc-50 font-bold text-2xl">
           Collaborate with us
         </h4>
         <div className="flex flex-col gap-4">
           {contactInfo.map((info, index) => (
-            <div
+            <a
+              target="_blank"
+              href={info.link}
               key={index}
-              className="flex items-center space-x-4 cursor-pointer text-zinc-50"
+              className={`${FullMenuCSS.link} w-fit flex items-center space-x-4 cursor-pointer`}
             >
-              <FontAwesomeIcon icon={info.icon} className="text-lg" />
-              <a href={info.link} className="text-lg" target="_blank">
+              <FontAwesomeIcon
+                icon={info.icon}
+                className={`${FullMenuCSS.icon} text-lg`}
+              />
+              <p className={`text-lg text-zinc-50 relative overflow-hidden`}>
                 {info.title}
-              </a>
-            </div>
+                <span className={FullMenuCSS.underline}></span>
+              </p>
+            </a>
           ))}
         </div>
         {/* Social Info */}
-        <div className="flex mt-4 gap-10 items-centere">
+        <div className="flex mt-2 gap-10 items-centere">
           {socialInfo.map((socialInfo, index) => (
             <a
               key={index}
               title={socialInfo.title}
-              className="text-3xl text-zinc-50 hover:text-primary-accent transition-all"
+              className="text-3xl text-zinc-50 hover:text-primary-accent transition-all duration-300"
               href={socialInfo.link}
             >
               <FontAwesomeIcon icon={socialInfo.icon} />
