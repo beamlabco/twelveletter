@@ -42,10 +42,22 @@ body {
   font-family: "Visby Regular";
 }
 
-@media screen and (min-width: 640px) {}
+@media screen and (min-width: 540px) {
+  :root {
+
+    --ct-margin: 60px;
+
+  }
+}
 
 @media screen and (min-width: 768px) {}
 
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+  :root {
+
+    --ct-margin: 100px;
+
+  }
+}
 
 @media screen and (min-width: 1280px) {}

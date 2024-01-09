@@ -18,7 +18,7 @@ export default function Menubar() {
       <div className="z-50 flex items-center justify-between w-full h-full container-margin">
         <picture>
           <img
-            className="w-[190px]"
+            className="w-[190px] lg:w-[230px]"
             src={isOpen ? "/LogoWhite.png" : "/Logo.png"}
           />
         </picture>
@@ -30,7 +30,7 @@ export default function Menubar() {
         </label>
       </div>
       {isOpen && (
-        <div className="absolute left-0 z-40 flex items-center justify-center w-full pt-6 pb-12 top-20 bg-secondary-accent">
+        <div className="absolute left-0 z-40 flex items-center justify-center w-full pt-6 pb-12 sm:pt-16 sm:h-full lg:pt-0 lg:pb-0 top-20 bg-secondary-accent lg:fixed">
           <FullscreenMenu />
         </div>
       )}

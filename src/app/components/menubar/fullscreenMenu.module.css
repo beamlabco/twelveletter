@@ -23,23 +23,9 @@
     color: #FF7062;
 }
 
-.list:hover span {
-    animation: arrowIconHoverAnimation 0.5s ease;
-}
-
-
-
 .list:hover .arrow {
     animation: arrowIconHoverAnimation 0.5s ease;
 }
-
-/* For svg
-.list:hover .arrowIcon {
-    fill: #FF7062;
-    transition: all 0.5s ease;
-}
- */
-
 
 @keyframes arrowIconHoverAnimation {
     0% {
@@ -47,11 +33,11 @@
     }
 
     25% {
-        transform: translateX(-5px);
+        transform: translateX(-4px);
     }
 
     75% {
-        transform: translateX(5px);
+        transform: translateX(3px);
     }
 
     100% {

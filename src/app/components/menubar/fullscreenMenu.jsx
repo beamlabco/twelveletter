@@ -6,9 +6,7 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
-import ArrowIcon from "../Icons/arrowIcon";
 
 import {
   faFacebookF,
@@ -66,30 +64,27 @@ const socialInfo = [
 
 export default function FullscreenMenu() {
   return (
-    <div className="flex flex-col w-full h-full gap-8 overflow-visible container-margin">
+    <div className="flex flex-col w-full h-full gap-8 overflow-visible sm:gap-10 sm:flex-wrap container-margin lg:justify-evenly lg:items-center lg:flex-row lg:mt-[-10rem]">
       {/* Service & company Info */}
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 sm:flex-wrap sm:flex-row sm:justify-between sm:w-[80%] md:w-[70%] lg:w-[40%] xl:w-[30%]   ">
         {menuData.map((category) => (
-          <div key={category.title} className="flex flex-col gap-4">
-            <p className="text-2xl font-bold text-col text-zinc-50">
+          <div key={category.title} className="flex flex-col gap-4 lg:gap-7">
+            <p className="text-2xl font-bold text-col text-zinc-50 lg:text-3xl">
               {category.title}
             </p>
             <nav>
-              <ul className="flex flex-col gap-4 p-0 font-medium list-none text-zinc-50">
+              <ul className="flex flex-col gap-4 p-0 font-medium list-none text-zinc-50 lg:gap-5">
                 {category.items.map((item) => (
                   <li key={item.title}>
                     <a
                       href={item.link}
-                      className={`${FullMenuCSS.list}  w-fit  flex items-center gap-3  text-lg hover:scale-105 hover:text-primary-accent  transition-all duration-200`}
+                      className={`${FullMenuCSS.list}  w-fit flex items-center gap-3 text-lg hover:text-primary-accent  transition-all duration-200 lg:text-xl`}
                     >
                       <FontAwesomeIcon
-                        className={`${FullMenuCSS.arrow} text-base`}
+                        className={`${FullMenuCSS.arrow} text-base  lg:text-lg`}
                         color="#FF7062"
                         icon={faRightLong}
                       />
-                      {/*   <span>
-                        <ArrowIcon className="text-3xl" color="#FF7062" />
-                      </span> */}
                       {item.title}
                     </a>
                   </li>
@@ -100,11 +95,11 @@ export default function FullscreenMenu() {
         ))}
       </div>
       {/* Collaboration Info */}
-      <div className="flex flex-col gap-5">
-        <h4 className="text-2xl font-bold text-col text-zinc-50">
+      <div className="flex flex-col gap-5 sm:flex-wrap lg:gap-7">
+        <h4 className="text-2xl font-bold text-col lg:text-3xl text-zinc-50">
           Collaborate with us
         </h4>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 lg:gap-5">
           {contactInfo.map((info, index) => (
             <a
               target="_blank"
@@ -114,9 +109,11 @@ export default function FullscreenMenu() {
             >
               <FontAwesomeIcon
                 icon={info.icon}
-                className={`${FullMenuCSS.icon} text-lg`}
+                className={`${FullMenuCSS.icon} text-lg lg:text-xl`}
               />
-              <p className={`text-lg text-zinc-50 relative overflow-hidden`}>
+              <p
+                className={`text-lg text-zinc-50 relative overflow-hidden lg:text-xl`}
+              >
                 {info.title}
                 <span className={FullMenuCSS.underline}></span>
               </p>
@@ -124,7 +121,7 @@ export default function FullscreenMenu() {
           ))}
         </div>
         {/* Social Info */}
-        <div className="flex gap-10 mt-2 items-centere">
+        <div className="flex gap-10 mt-2 items-centere lg:mt-0">
           {socialInfo.map((socialInfo, index) => (
             <a
               key={index}
