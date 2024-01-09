@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url(https://db.onlinewebfonts.com/c/e3d4d88f7ba46cfbdfb4045368826129?family=Visby+Regular);
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
 
 :root {
   --primary-accent: #FF867A;
@@ -41,6 +42,7 @@ body {
   width: var(--width);
   max-width: calc(100% - var(--ct-margin));
   margin-top: var(--pct-margin-top);
+
   margin-left: auto;
   margin-right: auto;
 }

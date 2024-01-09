@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import MenuBarCSS from "./menubar.module.css";
 import FullscreenMenu from "./fullscreenMenu";
+import Logo from "../logo/Logo";
 
 export default function Menubar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,12 +17,13 @@ export default function Menubar() {
       className="flex justify-center items-center top-0  w-full h-24 lg:h-28 bg-[#fff] "
     >
       <div className="z-50 flex items-center justify-between w-full h-full container-margin">
-        <picture>
-          <img
-            className="w-[190px] lg:w-[230px]"
-            src={isOpen ? "/LogoWhite.png" : "/Logo.png"}
-          />
-        </picture>
+        {/*    <img
+          className="w-[190px] lg:w-[230px]"
+          src={isOpen ? "/LogoWhite.png" : "/Logo.png"}
+        /> */}
+        <a href="/" className="text-white">
+          <Logo />
+        </a>
         <label
           className={`${MenuBarCSS["label"]} ${
             !isOpen ? MenuBarCSS.labelhover : ""
