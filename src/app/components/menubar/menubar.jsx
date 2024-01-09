@@ -15,7 +15,7 @@ export default function Menubar() {
       style={{ backgroundColor: !isOpen ? "#fff" : "#374852" }}
       className="flex justify-center items-center top-0  w-full h-24 bg-[#fff] "
     >
-      <div className="container-margin z-50 flex justify-between h-full items-center w-full">
+      <div className="z-50 flex items-center justify-between w-full h-full container-margin">
         <picture>
           <img
             className="w-[190px]"
@@ -30,7 +30,7 @@ export default function Menubar() {
         </label>
       </div>
       {isOpen && (
-        <div className="absolute top-20 left-0 w-full pt-6 pb-12  bg-secondary-accent z-40 flex justify-center items-center">
+        <div className="absolute left-0 z-40 flex items-center justify-center w-full pt-6 pb-12 top-20 bg-secondary-accent">
           <FullscreenMenu />
         </div>
       )}

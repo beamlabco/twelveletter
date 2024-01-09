@@ -66,16 +66,16 @@ const socialInfo = [
 
 export default function FullscreenMenu() {
   return (
-    <div className="container-margin  overflow-visible flex flex-col w-full h-full gap-8">
+    <div className="flex flex-col w-full h-full gap-8 overflow-visible container-margin">
       {/* Service & company Info */}
       <div className="flex flex-col gap-8">
         {menuData.map((category) => (
           <div key={category.title} className="flex flex-col gap-4">
-            <p className="text-col text-zinc-50 font-bold text-2xl">
+            <p className="text-2xl font-bold text-col text-zinc-50">
               {category.title}
             </p>
             <nav>
-              <ul className="list-none p-0 text-zinc-50 flex flex-col gap-4 font-medium">
+              <ul className="flex flex-col gap-4 p-0 font-medium list-none text-zinc-50">
                 {category.items.map((item) => (
                   <li key={item.title}>
                     <a
@@ -101,7 +101,7 @@ export default function FullscreenMenu() {
       </div>
       {/* Collaboration Info */}
       <div className="flex flex-col gap-5">
-        <h4 className="text-col text-zinc-50 font-bold text-2xl">
+        <h4 className="text-2xl font-bold text-col text-zinc-50">
           Collaborate with us
         </h4>
         <div className="flex flex-col gap-4">
@@ -124,12 +124,12 @@ export default function FullscreenMenu() {
           ))}
         </div>
         {/* Social Info */}
-        <div className="flex mt-2 gap-10 items-centere">
+        <div className="flex gap-10 mt-2 items-centere">
           {socialInfo.map((socialInfo, index) => (
             <a
               key={index}
               title={socialInfo.title}
-              className="text-3xl text-zinc-50 hover:text-primary-accent transition-all duration-300"
+              className="text-3xl transition-all duration-300 text-zinc-50 hover:text-primary-accent"
               href={socialInfo.link}
             >
               <FontAwesomeIcon icon={socialInfo.icon} />
