@@ -3,6 +3,8 @@ import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Menubar from "./components/menubar/menubar";
+import Footer from "./components/footer/footer";
+
 config.autoAddCss = false;
 export const metadata = {
   title: "Create Next App",
@@ -15,6 +17,7 @@ export default function RootLayout({ children }) {
       <body>
         <Menubar />
         {children}
+        <Footer />
       </body>
     </html>
   );

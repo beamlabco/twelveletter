@@ -1,28 +1,43 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MenuBarCSS from "./menubar.module.css";
 import FullscreenMenu from "./fullscreenMenu";
 import Logo from "../logo/Logo";
 
 export default function Menubar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasShadow, setHasShadow] = useState(false);
 
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    setHasShadow(scrollY > 0);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div
-      style={{ backgroundColor: !isOpen ? "#fff" : "#374852" }}
-      className="flex justify-center items-center top-0  w-full h-24 lg:h-28 bg-[#fff] "
+    <header
+      style={{
+        backgroundColor: !isOpen ? "#fff" : "#374852",
+        boxShadow: hasShadow
+          ? "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)"
+          : "",
+      }}
+      className={`flex sticky justify-center transition-all duration-300 items-center top-0 w-full h-24 lg:h-24 bg-[#fff] `}
     >
       <div className="z-50 flex items-center justify-between w-full h-full container-margin">
-        {/*    <img
-          className="w-[190px] lg:w-[230px]"
-          src={isOpen ? "/LogoWhite.png" : "/Logo.png"}
-        /> */}
         <a href="/" className="text-white">
-          <Logo />
+          <Logo isOpen={isOpen} />
         </a>
         <label
           className={`${MenuBarCSS["label"]} ${
@@ -41,6 +56,6 @@ export default function Menubar() {
           <FullscreenMenu />
         </div>
       )}
-    </div>
+    </header>
   );
 }

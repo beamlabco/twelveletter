@@ -12,9 +12,10 @@
   --primary-black: #2C2C2C;
   --secondary-black: #4D4D4D;
   --tertiary-black: #7A7A7A;
-  --width: 1480px;
+  --width: 1440px;
   --ct-margin: 40px;
-  --pct-margin-top: 50px;
+  --pct-margin-top: 40px;
+
 }
 
 * {
@@ -25,7 +26,7 @@
 
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
   font-family: "Visby Regular";
 
