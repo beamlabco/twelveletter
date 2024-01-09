@@ -29,6 +29,7 @@ const menuData = [
   {
     title: "Company",
     items: [
+      { title: "Home", link: "/" },
       { title: "Portfolio", link: "/portfolio" },
       { title: "About Us", link: "/about-us" },
       { title: "Contact Us", link: "/contact-us" },

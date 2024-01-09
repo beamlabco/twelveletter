@@ -13,7 +13,7 @@ export default function Menubar() {
   return (
     <div
       style={{ backgroundColor: !isOpen ? "#fff" : "#374852" }}
-      className="flex justify-center items-center top-0  w-full h-24 bg-[#fff] "
+      className="flex justify-center items-center top-0  w-full h-24 lg:h-28 bg-[#fff] "
     >
       <div className="z-50 flex items-center justify-between w-full h-full container-margin">
         <picture>
@@ -22,7 +22,12 @@ export default function Menubar() {
             src={isOpen ? "/LogoWhite.png" : "/Logo.png"}
           />
         </picture>
-        <label className={MenuBarCSS["label"]} htmlFor="burger">
+        <label
+          className={`${MenuBarCSS["label"]} ${
+            !isOpen ? MenuBarCSS.labelhover : ""
+          }`}
+          htmlFor="burger"
+        >
           <input onClick={handleMenuToggle} type="checkbox" id="burger" />
           <span></span>
           <span></span>
