@@ -65,37 +65,36 @@ const socialInfo = [
 
 export default function FullscreenMenu() {
   return (
-    <div className="absolute left-0 z-[998] sm:fixed md:h-full flex items-center justify-center w-full pt-6 pb-12 sm:pt-16 sm:h-full lg:pt-0 lg:pb-0 top-20 bg-secondary-accent lg:fixed overflow-y-auto">
-      <div className="flex flex-col w-full h-full gap-8 overflow-visible sm:gap-10 sm:flex-wrap md:flex-col container-margin lg:justify-evenly lg:items-center lg:flex-row lg:mt-[-10rem]">
+    <div
+      className={`${FullMenuCSS.height} absolute  lg:fixed left-0 z-[998] flex items-center justify-center w-full pt-6 lg:pt-0 py-16 top-[5.9rem] bg-secondary-accent overflow-y-auto`}
+    >
+      <div className="grid xl:max-w-[1250px] grid-cols-1 gap-10 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3 container-margin">
         {/* Service & company Info */}
-        <div className="flex flex-col flex-wrap gap-8 md:gap-14 lg:gap-20 md:flex-row sm:flex-wrap lg:flex-nowrap">
-          {menuData.map((category) => (
-            <div key={category.title} className="flex flex-col gap-4 lg:gap-7">
-              <p className="text-2xl font-bold text-col text-zinc-50 lg:text-3xl">
-                {category.title}
-              </p>
-              <nav>
-                <ul className="flex flex-col gap-4 p-0 font-medium list-none text-zinc-50 lg:gap-5">
-                  {category.items.map((item) => (
-                    <li key={item.title}>
-                      <a
-                        href={item.link}
-                        className={`${FullMenuCSS.list} whitespace-nowrap w-fit flex items-center gap-3 text-lg hover:text-primary-accent  transition-all duration-200 lg:text-xl`}
-                      >
-                        <FontAwesomeIcon
-                          className={`${FullMenuCSS.arrow} text-base  lg:text-lg`}
-                          color="#FF7062"
-                          icon={faRightLong}
-                        />
-                        {item.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-          ))}
-        </div>
+        {menuData.map((category, index) => (
+          <div key={index}>
+            <p className="text-2xl font-bold tracking-wider text-zinc-100 md:text-3xl">
+              {category.title}
+            </p>
+
+            <ul className="mt-6 space-y-4 text-zinc-100">
+              {category.items.map((menuItem, itemIndex) => (
+                <li key={itemIndex}>
+                  <a
+                    href={menuItem.link}
+                    className={`${FullMenuCSS.list} whitespace-nowrap w-fit flex items-center gap-3 text-base hover:text-primary-accent transition-all duration-200 lg:text-xl`}
+                  >
+                    <FontAwesomeIcon
+                      className={`${FullMenuCSS.arrow} text-base lg:text-lg`}
+                      color="#FF7062"
+                      icon={faRightLong}
+                    />
+                    {menuItem.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
         {/* Collaboration Info */}
         <div className="flex flex-col gap-5 sm:flex-wrap lg:gap-7">
           <h4 className="text-2xl font-bold text-col lg:text-3xl text-zinc-50">

@@ -48,7 +48,7 @@ export default function Menubar() {
           ? "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)"
           : "",
       }}
-      className={`flex sticky justify-center transition-all duration-300 items-center top-0 w-full h-24 lg:h-24 bg-[#fff] `}
+      className={`flex sticky justify-center transition-all duration-300 items-center top-0 w-full h-24 bg-[#fff] `}
     >
       <div className="z-[999] flex items-center justify-between w-full h-full container-margin">
         <a href="/" className="text-white">
@@ -60,7 +60,12 @@ export default function Menubar() {
           }`}
           htmlFor="burger"
         >
-          <input onClick={handleMenuToggle} type="checkbox" id="burger" />
+          <input
+            onClick={handleMenuToggle}
+            autocomplete="off"
+            type="checkbox"
+            id="burger"
+          />
           <span></span>
           <span></span>
           <span></span>

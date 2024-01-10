@@ -27,6 +27,10 @@
     animation: arrowIconHoverAnimation 0.5s ease;
 }
 
+.height {
+    min-height: calc(100vh - 5rem);
+}
+
 @keyframes arrowIconHoverAnimation {
     0% {
         transform: translateX(0);

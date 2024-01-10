@@ -25,7 +25,7 @@ const socialInfo = [
 const contactInfo = [
   {
     info: "email@gmail.com",
-    subHeading: "Mail US",
+    subHeading: "MAIL US",
     link: "mailto:twelveletter@gmail.com",
   },
   {
@@ -35,7 +35,7 @@ const contactInfo = [
   },
   {
     info: "Your Location",
-    subHeading: "Visit US",
+    subHeading: "VISIT US",
     link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
   },
 ];
