@@ -65,9 +65,9 @@ const socialInfo = [
 
 export default function FullscreenMenu() {
   return (
-    <div className="flex flex-col w-full h-full gap-8 overflow-visible sm:gap-10 sm:flex-wrap container-margin lg:justify-evenly lg:items-center lg:flex-row lg:mt-[-10rem] overflow-y-auto">
+    <div className="flex flex-col w-full h-full gap-8 overflow-visible sm:gap-10 sm:flex-wrap md:flex-col container-margin lg:justify-evenly lg:items-center lg:flex-row lg:mt-[-10rem]">
       {/* Service & company Info */}
-      <div className="flex flex-col gap-8 sm:flex-wrap sm:flex-row sm:justify-between sm:w-[80%] md:w-[70%] lg:flex-nowrap lg:w-[50%] xl:w-[30%]   ">
+      <div className="flex flex-col flex-wrap gap-8 md:gap-14 lg:gap-20 md:flex-row sm:flex-wrap lg:flex-nowrap">
         {menuData.map((category) => (
           <div key={category.title} className="flex flex-col gap-4 lg:gap-7">
             <p className="text-2xl font-bold text-col text-zinc-50 lg:text-3xl">

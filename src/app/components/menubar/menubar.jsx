@@ -25,7 +25,7 @@ export default function Menubar() {
         mainElement.style.display = "none";
         footer.style.display = "none";
       } else {
-        mainElement.style.display = ""; // Set it to an empty string to remove the inline style
+        mainElement.style.display = "";
         footer.style.display = "";
       }
     }
@@ -67,7 +67,7 @@ export default function Menubar() {
         </label>
       </div>
       {isOpen && (
-        <div className="test absolute left-0 z-[998] sm:fixed flex items-center justify-center w-full pt-6 pb-12 sm:pt-16 sm:h-full lg:pt-0 lg:pb-0 top-20 bg-secondary-accent lg:fixed overflow-y-auto">
+        <div className="absolute left-0 z-[998] sm:fixed md:h-full flex items-center justify-center w-full pt-6 pb-12 sm:pt-16 sm:h-full lg:pt-0 lg:pb-0 top-20 bg-secondary-accent lg:fixed overflow-y-auto">
           <FullscreenMenu />
         </div>
       )}

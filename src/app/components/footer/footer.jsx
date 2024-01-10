@@ -24,9 +24,9 @@ const socialInfo = [
 
 const contactInfo = [
   {
-    info: "Your Location",
-    subHeading: "MAIL US",
-    link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
+    info: "email@gmail.com",
+    subHeading: "Mail US",
+    link: "mailto:twelveletter@gmail.com",
   },
   {
     info: "+977 9801020202",
@@ -34,9 +34,9 @@ const contactInfo = [
     link: "tel:+97798010202020",
   },
   {
-    info: "email@gmail.com",
-    subHeading: "VISIT US",
-    link: "mailto:twelveletter@gmail.com",
+    info: "Your Location",
+    subHeading: "Visit US",
+    link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
   },
 ];
 
@@ -85,7 +85,7 @@ const companyInfo = [
 export default function footer() {
   return (
     <footer id="footer" className="bg-secondary-accent">
-      <div className="pt-20 pb-16 space-y-8 tracking-wider container-margin lg:space-y-16">
+      <div className="pt-16 pb-16 space-y-8 tracking-wider lg:pt-20 container-margin">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           <div>
             <a href="/">
@@ -111,10 +111,11 @@ export default function footer() {
               ))}
             </ul>
           </div>
-          {/* Contact Info */}
+
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
-            <div>
-              <ul className="mt-4 space-y-6 text-sm">
+            {/* Contact Info */}
+            <div className="-mt-2 lg:mt-2">
+              <ul className="mt-2 space-y-6 text-sm">
                 {contactInfo.map((contactInfo, index) => (
                   <li key={index} className="flex flex-col gap-1">
                     <span className="font-semibold tracking-wider text-md text-primary-accent">
@@ -144,7 +145,7 @@ export default function footer() {
                   <li key={index}>
                     <a
                       href={service.link}
-                      className={`${FooterCSS.list}  w-fit flex items-center gap-3 text-base hover:text-primary-accent  transition-all duration-200 lg:text-lg`}
+                      className={`${FooterCSS.list} whitespace-nowrap w-fit flex items-center gap-3 text-base hover:text-primary-accent  transition-all duration-200 lg:text-lg`}
                     >
                       <FontAwesomeIcon
                         className={`${FooterCSS.arrow} text-base  lg:text-lg`}
@@ -184,8 +185,11 @@ export default function footer() {
           </div>
         </div>
         <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 dark:opacity-50"></hr>
-        <div className="flex justify-between">
-          <a className="text-s text-zinc-400 font-manrope" href="#">
+        <div className="flex flex-wrap justify-between gap-2">
+          <a
+            className="text-s text-zinc-400 font-manrope hover:text-primary-accent"
+            href="#"
+          >
             Terms & Conditions
           </a>
           <p className="text-s text-zinc-400">
