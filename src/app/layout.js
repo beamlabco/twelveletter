@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Menubar />
-        {children}
+        <div id="main">{children}</div>
         <Footer />
       </body>
     </html>

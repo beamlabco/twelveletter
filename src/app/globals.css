@@ -26,10 +26,16 @@
 
 html,
 body {
-  overflow-x: clip;
   scroll-behavior: smooth;
   font-family: "Visby Regular";
 
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: "Visby Regular";
+  position: relative;
 }
 
 .container-margin {
@@ -48,10 +54,7 @@ body {
   margin-right: auto;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  font-family: "Visby Regular";
-}
+
 
 @media screen and (min-width: 540px) {
   :root {

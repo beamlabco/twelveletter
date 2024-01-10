@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import MenuBarCSS from "./menubar.module.css";
 import FullscreenMenu from "./fullscreenMenu";
-import Logo from "../logo/Logo";
+import Logo from "../logo/logo";
 
 export default function Menubar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,12 +18,27 @@ export default function Menubar() {
   };
 
   useEffect(() => {
+    const mainElement = document.getElementById("main");
+    const footer = document.getElementById("footer");
+    if (mainElement) {
+      if (isOpen) {
+        mainElement.style.display = "none";
+        footer.style.display = "none";
+      } else {
+        mainElement.style.display = ""; // Set it to an empty string to remove the inline style
+        footer.style.display = "";
+      }
+    }
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      if (mainElement) {
+        mainElement.style.overflowY = "visible";
+      }
     };
-  }, []);
+  }, [isOpen]);
 
   return (
     <header
@@ -35,9 +50,9 @@ export default function Menubar() {
       }}
       className={`flex sticky justify-center transition-all duration-300 items-center top-0 w-full h-24 lg:h-24 bg-[#fff] `}
     >
-      <div className="z-50 flex items-center justify-between w-full h-full container-margin">
+      <div className="z-[999] flex items-center justify-between w-full h-full container-margin">
         <a href="/" className="text-white">
-          <Logo isOpen={isOpen} />
+          <Logo whiteLogo={isOpen} />
         </a>
         <label
           className={`${MenuBarCSS["label"]} ${
@@ -52,7 +67,7 @@ export default function Menubar() {
         </label>
       </div>
       {isOpen && (
-        <div className="absolute left-0 z-40 flex items-center justify-center w-full pt-6 pb-12 sm:pt-16 sm:h-full lg:pt-0 lg:pb-0 top-20 bg-secondary-accent lg:fixed">
+        <div className="test absolute left-0 z-[998] sm:fixed flex items-center justify-center w-full pt-6 pb-12 sm:pt-16 sm:h-full lg:pt-0 lg:pb-0 top-20 bg-secondary-accent lg:fixed overflow-y-auto">
           <FullscreenMenu />
         </div>
       )}

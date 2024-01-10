@@ -5,13 +5,13 @@ import {
   faPhone,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
-import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 
 import {
   faFacebookF,
   faInstagram,
   faLinkedinIn,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import FullMenuCSS from "./fullscreenMenu.module.css";
 
@@ -65,9 +65,9 @@ const socialInfo = [
 
 export default function FullscreenMenu() {
   return (
-    <div className="flex flex-col w-full h-full gap-8 overflow-visible sm:gap-10 sm:flex-wrap container-margin lg:justify-evenly lg:items-center lg:flex-row lg:mt-[-10rem]">
+    <div className="flex flex-col w-full h-full gap-8 overflow-visible sm:gap-10 sm:flex-wrap container-margin lg:justify-evenly lg:items-center lg:flex-row lg:mt-[-10rem] overflow-y-auto">
       {/* Service & company Info */}
-      <div className="flex flex-col gap-8 sm:flex-wrap sm:flex-row sm:justify-between sm:w-[80%] md:w-[70%] lg:w-[40%] xl:w-[30%]   ">
+      <div className="flex flex-col gap-8 sm:flex-wrap sm:flex-row sm:justify-between sm:w-[80%] md:w-[70%] lg:flex-nowrap lg:w-[50%] xl:w-[30%]   ">
         {menuData.map((category) => (
           <div key={category.title} className="flex flex-col gap-4 lg:gap-7">
             <p className="text-2xl font-bold text-col text-zinc-50 lg:text-3xl">
@@ -79,7 +79,7 @@ export default function FullscreenMenu() {
                   <li key={item.title}>
                     <a
                       href={item.link}
-                      className={`${FullMenuCSS.list}  w-fit flex items-center gap-3 text-lg hover:text-primary-accent  transition-all duration-200 lg:text-xl`}
+                      className={`${FullMenuCSS.list} whitespace-nowrap w-fit flex items-center gap-3 text-lg hover:text-primary-accent  transition-all duration-200 lg:text-xl`}
                     >
                       <FontAwesomeIcon
                         className={`${FullMenuCSS.arrow} text-base  lg:text-lg`}
