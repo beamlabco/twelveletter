@@ -66,11 +66,7 @@ export default function Menubar() {
           <span></span>
         </label>
       </div>
-      {isOpen && (
-        <div className="absolute left-0 z-[998] sm:fixed md:h-full flex items-center justify-center w-full pt-6 pb-12 sm:pt-16 sm:h-full lg:pt-0 lg:pb-0 top-20 bg-secondary-accent lg:fixed overflow-y-auto">
-          <FullscreenMenu />
-        </div>
-      )}
+      {isOpen && <FullscreenMenu />}
     </header>
   );
 }
