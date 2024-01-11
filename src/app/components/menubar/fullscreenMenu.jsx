@@ -22,7 +22,7 @@ export default function FullscreenMenu() {
                 <li key={itemIndex}>
                   <a
                     href={menuItem.link}
-                    className={`${FullMenuCSS.list} whitespace-nowrap w-fit flex items-center gap-3 text-base hover:text-primary-accent transition-all duration-200 lg:text-xl`}
+                    className={`${FullMenuCSS.list} whitespace-nowrap w-fit flex items-center gap-3 text-lg hover:text-primary-accent transition-all duration-200 lg:text-xl`}
                   >
                     <FontAwesomeIcon
                       className={`${FullMenuCSS.arrow} text-base lg:text-lg`}
