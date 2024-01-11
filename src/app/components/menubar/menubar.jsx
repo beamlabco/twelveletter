@@ -47,11 +47,12 @@ export default function Menubar() {
         boxShadow: hasShadow
           ? "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)"
           : "",
+        zIndex: 1000,
       }}
-      className={`flex sticky justify-center transition-all duration-300 items-center top-0 w-full h-20 bg-[#fff] `}
+      className={`flex sticky justify-center transition-all duration-300 items-center top-0 w-full h-24 bg-[#fff] `}
     >
-      <div className="z-[999] flex items-center justify-between w-full h-full container-margin">
-        <a href="/" className="text-white">
+      <div className="flex items-center justify-between w-full h-full container-margin">
+        <a href="/">
           <Logo whiteLogo={isOpen} />
         </a>
         <label

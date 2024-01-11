@@ -21,7 +21,7 @@ export default function aboutUs() {
               <h2 className="text-2xl font-medium sm:text-3xl lg:text-4xl sm:leading-tight text-black-shade-200">
                 Your end goals are our No. 1 Priority
               </h2>
-              <p className="mt-3 text-base leading-8 md:text-lg md:leading-9 md:mt-4 text-black-shade-100">
+              <p className="mt-3 paragraph md:mt-4">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -38,7 +38,7 @@ export default function aboutUs() {
               <h2 className="text-2xl font-medium sm:text-3xl lg:text-4xl sm:leading-tight text-black-shade-200">
                 Your end goals are our No. 1 Priority
               </h2>
-              <p className="mt-3 text-base leading-8 md:text-lg md:leading-9 md:mt-4 text-black-shade-100">
+              <p className="mt-3 paragraph md:mt-4">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
