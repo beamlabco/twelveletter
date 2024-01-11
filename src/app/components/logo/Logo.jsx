@@ -8,7 +8,7 @@ export default function Logo(props) {
         viewBox="0 0 418 83"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={`w-[190px] lg:w-[230px]  ${LogoCSS.logo}`}
+        className={`w-[165px] lg:w-[230px]  ${LogoCSS.logo}`}
       >
         <g clipPath="url(#clip0_5_4)">
           <path

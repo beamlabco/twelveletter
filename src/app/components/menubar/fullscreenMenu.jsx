@@ -1,72 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLocationDot,
-  faPhone,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
-
-import {
-  faFacebookF,
-  faInstagram,
-  faLinkedinIn,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
 import FullMenuCSS from "./fullscreenMenu.module.css";
-
-const menuData = [
-  {
-    title: "Services",
-    items: [
-      { title: "Branding", link: "/service/branding" },
-      { title: "Digital Marketing", link: "/service/digital-marketing" },
-      { title: "SEO and Analysis", link: "/service/seo-analyasis" },
-      { title: "Graphic Contents", link: "/service/graphic-content" },
-      { title: "Motion Graphics", link: "/service/motion-graphics" },
-    ],
-  },
-  {
-    title: "Company",
-    items: [
-      { title: "Home", link: "/" },
-      { title: "Portfolio", link: "/portfolio" },
-      { title: "About Us", link: "/about-us" },
-      { title: "Contact Us", link: "/contact-us" },
-      { title: "Policies", link: "/policies" },
-    ],
-  },
-];
-
-const contactInfo = [
-  {
-    icon: faLocationDot,
-    title: "Your Location",
-    link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
-  },
-  { icon: faPhone, title: "+977 9801020202", link: "tel:+97798010202020" },
-  {
-    icon: faEnvelope,
-    title: "email@gmail.com",
-    link: "mailto:twelveletter@gmail.com",
-  },
-];
-
-const socialInfo = [
-  {
-    icon: faInstagram,
-    title: "Instagram",
-    link: "https://www.instagram.com/twelveletter.company/",
-  },
-  { icon: faLinkedinIn, title: "Linkedin", link: "#" },
-  { icon: faFacebookF, title: "Facebook", link: "#" },
-  { icon: faXTwitter, title: "X", link: "#" },
-];
+import { contactInfo, socialInfo, menuData } from "../../data/companyInfo";
 
 export default function FullscreenMenu() {
   return (
     <div
-      className={`${FullMenuCSS.height} absolute  lg:fixed left-0 z-[998] flex items-center justify-center w-full pt-6 lg:pt-0 py-16 top-[5.9rem] bg-secondary-accent overflow-y-auto`}
+      className={`${FullMenuCSS.height} absolute  lg:fixed left-0 z-[998] flex items-center justify-center w-full pt-6 lg:pt-0 py-16 top-[4.9rem] bg-secondary-accent overflow-y-auto`}
     >
       <div className="grid xl:max-w-[1250px] grid-cols-1 gap-10 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3 container-margin">
         {/* Service & company Info */}
@@ -122,7 +63,7 @@ export default function FullscreenMenu() {
             ))}
           </div>
           {/* Social Info */}
-          <div className="flex gap-10 mt-2 items-centere lg:mt-0">
+          <div className="flex items-center gap-10 mt-2 lg:mt-0">
             {socialInfo.map((socialInfo, index) => (
               <a
                 key={index}
