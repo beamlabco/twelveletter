@@ -6,6 +6,9 @@ import { serviceData } from "@/app/data/serviceData";
 import { useState, useEffect } from "react";
 import ContactModule from "@/app/components/contactModules/contactModule";
 import BrandModule from "@/app/components/brandModule/brandModule";
+import ReactMarkdown from "react-markdown";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function Service() {
   const params = useParams();
@@ -44,7 +47,7 @@ export default function Service() {
         />
         <p className="mt-6 paragraph lg:max-w-[1000px]">{service?.brief}</p>
       </section>
-      <section className="flex flex-col items-center gap-10 lg:gap-16 container-margin section">
+      <section className="flex flex-col items-center gap-10 lg:gap-16 container-margin padding-y">
         <p className="text-3xl lg:text-[2.6rem] font-semibold tracking-wider text-center">
           What's{" "}
           <span className="text-3xl lg:text-5xl text-primary-accent">
@@ -63,11 +66,11 @@ export default function Service() {
               <picture
                 aria-label={feature ? feature.title : "Icon"}
                 aria-description={feature.title}
-                className="w-20 mb-6 lg:w-20"
+                className="w-16 mb-6 lg:w-20"
               >
                 <img src={feature?.icon} />
               </picture>
-              <h3 className="text-xl font-semibold tracking-wider lg:text-2xl text-primary-accent">
+              <h3 className="text-xl tracking-wider font-base lg:font-semibold lg:text-2xl text-primary-accent">
                 {feature.title}
               </h3>
               <p className="mt-2 paragraph">{feature.description}</p>
@@ -77,6 +80,28 @@ export default function Service() {
       </section>
       <section>
         <BrandModule />
+      </section>
+      <section className="container-margin lg:max-w-[1200px] padding-y">
+        <div className="flex flex-col gap-6 lg:flex-row lg:gap-4">
+          <picture className="flex items-center justify-center w-full">
+            <img
+              className="md:max-w-[600px] lg:max-w-[500px] xl:max-w-xl"
+              src={service?.benefits.image}
+            ></img>
+          </picture>
+          <div className="flex flex-col gap-3 lg:gap-4 md:px-11">
+            <h3 className="heading-3">{service?.benefits.title}</h3>
+            <p className="paragraph">{service?.benefits.description}</p>
+            <ul className="list-inside ">
+              {service?.benefits.bulletPoints.map((point, index) => (
+                <li key={index} className="flex items-center gap-3 paragraph">
+                  <FontAwesomeIcon color="#FF867A" icon={faCheck} />
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
       <section>
         <ContactModule />

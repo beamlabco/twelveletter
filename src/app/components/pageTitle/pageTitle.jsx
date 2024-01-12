@@ -25,7 +25,7 @@ export default function Title(props) {
 
   return (
     <div>
-      <h1 className="text-lg font-semibold tracking-wider md:text-xl font-base text-primary-accent">
+      <h1 className="text-base font-semibold tracking-wider md:text-xl font-base text-primary-accent">
         {subHeading}
       </h1>
       <p className={determineTextSize()}>{heading}</p>

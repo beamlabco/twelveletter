@@ -38,10 +38,16 @@ export const serviceData = [
           },
         ],
         benefits: {
-          image: "/assets/service/egpic.png",
+          image: "/assets/service/egpic.jpg",
           title: "Increased Visibility",
           description:
-            "Enhance your brand visibility and attract more customers.",
+            "Enhance your brand visibility and attract more customers.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ",
+          bulletPoints: [
+            "Increase your profits",
+            "Increase your conversions",
+            "Increase your conversions",
+            "Increase your conversions",
+          ],
         },
       },
       {
