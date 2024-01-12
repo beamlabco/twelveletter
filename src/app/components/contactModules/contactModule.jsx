@@ -11,7 +11,7 @@ export default function ContactModule() {
         textSize="medium"
         heading="Get in Touch: Reach Out to Us for Inquiries, Assistance, or Collaborations"
       />
-      <div className="grid grid-cols-2 mt-8 sm:mt-10 gap-7 lg:gap-x-0 lg:gap-y-12 lg:mt-14">
+      <div className="grid grid-cols-2 mt-8 sm:mt-10 gap-7 lg:gap-x-0 lg:gap-y-10 lg:mt-14">
         {contactInfo.slice(1).map((info, index) => (
           <div key={index} className="col-span-2 sm:col-span-1">
             <a

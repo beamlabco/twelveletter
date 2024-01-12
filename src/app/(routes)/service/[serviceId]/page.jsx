@@ -4,6 +4,8 @@ import { useParams } from "next/navigation";
 import PageTitle from "../../../components/pageTitle/pageTitle";
 import { serviceData } from "@/app/data/serviceData";
 import { useState, useEffect } from "react";
+import ContactModule from "@/app/components/contactModules/contactModule";
+import BrandModule from "@/app/components/brandModule/brandModule";
 
 export default function Service() {
   const params = useParams();
@@ -34,7 +36,7 @@ export default function Service() {
 
   return (
     <>
-      <section className="page-container">
+      <section className="container-margin section">
         <PageTitle
           subHeading={service?.serviceType}
           textSize="large"
@@ -42,7 +44,7 @@ export default function Service() {
         />
         <p className="mt-6 paragraph lg:max-w-[1000px]">{service?.brief}</p>
       </section>
-      <section className="flex flex-col items-center gap-10 lg:gap-16 min-h-72 container-margin section">
+      <section className="flex flex-col items-center gap-10 lg:gap-16 container-margin section">
         <p className="text-3xl lg:text-[2.6rem] font-semibold tracking-wider text-center">
           What's{" "}
           <span className="text-3xl lg:text-5xl text-primary-accent">
@@ -72,6 +74,12 @@ export default function Service() {
             </div>
           ))}
         </div>
+      </section>
+      <section>
+        <BrandModule />
+      </section>
+      <section>
+        <ContactModule />
       </section>
     </>
   );

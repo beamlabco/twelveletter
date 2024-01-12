@@ -26,7 +26,7 @@ export const serviceData = [
           },
           {
             title: "Strategic Planning",
-            icon: "/assets/service/DM-strat.png",
+            icon: "/assets/service/DM-seo.png",
             description:
               "Crafting comprehensive digital marketing strategies tailored to the client's goals, including market analysis, target audience identification, and goal setting.",
           },
@@ -38,7 +38,7 @@ export const serviceData = [
           },
         ],
         benefits: {
-          image: "digital-marketing-benefit.png",
+          image: "/assets/service/egpic.png",
           title: "Increased Visibility",
           description:
             "Enhance your brand visibility and attract more customers.",

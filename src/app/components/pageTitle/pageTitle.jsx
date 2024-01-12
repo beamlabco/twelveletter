@@ -15,7 +15,7 @@ export default function Title(props) {
       case "small":
         return "mt-3 text-2xl font-semibold tracking-wider md:text-3xl font-base text-black-shade-300";
       case "medium":
-        return "mt-4 text-[1.75rem] font-semibold leading-10 tracking-wide md:text-4xl md:leading-snug lg:text-[2.75rem] text-black-shade-300";
+        return "mt-4 text-[1.7rem] font-semibold leading-10 tracking-wide md:text-4xl md:leading-snug lg:text-[2.6rem] text-black-shade-300";
       case "large":
         return "mt-4 text-3xl font-semibold leading-10 tracking-wide md:text-4xl md:leading-snug lg:text-5xl lg:leading-tight text-black-shade-300";
       default:
