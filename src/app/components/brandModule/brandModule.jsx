@@ -29,12 +29,12 @@ export default function brandModule() {
 
   return (
     <div className="padding-y-lg bg-[#F5F5F7]">
-      <div className="flex flex-col items-center w-full gap-6 pb-2 container-margin">
-        <p className="heading-2">
+      <div className="flex flex-col items-center w-full gap-5 pb-2 lg:gap-6 container-margin">
+        <p className="font-semibold tracking-wider text-center heading-medium">
           <span className="text-primary-accent">Connected Success:</span> Brands
-          We've Collaborated With
+          We have Collaborated With
         </p>
-        <p className="text-center max-w-[500px] paragraph ">
+        <p className="text-center max-w-[500px] paragraph">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </p>
@@ -56,7 +56,11 @@ export default function brandModule() {
               key={index}
               className="flex items-center justify-center my-auto"
             >
-              <img className="max-w-40" src={brand?.icon} alt={brand?.name} />
+              <img
+                className="max-w-48 sm:max-w-40"
+                src={brand?.icon}
+                alt={brand?.name}
+              />
             </picture>
           ))}
         </Carousel>

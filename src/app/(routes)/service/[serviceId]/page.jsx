@@ -39,7 +39,7 @@ export default function Service() {
 
   return (
     <>
-      <section className="container-margin top-section-p ">
+      <section className="container-margin top-section-p">
         <PageTitle
           subHeading={service?.serviceType}
           textSize="large"
@@ -48,32 +48,33 @@ export default function Service() {
         <p className="mt-6 paragraph lg:max-w-[1100px]">{service?.brief}</p>
       </section>
       {/* Features section */}
-      <section className="flex flex-col items-center gap-10 lg:gap-16 container-margin padding-y margin-t">
-        <p className="text-3xl lg:text-[2.6rem] font-semibold tracking-wider text-center">
-          What's <span className=" text-primary-accent">Included?</span>
-        </p>
-
-        <div className="grid grid-cols-1 mt-2 md:grid-cols-2 md:gap-x-10 lg:gap-x-28 gap-y-14">
-          {service?.features?.map((feature, index) => (
-            <div
-              key={index}
-              className={`${
-                index % 2 === 0 ? "md:mt-0" : "md:mt-16"
-              } flex flex-col  max-w-[450px]`}
-            >
-              <picture
-                aria-label={feature ? feature.title : "Icon"}
-                aria-description={feature.title}
-                className="w-16 mb-6 lg:w-20"
+      <section className="container-margin padding-y margin-t">
+        <div className="flex flex-col items-center gap-10 lg:gap-16 ">
+          <p className="text-3xl lg:text-[2.6rem] font-semibold tracking-wider text-center">
+            What's <span className=" text-primary-accent">Included?</span>
+          </p>
+          <div className="grid grid-cols-1 mt-2 md:grid-cols-2 md:gap-x-10 lg:gap-x-28 gap-y-14">
+            {service?.features?.map((feature, index) => (
+              <div
+                key={index}
+                className={`${
+                  index % 2 === 0 ? "md:mt-0" : "md:mt-16"
+                } flex flex-col  max-w-[450px]`}
               >
-                <img src={feature?.icon} />
-              </picture>
-              <h3 className="text-xl tracking-wider font-base lg:font-semibold lg:text-2xl text-primary-accent">
-                {feature.title}
-              </h3>
-              <p className="mt-2 paragraph">{feature.description}</p>
-            </div>
-          ))}
+                <picture
+                  aria-label={feature ? feature.title : "Icon"}
+                  aria-description={feature.title}
+                  className="w-16 mb-6 lg:w-20"
+                >
+                  <img src={feature?.icon} />
+                </picture>
+                <h3 className="heading-small lg:font-semibold text-primary-accent">
+                  {feature.title}
+                </h3>
+                <p className="mt-2 paragraph">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       {/* Brand partners */}
@@ -90,7 +91,9 @@ export default function Service() {
             ></img>
           </picture>
           <div className="flex flex-col gap-3 lg:gap-4 md:px-11">
-            <h3 className="heading-3">{service?.benefits.title}</h3>
+            <h3 className="font-semibold tracking-wider heading-medium text-black-shade-300">
+              {service?.benefits.title}
+            </h3>
             <p className="paragraph">{service?.benefits.description}</p>
             <ul className="list-inside ">
               {service?.benefits.bulletPoints.map((point, index) => (
