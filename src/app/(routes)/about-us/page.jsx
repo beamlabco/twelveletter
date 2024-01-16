@@ -48,6 +48,7 @@ export default function aboutUs() {
           </section>
         </div>
       </div>
+
       <ContactModule />
     </>
   );

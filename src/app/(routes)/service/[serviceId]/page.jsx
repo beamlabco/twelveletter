@@ -107,9 +107,8 @@ export default function Service() {
       <section className="margin-t padding-y">
         <Testimonial />
       </section>
-      <section className="margin-t">
-        <ContactModule />
-      </section>
+
+      <ContactModule />
     </>
   );
 }
