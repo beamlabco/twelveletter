@@ -1,14 +1,8 @@
 import React from "react";
 
 export default function Title(props) {
-  const { subHeading, heading, highlight, textSize } = props;
-
-  const renderHighlight = () => {
-    if (highlight) {
-      return <span>{highlight}</span>;
-    }
-    return null;
-  };
+  const { subHeading, heading, highlightText, highlightGradient, textSize } =
+    props;
 
   const determineTextSize = () => {
     switch (textSize) {
@@ -19,16 +13,29 @@ export default function Title(props) {
       case "large":
         return "mt-4 text-3xl font-semibold leading-10 tracking-wide md:text-4xl md:leading-snug lg:text-5xl lg:leading-tight text-black-shade-300";
       default:
-        return ""; // Default size or handle additional cases as needed
+        return "";
     }
   };
 
   return (
     <div>
-      <h1 className="text-base font-semibold tracking-wider md:text-xl font-base text-primary-accent">
+      <h1 className="text-base font-semibold tracking-widest md:text-xl font-base text-primary-accent">
         {subHeading}
       </h1>
-      <p className={determineTextSize()}>{heading}</p>
+      <p className={determineTextSize()}>
+        {highlightText ? (
+          <span
+            className={`${
+              highlightGradient ? "gradient" : "text-primary-accent"
+            }`}
+          >
+            {highlightText}{" "}
+          </span>
+        ) : (
+          ""
+        )}
+        {heading}
+      </p>
     </div>
   );
 }

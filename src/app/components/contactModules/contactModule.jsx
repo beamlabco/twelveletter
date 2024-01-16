@@ -5,7 +5,7 @@ import { contactInfo, socialInfo } from "../../data/companyInfo.js";
 
 export default function ContactModule() {
   return (
-    <section className="padding-y bg-[#F5F5F7] ">
+    <section className="padding-y padding-y-lg bg-[#F5F5F7] ">
       <div className="pb-1 container-margin">
         <PageTitle
           subHeading="Contact Us"

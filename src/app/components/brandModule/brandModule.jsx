@@ -28,18 +28,18 @@ export default function brandModule() {
   };
 
   return (
-    <div className="padding-y bg-[#F5F5F7]">
+    <div className="padding-y-lg bg-[#F5F5F7]">
       <div className="flex flex-col items-center w-full gap-6 pb-2 container-margin">
-        <h3 className="text-2xl font-semibold tracking-wider text-center md:text-4xl font-base text-black-shade-300">
+        <p className="heading-2">
           <span className="text-primary-accent">Connected Success:</span> Brands
           We've Collaborated With
-        </h3>
+        </p>
         <p className="text-center max-w-[500px] paragraph ">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </p>
       </div>
-      <div className="w-full mt-12 mb-4 md:mt-14 lg:mt-16">
+      <div className="w-full mt-6 mb-4 md:mt-14 lg:mt-16">
         <Carousel
           dotListClass="react-multi-carousel-dot-list"
           infinite={true}
