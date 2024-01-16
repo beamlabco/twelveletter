@@ -127,6 +127,10 @@ body {
   animation: move-bg 15s infinite linear;
 }
 
+.hidden {
+  display: none;
+}
+
 @keyframes move-bg {
   to {
     background-position: var(--bg-size) 0;
