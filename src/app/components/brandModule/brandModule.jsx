@@ -2,6 +2,7 @@ import "./brandModule.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { brandData } from "@/app/data/brandData";
+import Slider from "react-infinite-logo-slider";
 
 export default function brandModule() {
   const responsive = {
@@ -39,7 +40,7 @@ export default function brandModule() {
           industry.
         </p>
       </div>
-      <div className="w-full mt-6 mb-4 md:mt-14 lg:mt-16">
+      {/*  <div className="w-full mt-6 mb-4 md:mt-14 lg:mt-16">
         <Carousel
           dotListClass="react-multi-carousel-dot-list"
           infinite={true}
@@ -50,20 +51,49 @@ export default function brandModule() {
           responsive={responsive}
           removeArrowOnDeviceType={["mobileL", "tablet", "mobile", "desktop"]}
           pauseOnHover={false}
+          minimumTouchDrag={30}
+          minimumSlideDrag={30}
+          focusOnSelect={false}
+          ssr={true}
         >
           {brandData?.map((brand, index) => (
             <picture
               key={index}
-              className="flex items-center justify-center my-auto"
+              className="flex items-center justify-center my-auto pointer-events-none select-none"
             >
               <img
-                className="max-w-48 sm:max-w-40"
+                className="pointer-events-none max-w-48 sm:max-w-40"
                 src={brand?.icon}
                 alt={brand?.name}
               />
             </picture>
           ))}
         </Carousel>
+      </div> */}
+
+      <div className="w-full mt-6 mb-4 md:mt-14 lg:mt-16">
+        <Slider
+          width="350px"
+          duration={30}
+          pauseOnHover={true}
+          blurBorders={false}
+          blurBoderColor={"#fff"}
+        >
+          {brandData?.map((brand, index) => (
+            <Slider.Slide>
+              <picture
+                key={index}
+                className="flex items-center justify-center my-auto pointer-events-none select-none"
+              >
+                <img
+                  className="pointer-events-none max-w-48 sm:max-w-40"
+                  src={brand?.icon}
+                  alt={brand?.name}
+                />
+              </picture>
+            </Slider.Slide>
+          ))}
+        </Slider>
       </div>
     </div>
   );

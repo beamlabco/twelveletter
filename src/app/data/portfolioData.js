@@ -107,6 +107,6 @@ export const portfolioData = [
 
     description: "",
     category: "Graphic Design",
-    image: "/assets/Portfolio/p2.png",
+    image: "/assets/Portfolio/p3.png",
   },
 ];

@@ -1,8 +1,45 @@
-import React from "react";
+"use client";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 import PageTitle from "../../components/pageTitle/pageTitle";
+import CategoryMenu from "./categoryMenu";
 import { portfolioData } from "@/app/data/portfolioData";
 
-export default function Page() {
+export default function PortfolioPage(props) {
+  const [selectedCategory, setSelectedCategory] = useState(
+    props.selectedCategory !== undefined ? props.selectedCategory : null
+  );
+  const [filteredData, setFilteredData] = useState(null); // Use null as initial state
+  const [loading, setLoading] = useState(true); // Track loading state
+
+  useEffect(() => {
+    // Simulate async data fetching or filtering
+    const fetchData = async () => {
+      setLoading(true); // Set loading to true before fetching
+
+      // Simulate API call or data filtering
+      const newData = selectedCategory
+        ? portfolioData.filter(
+            (item) =>
+              item.category.toLowerCase().replace(/\s+/g, "-") ===
+              selectedCategory.toLowerCase().replace(/\s+/g, "-")
+          )
+        : portfolioData;
+
+      // Introduce a delay (simulating async operation)
+      await new Promise((resolve) => setTimeout(resolve, 300));
+
+      setFilteredData(newData);
+      setLoading(false); // Set loading to false after fetching
+    };
+
+    fetchData();
+  }, [selectedCategory]);
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <div className="min-h-screen top-section-p container-margin">
       <section>
@@ -12,29 +49,49 @@ export default function Page() {
           subHeading="Portfolio Showcase"
         />
       </section>
-      <section className="py-10">Sub Menu</section>
+      <section className="py-10">
+        <CategoryMenu
+          categories={[
+            ...Array.from(new Set(portfolioData.map((item) => item.category))),
+          ]}
+          selectedCategory={props.selectedCategory || selectedCategory}
+          handleCategoryClick={handleCategoryClick}
+        />
+      </section>
       <section>
         <div>
-          <ul className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {portfolioData?.map((portfolio, index) => (
-              <li className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group">
-                <a className="relative w-full cursor-pointer card-container">
-                  <img
-                    className="top-0 left-0 object-cover w-full h-full transition-opacity"
-                    src={portfolio.image}
-                    alt="Card Image"
-                  />
-                  <div className="absolute inset-0 flex items-end">
-                    <div className="w-full px-3 pb-2 transition-opacity ease-in opacity-0 pt-7 duration-400 bg-gradient-to-t from-black via-black to-transparent group-hover:opacity-100">
-                      <h4 className="font-medium tracking-wider text-white">
-                        {portfolio.title}
-                      </h4>
+          {loading ? (
+            // Show loader while loading
+            <p>Loading...</p>
+          ) : (
+            <ul className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {filteredData.map(({ id, slug, image, title }) => (
+                <li
+                  key={id}
+                  className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group"
+                >
+                  <Link
+                    as={`/portfolio/showcase/${slug}}`}
+                    href="/portfolio/showcase/[portfolioSlug]"
+                    className="relative w-full cursor-pointer card-container"
+                  >
+                    <img
+                      className="top-0 left-0 object-cover w-full h-full transition-opacity"
+                      src={image}
+                      alt="Card Image"
+                    />
+                    <div className="absolute inset-0 flex items-end">
+                      <div className="w-full px-3 pt-3 pb-2 transition-opacity ease-in opacity-0 duration-400 bg-gradient-to-t from-black via-black to-transparent group-hover:opacity-90">
+                        <h4 className="font-medium tracking-wider text-white text-over">
+                          {title}
+                        </h4>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </section>
     </div>
