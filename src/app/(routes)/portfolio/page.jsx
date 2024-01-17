@@ -4,7 +4,8 @@ import Link from "next/link";
 import PageTitle from "../../components/pageTitle/pageTitle";
 import CategoryMenu from "./(components)/categoryMenu";
 import { portfolioData } from "@/app/data/portfolioData";
-
+import ContactModule from "@/app/components/contactModules/contactModule";
+import Loader from "@/app/components/loader/loader";
 export default function PortfolioPage(props) {
   const [selectedCategory, setSelectedCategory] = useState(
     props.selectedCategory !== undefined ? props.selectedCategory : null
@@ -41,59 +42,64 @@ export default function PortfolioPage(props) {
   };
 
   return (
-    <div className="min-h-screen top-section-p container-margin">
-      <section>
-        <PageTitle
-          textSize="large"
-          heading="Explore Our Portfolio: A Showcase of Creativity, Innovation, and Success Stories"
-          subHeading="Portfolio Showcase"
-        />
-      </section>
-      <section className="py-10">
-        <CategoryMenu
-          categories={[
-            ...Array.from(new Set(portfolioData.map((item) => item.category))),
-          ]}
-          selectedCategory={props.selectedCategory || selectedCategory}
-          handleCategoryClick={handleCategoryClick}
-        />
-      </section>
-      <section>
-        <div>
-          {loading ? (
-            // Show loader while loading
-            <p>Loading...</p>
-          ) : (
-            <ul className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {filteredData.map(({ id, slug, image, title }) => (
-                <li
-                  key={id}
-                  className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group"
-                >
-                  <Link
-                    as={`/portfolio/showcase/${slug}}`}
-                    href="/portfolio/showcase/[portfolioSlug]"
-                    className="relative w-full cursor-pointer card-container"
+    <>
+      <div className="min-h-screen top-section-p container-margin">
+        <section>
+          <PageTitle
+            textSize="large"
+            heading="Explore Our Portfolio: A Showcase of Creativity, Innovation, and Success Stories"
+            subHeading="Portfolio Showcase"
+          />
+        </section>
+        <section className="my-8 md:my-12 lg:mt-14 lg:mb-12">
+          <CategoryMenu
+            categories={[
+              ...Array.from(
+                new Set(portfolioData.map((item) => item.category))
+              ),
+            ]}
+            selectedCategory={props.selectedCategory || selectedCategory}
+            handleCategoryClick={handleCategoryClick}
+          />
+        </section>
+        <section>
+          <div>
+            {loading ? (
+              // Show loader while loading
+              <Loader />
+            ) : (
+              <ul className="grid grid-cols-1 gap-10 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
+                {filteredData.map(({ id, slug, image, title }) => (
+                  <li
+                    key={id}
+                    className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group"
                   >
-                    <img
-                      className="top-0 left-0 object-cover w-full h-full transition-opacity"
-                      src={image}
-                      alt="Card Image"
-                    />
-                    <div className="absolute inset-0 flex items-end">
-                      <div className="w-full px-3 pt-3 pb-2 transition-opacity ease-in opacity-0 duration-400 bg-gradient-to-t from-black via-black to-transparent group-hover:opacity-90">
-                        <h4 className="font-medium tracking-wider text-white text-over">
-                          {title}
-                        </h4>
+                    <Link
+                      as={`/portfolio/showcase/${slug}}`}
+                      href="/portfolio/showcase/[portfolioSlug]"
+                      className="relative w-full cursor-pointer card-container"
+                    >
+                      <img
+                        className="top-0 left-0 object-cover w-full h-full transition-opacity"
+                        src={image}
+                        alt="Card Image"
+                      />
+                      <div className="absolute bottom-0 flex w-full h-full">
+                        <div className="relative w-full h-full transition-opacity ease-in opacity-0 duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:opacity-100">
+                          <h4 className="absolute bottom-0 px-4 pb-3 font-medium tracking-wider text-white text-over">
+                            {title}
+                          </h4>
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      </section>
-    </div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </section>
+      </div>
+      <ContactModule />
+    </>
   );
 }
