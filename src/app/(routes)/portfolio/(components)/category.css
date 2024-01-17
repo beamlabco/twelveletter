@@ -1,0 +1,40 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-categories {
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+}
+
+.arrow-button {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  transition: background 0.3s;
+  padding: 0px 10px;
+  margin: 0;
+}
+
+.left-arrow {
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  transition: background 0.3s;
+  padding: 0px 10px;
+}

@@ -1,8 +1,25 @@
-.react-multi-carousel-track {
+.brand-item {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.brand-menu-slider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.category-item {
+  max-width: fit-content;
+}
+
+.category-menu-slider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .container {
   width: 100%;
   overflow: hidden;

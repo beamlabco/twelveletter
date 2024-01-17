@@ -62,7 +62,7 @@ export const portfolioData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc. Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
 
     description: "",
-    category: "Graphic Design",
+    category: "Motion Design",
     image: "/assets/Portfolio/p3.png",
   },
   {
@@ -106,7 +106,7 @@ export const portfolioData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc. Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
 
     description: "",
-    category: "Graphic Design",
+    category: "Photoshop",
     image: "/assets/Portfolio/p3.png",
   },
 ];

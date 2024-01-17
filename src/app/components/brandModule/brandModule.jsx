@@ -55,6 +55,8 @@ export default function brandModule() {
           minimumSlideDrag={30}
           focusOnSelect={false}
           ssr={true}
+          itemClass="brand-item"
+        sliderClass="brand-menu-slider"
         >
           {brandData?.map((brand, index) => (
             <picture

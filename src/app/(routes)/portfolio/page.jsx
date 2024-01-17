@@ -2,15 +2,15 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import PageTitle from "../../components/pageTitle/pageTitle";
-import CategoryMenu from "./categoryMenu";
+import CategoryMenu from "./(components)/categoryMenu";
 import { portfolioData } from "@/app/data/portfolioData";
 
 export default function PortfolioPage(props) {
   const [selectedCategory, setSelectedCategory] = useState(
     props.selectedCategory !== undefined ? props.selectedCategory : null
   );
-  const [filteredData, setFilteredData] = useState(null); // Use null as initial state
-  const [loading, setLoading] = useState(true); // Track loading state
+  const [filteredData, setFilteredData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Simulate async data fetching or filtering
