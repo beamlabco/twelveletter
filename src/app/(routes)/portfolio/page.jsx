@@ -80,13 +80,13 @@ export default function PortfolioPage(props) {
                       className="relative w-full cursor-pointer card-container"
                     >
                       <img
-                        className="top-0 left-0 object-cover w-full h-full transition-opacity"
+                        className="top-0 left-0 object-cover w-full transition-opacity"
                         src={image}
                         alt="Card Image"
                       />
-                      <div className="absolute bottom-0 flex w-full h-full">
-                        <div className="relative w-full h-full transition-opacity ease-in opacity-0 duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:opacity-100">
-                          <h4 className="absolute bottom-0 px-4 pb-3 font-medium tracking-wider text-white text-over">
+                      <div className="absolute bottom-0 flex w-full group">
+                        <div className="relative w-full transition-transform ease-in transform translate-y-2 opacity-0 duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:translate-y-0 group-hover:opacity-100">
+                          <h4 className="bottom-0 px-4 pt-4 pb-4 font-medium tracking-wider text-white duration-500 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
                             {title}
                           </h4>
                         </div>
