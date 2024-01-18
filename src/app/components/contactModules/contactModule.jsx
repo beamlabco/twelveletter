@@ -12,7 +12,7 @@ export default function ContactModule() {
           textSize="medium"
           heading="Get in Touch: Reach Out to Us for Inquiries, Assistance, or Collaborations"
         />
-        <div className="grid grid-cols-2 mt-8 sm:mt-12 gap-7 lg:gap-x-0 lg:gap-y-10 lg:mt-12">
+        <div className="grid grid-cols-2 gap-6 mt-8 sm:mt-12 lg:gap-x-0 lg:gap-y-10 lg:mt-12">
           {contactInfo.slice(1).map((info, index) => (
             <div key={index} className="col-span-2 sm:col-span-1">
               <a
@@ -24,7 +24,7 @@ export default function ContactModule() {
                   icon={info.icon}
                 />
                 <p
-                  className={`text-lg text-black-shade-300 tracking-wider font-semibold relative overflow-hidden lg:text-xl`}
+                  className={`text-base sm:text-lg text-black-shade-300 tracking-wider font-semibold relative overflow-hidden lg:text-xl`}
                 >
                   {info.title}
                   <span className="underline"></span>

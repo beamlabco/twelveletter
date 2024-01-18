@@ -15,7 +15,7 @@ export default function Service() {
   const serviceId = params.serviceId;
   const [service, setService] = useState();
 
-  useEffect(() => {
+  /*  useEffect(() => {
     // Fetch the service data based on serviceId (or slug)
     const fetchData = async () => {
       try {
@@ -35,17 +35,23 @@ export default function Service() {
     };
 
     fetchData();
-  }, [serviceId]);
+  }, [serviceId]); */
+
+  const selectedServiceData = serviceData[0].services.find(
+    (service) => service.slug === serviceId
+  );
 
   return (
     <>
       <section className="container-margin top-section-p">
         <PageTitle
-          subHeading={service?.serviceType}
+          subHeading={selectedServiceData?.serviceType}
           textSize="large"
-          heading={service?.title}
+          heading={selectedServiceData?.title}
         />
-        <p className="mt-6 paragraph lg:max-w-[1100px]">{service?.brief}</p>
+        <p className="mt-6 paragraph lg:max-w-[1100px]">
+          {selectedServiceData?.brief}
+        </p>
       </section>
       {/* Features section */}
       <section className="container-margin padding-y margin-t">
@@ -54,7 +60,7 @@ export default function Service() {
             What's <span className=" text-primary-accent">Included?</span>
           </p>
           <div className="grid grid-cols-1 mt-2 md:grid-cols-2 md:gap-x-10 lg:gap-x-28 gap-y-14">
-            {service?.features?.map((feature, index) => (
+            {selectedServiceData?.features?.map((feature, index) => (
               <div
                 key={index}
                 className={`${
@@ -87,21 +93,25 @@ export default function Service() {
           <picture className="flex items-center justify-center w-full">
             <img
               className="md:max-w-[600px] lg:max-w-[500px] xl:max-w-xl"
-              src={service?.benefits.image}
+              src={selectedServiceData?.benefits.image}
             ></img>
           </picture>
           <div className="flex flex-col gap-3 lg:gap-4 md:px-11">
             <h3 className="font-semibold tracking-wider heading-medium text-black-shade-300">
-              {service?.benefits.title}
+              {selectedServiceData?.benefits.title}
             </h3>
-            <p className="paragraph">{service?.benefits.description}</p>
+            <p className="paragraph">
+              {selectedServiceData?.benefits.description}
+            </p>
             <ul className="list-inside ">
-              {service?.benefits.bulletPoints.map((point, index) => (
-                <li key={index} className="flex items-center gap-3 paragraph">
-                  <FontAwesomeIcon color="#FF867A" icon={faCheck} />
-                  {point}
-                </li>
-              ))}
+              {selectedServiceData?.benefits?.bulletPoints?.map(
+                (point, index) => (
+                  <li key={index} className="flex items-center gap-3 paragraph">
+                    <FontAwesomeIcon color="#FF867A" icon={faCheck} />
+                    {point}
+                  </li>
+                )
+              )}
             </ul>
           </div>
         </div>

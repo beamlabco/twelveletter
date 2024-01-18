@@ -68,14 +68,14 @@ export default function PortfolioPage(props) {
               // Show loader while loading
               <Loader />
             ) : (
-              <ul className="grid grid-cols-1 gap-10 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
+              <ul className="grid grid-cols-1 gap-6 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
                 {filteredData.map(({ id, slug, image, title }) => (
                   <li
                     key={id}
                     className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group"
                   >
                     <Link
-                      as={`/portfolio/showcase/${slug}}`}
+                      as={`/portfolio/showcase/${slug}`}
                       href="/portfolio/showcase/[portfolioSlug]"
                       className="relative w-full cursor-pointer card-container"
                     >
@@ -86,7 +86,7 @@ export default function PortfolioPage(props) {
                       />
                       <div className="absolute bottom-0 flex w-full group">
                         <div className="relative w-full transition-transform ease-in transform translate-y-2 opacity-0 duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:translate-y-0 group-hover:opacity-100">
-                          <h4 className="bottom-0 px-4 pt-4 pb-4 font-medium tracking-wider text-white duration-500 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
+                          <h4 className="bottom-0 px-4 pt-4 pb-3 font-medium tracking-wider text-white duration-500 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
                             {title}
                           </h4>
                         </div>

@@ -10,6 +10,10 @@
     @apply text-base leading-7 text-black-shade-200 md:text-lg md:leading-8;
   }
 
+  .heading-large {
+    @apply text-3xl leading-snug sm:text-4xl lg:text-5xl;
+  }
+
   .heading-medium {
     @apply text-2xl leading-snug sm:text-3xl lg:text-4xl;
   }
