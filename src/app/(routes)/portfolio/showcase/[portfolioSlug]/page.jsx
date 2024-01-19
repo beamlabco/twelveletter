@@ -57,7 +57,7 @@ export default function Page() {
             {description}
           </p>
           <figure className="relative w-full max-w-3xl mt-6 overflow-hidden rounded-md shadow-md sm:mt-10">
-            <img className="w-full h-full" src={image}></img>
+            <img alt={title} className="w-full h-full" src={image}></img>
           </figure>
         </div>
       </section>
@@ -76,7 +76,7 @@ export default function Page() {
       </section>
       <section className="flex justify-center w-full padding-y margin-t">
         <figure className="w-full overflow-hidden lg:rounded-md max-w-[1000px]">
-          <img className="w-full" src={contentImage}></img>
+          <img alt={title} className="w-full" src={contentImage}></img>
         </figure>
       </section>
       <section className="margin-t padding-y">

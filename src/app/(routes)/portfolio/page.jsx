@@ -93,7 +93,7 @@ export default function PortfolioPage(props) {
                         <img
                           className="top-0 left-0 object-fill w-full transition-opacity "
                           src={image}
-                          alt="Card Image"
+                          alt={title}
                         />
                         <div className="absolute bottom-0 flex w-full group">
                           <div

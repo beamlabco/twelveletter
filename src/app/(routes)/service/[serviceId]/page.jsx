@@ -71,7 +71,7 @@ export default function Service() {
                   aria-description={feature.title}
                   className="w-16 mb-6 lg:w-[5rem]"
                 >
-                  <img src={feature?.icon} />
+                  <img alt={feature.title} src={feature?.icon} />
                 </picture>
                 <h3 className="heading-small lg:font-semibold text-primary-accent">
                   {feature.title}
@@ -91,6 +91,7 @@ export default function Service() {
         <div className="flex container-margin lg:max-w-[1200px] flex-col gap-6 lg:flex-row lg:gap-4">
           <picture className="flex items-center justify-center w-full">
             <img
+              alt={selectedServiceData?.benefits.title}
               className="md:max-w-[600px] lg:max-w-[500px] xl:max-w-xl"
               src={selectedServiceData?.benefits.image}
             ></img>

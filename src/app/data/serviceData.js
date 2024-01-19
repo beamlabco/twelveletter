@@ -13,32 +13,32 @@ export const serviceData = [
         features: [
           {
             title: "Social Media Management",
-            icon: "/assets/service/DM-seo.png",
+            icon: "/assets/Service/DM-seo.png",
             description:
               "Developing and executing social media strategies to engage the target audience, increase brand awareness, and drive conversions through platforms like Facebook, Twitter, Instagram, LinkedIn, etc.",
           },
 
           {
             title: "SEO Optimization",
-            icon: "/assets/service/DM-seo.png",
+            icon: "/assets/Service/DM-seo.png",
             description:
               "Optimizing website content, structure, and technical aspects to improve visibility on search engines, thereby increasing organic traffic and enhancing online discoverability.",
           },
           {
             title: "Strategic Planning",
-            icon: "/assets/service/DM-seo.png",
+            icon: "/assets/Service/DM-seo.png",
             description:
               "Crafting comprehensive digital marketing strategies tailored to the client's goals, including market analysis, target audience identification, and goal setting.",
           },
           {
             title: "Online Advertisment Campaigns",
-            icon: "/assets/service/DM-seo.png",
+            icon: "/assets/Service/DM-seo.png",
             description:
               "Implementing and managing targeted online advertising campaigns across platforms such as Google Ads, Facebook, Instagram, LinkedIn, and other relevant channels.",
           },
         ],
         benefits: {
-          image: "/assets/service/egpic.jpg",
+          image: "/assets/Service/egpic.jpg",
           title: "Increased Visibility",
           description:
             "Enhance your brand visibility and attract more customers.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ",

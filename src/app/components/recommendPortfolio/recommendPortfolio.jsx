@@ -46,7 +46,7 @@ export default function RecommendPortfolio({
               <img
                 className="top-0 left-0 object-cover w-full transition-opacity"
                 src={image}
-                alt="Card Image"
+                alt="Card"
               />
               <div className="absolute bottom-0 flex w-full group">
                 <div className="relative w-full transition-transform ease-in transform translate-y-2 opacity-0 duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:translate-y-0 group-hover:opacity-100">
