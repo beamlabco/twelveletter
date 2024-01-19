@@ -3,7 +3,6 @@
 import { useParams } from "next/navigation";
 import PageTitle from "../../../components/pageTitle/pageTitle";
 import { serviceData } from "@/app/data/serviceData";
-import { useState, useEffect } from "react";
 import ContactModule from "@/app/components/contactModules/contactModule";
 import BrandModule from "@/app/components/brandModule/brandModule";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -57,7 +56,7 @@ export default function Service() {
       <section className="container-margin padding-y margin-t">
         <div className="flex flex-col items-center gap-10 lg:gap-16 ">
           <p className="text-3xl lg:text-[2.6rem] font-semibold tracking-wider text-center">
-            What's <span className=" text-primary-accent">Included?</span>
+            What&apos;s <span className=" text-primary-accent">Included?</span>
           </p>
           <div className="grid grid-cols-1 mt-2 md:grid-cols-2 md:gap-x-10 lg:gap-x-32 gap-y-14">
             {selectedServiceData?.features?.map((feature, index) => (
@@ -118,9 +117,9 @@ export default function Service() {
       </section>
 
       {/* Testimonial section */}
-      {/*      <section className="margin-t padding-y">
+      <section className="margin-t padding-y">
         <Testimonial />
-      </section> */}
+      </section>
       <section className="margin-t padding-y">
         <RecommendPortfolio />
       </section>

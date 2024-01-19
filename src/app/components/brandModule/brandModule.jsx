@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { brandData } from "@/app/data/brandData";
 import Slider from "react-infinite-logo-slider";
+import Image from "next/image";
 
 export default function brandModule() {
   const responsive = {
@@ -82,11 +83,8 @@ export default function brandModule() {
           blurBoderColor={"#fff"}
         >
           {brandData?.map((brand, index) => (
-            <Slider.Slide>
-              <picture
-                key={index}
-                className="flex items-center justify-center my-auto pointer-events-none select-none"
-              >
+            <Slider.Slide key={index}>
+              <picture className="flex items-center justify-center my-auto pointer-events-none select-none">
                 <img
                   className="pointer-events-none max-w-48 sm:max-w-40"
                   src={brand?.icon}

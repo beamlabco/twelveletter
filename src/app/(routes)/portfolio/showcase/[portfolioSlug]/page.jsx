@@ -9,7 +9,7 @@ import { portfolioData } from "@/app/data/portfolioData";
 import { useRouter } from "next/navigation";
 import RecommendPortfolio from "@/app/components/recommendPortfolio/recommendPortfolio";
 
-export default function page() {
+export default function Page() {
   const router = useRouter();
   const params = useParams();
   const portfolioSlug = params.portfolioSlug;
