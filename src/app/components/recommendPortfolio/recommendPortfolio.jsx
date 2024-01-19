@@ -44,16 +44,26 @@ export default function RecommendPortfolio({
               className="relative w-full cursor-pointer card-container"
             >
               <img
-                className="top-0 left-0 object-cover w-full transition-opacity"
+                className="top-0 left-0 object-cover w-full overflow-hidden transition-opacity rounded-md"
                 src={image}
                 alt="Card"
               />
-              <div className="absolute bottom-0 flex w-full group">
-                <div className="relative w-full transition-transform ease-in transform translate-y-2 opacity-0 duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:translate-y-0 group-hover:opacity-100">
-                  <h4 className="bottom-0 px-4 pt-4 pb-3 font-medium tracking-wider text-white duration-500 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
+              <div className="absolute bottom-0 hidden w-full sm:flex group">
+                <div
+                  style={{
+                    transition: "all 100ms",
+                  }}
+                  className="relative w-full transition-transform ease-in transform translate-y-2 opacity-0 ease duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <h4 className="bottom-0 px-4 pt-4 pb-3 font-medium tracking-wider text-white transition-all duration-300 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
                     {title}
                   </h4>
                 </div>
+              </div>
+              <div className="mt-1 sm:hidden">
+                <h4 className="font-semibold tracking-wide transition-colors duration-200 text-black-shade-200 group-hover:text-primary-accent">
+                  {title}
+                </h4>
               </div>
             </Link>
           </li>
