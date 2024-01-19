@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import Testimonial from "@/app/components/testimonial/testimonial";
 import ContactModule from "@/app/components/contactModules/contactModule";
 import { useParams } from "next/navigation";
@@ -40,9 +40,10 @@ export default function page() {
         <div className="flex flex-col items-center justify-center container-margin">
           <button
             onClick={() => router.back()}
-            className="self-start mt-10 mb-8 text-xl font-semibold sm:mt-12 text-secondary-accent"
+            className="self-start mt-10 mb-8 text-xl font-semibold tracking-wide sm:mt-12 text-primary-accent"
           >
-            <FontAwesomeIcon size="sm" icon={faChevronLeft} /> Go Back
+            <FontAwesomeIcon size="md" icon={faArrowLeft} />
+            &nbsp; Go Back
           </button>
           <div>
             <h1 className="font-semibold tracking-wide text-center text-black-shade-300 heading-medium">
@@ -52,7 +53,7 @@ export default function page() {
               {category}
             </p>
           </div>
-          <p className="mt-3 font-semibold sm:mt-5 text-lg tracking-wide text-center max-w-[480px] text-black-shade-200">
+          <p className="mt-3 sm:mt-5 text-lg tracking-wide text-center max-w-[480px] text-black-shade-100">
             {description}
           </p>
           <figure className="relative w-full max-w-3xl mt-6 overflow-hidden rounded-md shadow-md sm:mt-10">
@@ -62,13 +63,13 @@ export default function page() {
       </section>
       <section className="flex flex-col items-center w-full padding-y margin-t container-margin">
         <div className="w-full max-w-[1000px]">
-          <span className="text-base font-semibold tracking-widest md:text-xl font-base text-primary-accent">
+          <span className="text-sm font-semibold tracking-widest md:text-lg font-base text-primary-accent">
             Project brief
           </span>
-          <h3 className="mt-1 font-semibold tracking-wider text-black-shade-300 sm:mt-2 heading-medium">
+          <h3 className="mt-1 font-semibold tracking-wider text-black-shade-200 sm:mt-2 heading-medium">
             {briefTitle}
           </h3>
-          <p className="mt-2 font-medium tracking-wide sm:mt-4 text-black-shade-200 paragraph">
+          <p className="mt-2 font-medium tracking-wide sm:mt-4 text-black-shade-100 paragraph">
             {brief}
           </p>
         </div>

@@ -10,7 +10,7 @@ export default function testimonial() {
         highlightText="Voices of Satisfaction:"
         textSize="medium"
       />
-      <p className="mt-5 text-lg tracking-wide max-w-[1100px] leading-relaxed text-black-shade-200 md:mt-7 lg:mt-7">
+      <p className="mt-5 text-xl font-medium tracking-wide max-w-[1100px] leading-relaxed text-black-shade-100 md:mt-7 lg:mt-7">
         "Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever"
       </p>

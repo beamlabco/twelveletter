@@ -29,7 +29,7 @@ export default function PortfolioPage(props) {
         : portfolioData;
 
       // Introduce a delay (simulating async operation)
-      await new Promise((resolve) => setTimeout(resolve, 200));
+      await new Promise((resolve) => setTimeout(resolve, 100));
 
       setFilteredData(newData);
       setLoading(false); // Set loading to false after fetching

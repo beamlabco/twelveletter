@@ -4,7 +4,7 @@ import { portfolioData } from "@/app/data/portfolioData";
 import PageTitle from "../../components/pageTitle/pageTitle";
 
 export default function RecommendPortfolio({
-  limit = 4,
+  limit = 3,
   random = false,
   category = null,
 }) {
@@ -32,7 +32,7 @@ export default function RecommendPortfolio({
         highlightGradient={true}
         textSize="medium"
       />
-      <ul className="grid grid-cols-1 gap-6 mt-7 md:mt-10 lg:mt-12 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
+      <ul className="grid grid-cols-1 gap-6 mt-10 md:mt-10 lg:mt-12 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 lg:gap-6">
         {filteredData.map(({ id, slug, image, title }) => (
           <li
             key={id}

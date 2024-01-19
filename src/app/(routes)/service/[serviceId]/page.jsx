@@ -14,7 +14,6 @@ import RecommendPortfolio from "@/app/components/recommendPortfolio/recommendPor
 export default function Service() {
   const params = useParams();
   const serviceId = params.serviceId;
-  const [service, setService] = useState();
 
   /*  useEffect(() => {
     // Fetch the service data based on serviceId (or slug)
@@ -50,7 +49,7 @@ export default function Service() {
           textSize="large"
           heading={selectedServiceData?.title}
         />
-        <p className="mt-6 paragraph lg:max-w-[1100px]">
+        <p className="mt-6 paragraph lg:max-w-[1000px]">
           {selectedServiceData?.brief}
         </p>
       </section>
@@ -60,7 +59,7 @@ export default function Service() {
           <p className="text-3xl lg:text-[2.6rem] font-semibold tracking-wider text-center">
             What's <span className=" text-primary-accent">Included?</span>
           </p>
-          <div className="grid grid-cols-1 mt-2 md:grid-cols-2 md:gap-x-10 lg:gap-x-28 gap-y-14">
+          <div className="grid grid-cols-1 mt-2 md:grid-cols-2 md:gap-x-10 lg:gap-x-32 gap-y-14">
             {selectedServiceData?.features?.map((feature, index) => (
               <div
                 key={index}
@@ -71,7 +70,7 @@ export default function Service() {
                 <picture
                   aria-label={feature ? feature.title : "Icon"}
                   aria-description={feature.title}
-                  className="w-16 mb-6 lg:w-20"
+                  className="w-16 mb-6 lg:w-[5rem]"
                 >
                   <img src={feature?.icon} />
                 </picture>
@@ -117,10 +116,11 @@ export default function Service() {
           </div>
         </div>
       </section>
+
       {/* Testimonial section */}
-      <section className="margin-t padding-y">
+      {/*      <section className="margin-t padding-y">
         <Testimonial />
-      </section>
+      </section> */}
       <section className="margin-t padding-y">
         <RecommendPortfolio />
       </section>

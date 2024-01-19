@@ -13,7 +13,7 @@ export const serviceData = [
         features: [
           {
             title: "Social Media Management",
-            icon: "/assets/service/DM-social.png",
+            icon: "/assets/service/DM-seo.png",
             description:
               "Developing and executing social media strategies to engage the target audience, increase brand awareness, and drive conversions through platforms like Facebook, Twitter, Instagram, LinkedIn, etc.",
           },
@@ -32,7 +32,7 @@ export const serviceData = [
           },
           {
             title: "Online Advertisment Campaigns",
-            icon: "/assets/service/DM-advert.png",
+            icon: "/assets/service/DM-seo.png",
             description:
               "Implementing and managing targeted online advertising campaigns across platforms such as Google Ads, Facebook, Instagram, LinkedIn, and other relevant channels.",
           },
