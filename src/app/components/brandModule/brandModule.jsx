@@ -76,21 +76,21 @@ export default function brandModule() {
 
       <div className="w-full mt-6 mb-4 md:mt-14 lg:mt-16">
         <Slider
-          width="350px"
+          width="250px"
           duration={30}
-          pauseOnHover={true}
+          pauseOnHover={false}
           blurBorders={false}
           blurBoderColor={"#fff"}
         >
           {brandData?.map((brand, index) => (
             <Slider.Slide key={index}>
-              <picture className="flex items-center justify-center my-auto pointer-events-none select-none">
+              <figure className="flex items-center justify-center my-auto pointer-events-none select-none">
                 <img
-                  className="pointer-events-none max-w-48 sm:max-w-40"
+                  className="pointer-events-none max-w-40 sm:max-w-40"
                   src={brand?.icon}
                   alt={brand?.name}
                 />
-              </picture>
+              </figure>
             </Slider.Slide>
           ))}
         </Slider>

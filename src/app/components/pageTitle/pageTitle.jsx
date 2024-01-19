@@ -11,7 +11,7 @@ export default function Title(props) {
       case "medium":
         return "mt-2 lg:mt-3 text-2xl font-semibold  leading-snug tracking-wide sm:text-3xl lg:text-4xl";
       case "large":
-        return "text-3xl mt-4 font-semibold leading-10 tracking-wide md:text-4xl md:leading-snug lg:text-5xl lg:leading-tight text-black-shade-300";
+        return "text-3xl mt-3 font-semibold leading-10 tracking-wide md:text-4xl md:leading-snug lg:text-5xl lg:leading-tight text-black-shade-300";
       default:
         return "";
     }
@@ -19,7 +19,7 @@ export default function Title(props) {
 
   return (
     <div>
-      <h1 className="text-sm font-semibold tracking-widest md:text-lg font-base text-primary-accent">
+      <h1 className="text-base font-semibold tracking-widest md:text-lg font-base text-primary-accent">
         {subHeading}
       </h1>
       <p className={determineTextSize()}>
