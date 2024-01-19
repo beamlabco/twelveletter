@@ -9,6 +9,7 @@ import BrandModule from "@/app/components/brandModule/brandModule";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Testimonial from "@/app/components/testimonial/testimonial";
+import RecommendPortfolio from "@/app/components/recommendPortfolio/recommendPortfolio";
 
 export default function Service() {
   const params = useParams();
@@ -120,7 +121,9 @@ export default function Service() {
       <section className="margin-t padding-y">
         <Testimonial />
       </section>
-
+      <section className="margin-t padding-y">
+        <RecommendPortfolio />
+      </section>
       <ContactModule />
     </>
   );

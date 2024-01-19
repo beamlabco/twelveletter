@@ -7,6 +7,7 @@ import ContactModule from "@/app/components/contactModules/contactModule";
 import { useParams } from "next/navigation";
 import { portfolioData } from "@/app/data/portfolioData";
 import { useRouter } from "next/navigation";
+import RecommendPortfolio from "@/app/components/recommendPortfolio/recommendPortfolio";
 
 export default function page() {
   const router = useRouter();
@@ -51,7 +52,7 @@ export default function page() {
               {category}
             </p>
           </div>
-          <p className="mt-3 sm:mt-5 text-lg tracking-wide text-center max-w-[480px] text-black-shade-200">
+          <p className="mt-3 font-semibold sm:mt-5 text-lg tracking-wide text-center max-w-[480px] text-black-shade-200">
             {description}
           </p>
           <figure className="relative w-full max-w-3xl mt-6 overflow-hidden rounded-md shadow-md sm:mt-10">
@@ -64,7 +65,7 @@ export default function page() {
           <span className="text-base font-semibold tracking-widest md:text-xl font-base text-primary-accent">
             Project brief
           </span>
-          <h3 className="mt-1 font-semibold tracking-wider sm:mt-2 heading-medium">
+          <h3 className="mt-1 font-semibold tracking-wider text-black-shade-300 sm:mt-2 heading-medium">
             {briefTitle}
           </h3>
           <p className="mt-2 font-medium tracking-wide sm:mt-4 text-black-shade-200 paragraph">
@@ -79,6 +80,9 @@ export default function page() {
       </section>
       <section className="margin-t padding-y">
         <Testimonial />
+      </section>
+      <section className="margin-t padding-y">
+        <RecommendPortfolio />
       </section>
       <ContactModule />
     </>

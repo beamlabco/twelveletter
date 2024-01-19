@@ -8,10 +8,9 @@ export default function testimonial() {
         subHeading="Testimonials"
         heading="Discover the words of our client"
         highlightText="Voices of Satisfaction:"
-        highlightGradient={true}
         textSize="medium"
       />
-      <p className="mt-5 text-2xl tracking-wide max-w-[1100px] leading-relaxed text-black-shade-200 md:mt-7 lg:mt-7">
+      <p className="mt-5 text-lg tracking-wide max-w-[1100px] leading-relaxed text-black-shade-200 md:mt-7 lg:mt-7">
         "Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever"
       </p>

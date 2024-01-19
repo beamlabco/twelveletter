@@ -6,6 +6,7 @@ import CategoryMenu from "./(components)/categoryMenu";
 import { portfolioData } from "@/app/data/portfolioData";
 import ContactModule from "@/app/components/contactModules/contactModule";
 import Loader from "@/app/components/loader/loader";
+import Pagination from "@/app/components/pagination/pagination";
 export default function PortfolioPage(props) {
   const [selectedCategory, setSelectedCategory] = useState(
     props.selectedCategory !== undefined ? props.selectedCategory : null
@@ -16,7 +17,7 @@ export default function PortfolioPage(props) {
   useEffect(() => {
     // Simulate async data fetching or filtering
     const fetchData = async () => {
-      setLoading(true); // Set loading to true before fetching
+      setLoading(true);
 
       // Simulate API call or data filtering
       const newData = selectedCategory
@@ -28,7 +29,7 @@ export default function PortfolioPage(props) {
         : portfolioData;
 
       // Introduce a delay (simulating async operation)
-      await new Promise((resolve) => setTimeout(resolve, 300));
+      await new Promise((resolve) => setTimeout(resolve, 200));
 
       setFilteredData(newData);
       setLoading(false); // Set loading to false after fetching
@@ -41,6 +42,15 @@ export default function PortfolioPage(props) {
     setSelectedCategory(category);
   };
 
+  const [showPerPage] = useState(12);
+  const [pagination, setPagination] = useState({
+    start: 0,
+    end: showPerPage,
+  });
+  const onPaginationChange = (start, end) => {
+    setPagination({ start: start, end: end });
+  };
+
   return (
     <>
       <div className="min-h-screen top-section-p container-margin">
@@ -51,7 +61,7 @@ export default function PortfolioPage(props) {
             subHeading="Portfolio Showcase"
           />
         </section>
-        <section className="my-8 md:my-12 lg:mt-14 lg:mb-12">
+        <section className="my-8 md:my-12 lg:mt-14 lg:mb-10">
           <CategoryMenu
             categories={[
               ...Array.from(
@@ -69,34 +79,47 @@ export default function PortfolioPage(props) {
               <Loader />
             ) : (
               <ul className="grid grid-cols-1 gap-6 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
-                {filteredData.map(({ id, slug, image, title }) => (
-                  <li
-                    key={id}
-                    className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group"
-                  >
-                    <Link
-                      as={`/portfolio/showcase/${slug}`}
-                      href="/portfolio/showcase/[portfolioSlug]"
-                      className="relative w-full cursor-pointer card-container"
+                {filteredData
+                  .slice(pagination.start, pagination.end)
+                  .map(({ id, slug, image, title }) => (
+                    <li
+                      key={id}
+                      className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group"
                     >
-                      <img
-                        className="top-0 left-0 object-cover w-full transition-opacity"
-                        src={image}
-                        alt="Card Image"
-                      />
-                      <div className="absolute bottom-0 flex w-full group">
-                        <div className="relative w-full transition-transform ease-in transform translate-y-2 opacity-0 duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:translate-y-0 group-hover:opacity-100">
-                          <h4 className="bottom-0 px-4 pt-4 pb-3 font-medium tracking-wider text-white duration-500 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
-                            {title}
-                          </h4>
+                      <Link
+                        href={`/portfolio/showcase/${slug}`}
+                        className="relative w-full cursor-pointer card-container"
+                      >
+                        <img
+                          className="top-0 left-0 object-cover w-full transition-opacity"
+                          src={image}
+                          alt="Card Image"
+                        />
+                        <div className="absolute bottom-0 flex w-full group">
+                          <div
+                            style={{
+                              transition: "all 100ms",
+                            }}
+                            className="relative w-full transition-transform ease-in transform translate-y-2 opacity-0 ease duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:translate-y-0 group-hover:opacity-100"
+                          >
+                            <h4 className="bottom-0 px-4 pt-4 pb-3 font-medium tracking-wider text-white transition-all duration-300 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
+                              {title}
+                            </h4>
+                          </div>
                         </div>
-                      </div>
-                    </Link>
-                  </li>
-                ))}
+                      </Link>
+                    </li>
+                  ))}
               </ul>
             )}
           </div>
+        </section>
+        <section className="margin-t">
+          <Pagination
+            showPerPage={showPerPage}
+            onPaginationChange={onPaginationChange}
+            total={filteredData?.length}
+          />
         </section>
       </div>
       <ContactModule />
