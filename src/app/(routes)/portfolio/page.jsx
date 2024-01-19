@@ -91,7 +91,7 @@ export default function PortfolioPage(props) {
                         className="relative w-full cursor-pointer card-container"
                       >
                         <img
-                          className="top-0 left-0 object-cover w-full transition-opacity"
+                          className="top-0 left-0 object-fill w-full transition-opacity "
                           src={image}
                           alt="Card Image"
                         />
