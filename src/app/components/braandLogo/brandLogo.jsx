@@ -1,6 +1,6 @@
 import LogoCSS from "./logo.module.css";
 
-export default function Logo(props) {
+export default function BrandLogo(props) {
   return (
     <>
       <svg

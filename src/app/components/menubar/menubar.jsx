@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import MenuBarCSS from "./menubar.module.css";
 import FullscreenMenu from "./fullscreenMenu";
-import Logo from "../logo/logo";
+import Logo from "../braandLogo/brandLogo";
 
 export default function Menubar() {
   const [isOpen, setIsOpen] = useState(false);

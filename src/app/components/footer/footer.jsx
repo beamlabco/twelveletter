@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Logo from "../logo/logo";
+import Logo from "../braandLogo/brandLogo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import {
