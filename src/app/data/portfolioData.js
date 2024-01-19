@@ -42,7 +42,7 @@ export const portfolioData = [
   },
   {
     id: 4,
-    title: "Sakura Web Design",
+    title: "Sakura Web Designs",
     slug: "sakura-web-design",
     briefTitle: "SAMI Web Design",
     brief:
