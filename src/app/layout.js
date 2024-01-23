@@ -19,6 +19,10 @@ export default function RootLayout({ children }) {
         <div id="main">{children}</div>
         <Footer />
       </body>
+      <script
+        async
+        src="https://www.google.com/maps/d/embed?mid=1BQL9p2tnGAJW3qAgNf1kOwkuA-j74eE&ehbc=2E312F&noprof=1"
+      ></script>
     </html>
   );
 }

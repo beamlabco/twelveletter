@@ -22,6 +22,12 @@ export const contactInfo = [
     title: "email@gmail.com",
     link: "mailto:twelveletter@gmail.com",
   },
+  {
+    icon: faLocationDot,
+    title: "Your Location",
+    link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
+  },
+  { icon: faPhone, title: "+977 9801020202", link: "tel:+97798010202020" },
 ];
 
 export const socialInfo = [
