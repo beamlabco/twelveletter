@@ -3,7 +3,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { brandData } from "@/app/data/brandData";
 import Slider from "react-infinite-logo-slider";
-import Image from "next/image";
 
 export default function brandModule() {
   const responsive = {

@@ -4,6 +4,7 @@ export const serviceData = [
       {
         id: 1,
         serviceType: "Digital Marketing",
+        serviceGraphic: "/assets/Service/illustrationg1.png",
         slug: "digital-marketing",
         title:
           "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",
@@ -53,6 +54,7 @@ export const serviceData = [
       {
         id: 2,
         serviceType: "Branding",
+        serviceGraphic: "/assets/Service/illustrationg1.png",
         slug: "branding",
         title:
           "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",
@@ -81,5 +83,48 @@ export const serviceData = [
       },
       // Add more services as needed
     ],
+  },
+];
+
+export const homeServiceData = [
+  {
+    id: 1,
+    title: "Digital Marketing",
+    slug: "digital-marketing",
+    image: "/assets/Service/illustrationg1.png",
+    brief:
+      "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
+  },
+  {
+    id: 2,
+    title: "Graphic Content",
+    slug: "graphic-content",
+    image: "/assets/Service/illustrationg2.png",
+    brief:
+      "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
+  },
+  {
+    id: 3,
+    title: "Branding",
+    slug: "branding",
+    image: "/assets/Service/illustrationg3.png",
+    brief:
+      "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
+  },
+  {
+    id: 4,
+    title: "SEO & Analysis",
+    slug: "digital-marketing",
+    image: "/assets/Service/illustrationg4.png",
+    brief:
+      "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
+  },
+  {
+    id: 5,
+    title: "Motion Graphics",
+    slug: "motion-graphics",
+    image: "/assets/Service/illustrationg1.png",
+    brief:
+      "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
   },
 ];
