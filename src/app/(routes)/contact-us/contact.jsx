@@ -28,7 +28,6 @@ export default function Contact() {
                 <input
                   id="sender_name"
                   type="text"
-                  autoFocus="true"
                   placeholder="John Doe"
                   name="name"
                   className="border-b-2 text-base outline-none text-black-shade-100 tracking-wide transition-all duration-200 border-[#E6E6E6] placeholder-[#9ba4a9] leading-10  focus:border-primary-accent focus:outline-none "
@@ -100,7 +99,7 @@ export default function Contact() {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-[480px] max-w-[700px] min-w-[400px]"
+              className="w-full h-[480px] max-w-[700px] md:min-w-[400px]"
             ></iframe>
           </div>
         </div>

@@ -4,7 +4,6 @@ export const serviceData = [
       {
         id: 1,
         serviceType: "Digital Marketing",
-        serviceGraphic: "/assets/Service/illustrationg1.png",
         slug: "digital-marketing",
         title:
           "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",
@@ -54,7 +53,6 @@ export const serviceData = [
       {
         id: 2,
         serviceType: "Branding",
-        serviceGraphic: "/assets/Service/illustrationg1.png",
         slug: "branding",
         title:
           "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",

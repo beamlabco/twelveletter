@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { brandData } from "@/app/data/brandData";
 import Slider from "react-infinite-logo-slider";
+import PageTitle from "../pageTitle/pageTitle";
 
 export default function brandModule() {
   const responsive = {
@@ -31,10 +32,11 @@ export default function brandModule() {
   return (
     <div className="padding-y-lg bg-[#F5F5F7]">
       <div className="flex flex-col items-center w-full gap-5 pb-2 lg:gap-6 container-margin">
-        <p className="font-semibold tracking-wider text-center heading-medium">
-          <span className="text-primary-accent">Connected Success:</span> Brands
-          We have Collaborated With
-        </p>
+        <PageTitle
+          heading="Brands We have Collaborated With"
+          textSize="medium"
+          highlightText="Connected Success:"
+        />
         <p className="text-center max-w-[500px] paragraph">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.

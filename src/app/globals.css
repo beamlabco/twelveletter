@@ -15,7 +15,7 @@
   }
 
   .heading-medium {
-    @apply text-2xl leading-snug sm:text-3xl lg:text-4xl;
+    @apply text-2xl leading-normal sm:text-3xl lg:text-4xl;
   }
 
   .heading-small {

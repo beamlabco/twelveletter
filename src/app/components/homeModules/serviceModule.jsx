@@ -82,7 +82,7 @@ export default function ServiceModule() {
           </div>
 
           {/* Right side: Respective images */}
-          <div className="relative w-full h-full lg:mr-20 xl:mr-52">
+          <div className="relative w-full h-full lg:mr-20 xl:mr-48">
             {homeServiceData.map((item, index) => (
               <div className="flex flex-col" key={item.id}>
                 <figure
@@ -105,10 +105,10 @@ export default function ServiceModule() {
                   }}
                   className="text-xl leading-relaxed tracking-wide text-black-shade-100"
                 >
-                  {item.brief}{" "}
+                  {item.brief}
                   <a
                     href={`/service/${item.slug}`}
-                    className="font-semibold tracking-wider transition-all duration-200 text-primary-accent hover:text-[#FF9E95] text-wiggle"
+                    className="tracking-wider transition-all duration-200 text-primary-accent hover:text-[#FF9E95] text-wiggle"
                   >
                     Read More
                   </a>
