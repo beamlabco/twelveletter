@@ -52,7 +52,7 @@ export default function ServiceModule() {
           heading="Tailored Design and Marketing Expertise for a Polished Professional Image."
         />
       </section>
-      <section className="w-full padding-y margin-t">
+      <section className="w-full mt-8 padding-y md:mt-10 lg:mt-12">
         <div className="relative items-center justify-between hidden w-full gap-10 lg:gap-20 md:flex">
           {/* Left side: List of titles */}
           <div className="relative md:max-w-[300px] lg:max-w-[350px] xl:max-w-full w-full">

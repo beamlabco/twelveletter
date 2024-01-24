@@ -42,7 +42,7 @@ export default function Page() {
             onClick={() => router.back()}
             className="self-start mt-10 mb-8 text-xl font-semibold tracking-wide sm:mt-12 text-primary-accent"
           >
-            <FontAwesomeIcon size="md" icon={faArrowLeft} />
+            <FontAwesomeIcon size="sm" icon={faArrowLeft} />
             &nbsp; Go Back
           </button>
           <div>

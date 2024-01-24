@@ -9,6 +9,7 @@ export default function Title(props) {
     highlightGradient,
     textSize,
     extraClass,
+    maxWidth,
   } = props;
 
   const determineTextSize = () => {
@@ -20,14 +21,14 @@ export default function Title(props) {
       case "large":
         return "text-3xl mt-3 font-semibold leading-10 tracking-wide md:text-4xl md:leading-snug lg:text-5xl lg:leading-snug text-black-shade-300";
       case "xl":
-        return "text-4xl mt-3 font-semibold leading-relaxed tracking-wide md:text-5xl md:leading-snug lg:text-6xl lg:leading-tight text-black-shade-300";
+        return "text-4xl mt-3 font-semibold leading-tight tracking-wide md:text-5xl md:leading-snug lg:text-6xl lg:leading-tight text-black-shade-300";
       default:
         return "";
     }
   };
 
   return (
-    <div>
+    <div className={`${maxWidth ? maxWidth : ""}`}>
       {subHeading && (
         <h1 className="text-base font-semibold tracking-widest md:text-lg font-base text-primary-accent">
           {subHeading}
