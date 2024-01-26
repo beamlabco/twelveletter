@@ -1,7 +1,4 @@
 "use client";
-import "./brandModule.css";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import { brandData } from "@/app/data/brandData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -56,27 +53,7 @@ export default function brandModule() {
         </p>
       </div>
 
-      <div className="w-full mt-6 mb-4 md:mt-14 lg:mt-16">
-        {/*  <Slider
-          width="250px"
-          duration={30}
-          pauseOnHover={false}
-          blurBorders={false}
-          blurBoderColor={"#fff"}
-        >
-          {brandData?.map((brand, index) => (
-            <Slider.Slide key={index}>
-              <figure className="flex items-center justify-center my-auto pointer-events-none select-none">
-                <img
-                  className="pointer-events-none max-w-40 sm:max-w-40"
-                  src={brand?.icon}
-                  alt={brand?.name}
-                />
-              </figure>
-            </Slider.Slide>
-          ))}
-        </Slider> */}
-
+      <div className="w-full mt-6 mb-4 md:mt-14 lg:mt-12">
         <Slider {...settings}>
           {brandData?.map((brand, index) => (
             <figure
@@ -84,7 +61,7 @@ export default function brandModule() {
               className="flex items-center justify-center my-auto pointer-events-none select-none"
             >
               <img
-                className="pointer-events-none max-w-36 sm:max-w-40"
+                className="pointer-events-none max-w-36 sm:max-w-48"
                 src={brand?.icon}
                 alt={brand?.name}
               />

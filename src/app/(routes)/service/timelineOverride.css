@@ -1,0 +1,77 @@
+.date-timeline {
+    color: rgb(255, 255, 255);
+}
+
+.vertical-timeline-element--work h3 {
+    font-size: 1.4rem;
+    font-family: var(--f1);
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+
+
+.vertical-timeline-element--work p {
+    font-size: 1.05rem;
+    font-family: var(--f3);
+
+}
+
+.vertical-timeline-element-subtitle {
+    font-weight: 500;
+}
+
+
+@media (max-width: 1460px) {
+    .vertical-timeline-element--work h3 {
+        font-size: 1.2rem;
+    }
+
+
+    .vertical-timeline-element--work h4 {
+        font-size: 0.8rem;
+    }
+
+    .vertical-timeline-element--work p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1170px) {
+    .date-timeline {
+        color: rgb(51, 51, 51);
+    }
+
+}
+
+
+@media (max-width: 769px) {
+    .vertical-timeline-element--work h3 {
+        font-size: 1.2rem;
+    }
+
+    .vertical-timeline-element--work h4 {
+        font-size: 0.8rem;
+    }
+
+    .vertical-timeline-element--work p {
+        font-size: 1rem;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .vertical-timeline-element--work h3 {
+        font-size: 1.1rem;
+    }
+
+    .vertical-timeline-element--work h4 {
+        font-size: 0.8rem;
+    }
+
+    .vertical-timeline-element--work p {
+        font-size: 0.9rem;
+    }
+}

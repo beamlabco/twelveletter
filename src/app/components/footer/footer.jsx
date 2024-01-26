@@ -3,6 +3,7 @@ import React from "react";
 import Logo from "../brandLogo/brandLogo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 import {
   faFacebookF,
   faInstagram,
@@ -88,9 +89,9 @@ export default function footer() {
       <div className="pt-16 pb-16 space-y-8 tracking-wider lg:pt-20 container-margin">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           <div>
-            <a href="/">
+            <Link href="/">
               <Logo whiteLogo={true} />
-            </a>
+            </Link>
 
             <p className="max-w-xs mt-4 leading-loose text-regular text-zinc-100">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
@@ -143,7 +144,7 @@ export default function footer() {
               <ul className="mt-6 space-y-4 text-zinc-100">
                 {servicesInfo.map((service, index) => (
                   <li key={index}>
-                    <a
+                    <Link
                       href={service.link}
                       className={`${FooterCSS.list} whitespace-nowrap w-fit flex items-center gap-3 text-base hover:text-primary-accent  transition-all duration-200 lg:text-lg`}
                     >
@@ -153,7 +154,7 @@ export default function footer() {
                         icon={faRightLong}
                       />
                       {service.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -167,7 +168,7 @@ export default function footer() {
               <ul className="mt-6 space-y-4 text-zinc-100">
                 {companyInfo.map((service, index) => (
                   <li key={index}>
-                    <a
+                    <Link
                       href={service.link}
                       className={`${FooterCSS.list} w-fit flex items-center gap-3 text-base hover:text-primary-accent  transition-all duration-200 lg:text-lg`}
                     >
@@ -177,7 +178,7 @@ export default function footer() {
                         icon={faRightLong}
                       />
                       {service.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -186,12 +187,12 @@ export default function footer() {
         </div>
         <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 dark:opacity-50"></hr>
         <div className="flex flex-wrap justify-between gap-2">
-          <a
+          <Link
             className="text-s text-zinc-400 font-manrope hover:text-primary-accent"
             href="#"
           >
             Terms & Conditions
-          </a>
+          </Link>
           <p className="text-s text-zinc-400">
             &copy; 2022. Company Name. All rights reserved.
           </p>

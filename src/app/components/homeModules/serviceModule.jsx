@@ -5,6 +5,7 @@ import PageTitle from "../pageTitle/pageTitle";
 import { homeServiceData } from "@/app/data/serviceData";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 export default function ServiceModule() {
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
@@ -61,14 +62,14 @@ export default function ServiceModule() {
                 <li
                   key={item.id}
                   onClick={() => handleTitleClick(index)}
-                  className={`lg:text-2xl md:text-xl whitespace-nowrap hover:text-primary-accent transition-all duration-200 font-semibold tracking-wider cursor-pointer ${
+                  className={`lg:text-[1.75rem] w-fit md:text-xl whitespace-nowrap ease-in hover:text-primary-accent transition-all duration-200 font-bold tracking-wider cursor-pointer ${
                     index === currentItemIndex
-                      ? "text-primary-accent lg:text-[1.8rem]"
+                      ? "text-primary-accent md:text-[1.8rem] lg:text-[2.1rem]"
                       : "text-black-shade-300"
                   }`}
                 >
                   <FontAwesomeIcon
-                    className={`text-base transition-all duration-200 lg:text-2xl mr-4 ${
+                    className={`text-2xl transition-all duration-200 lg:text-2xl mr-4 ${
                       index === currentItemIndex
                         ? "text-primary-accent lg:text-[1.8rem]"
                         : "text-transparent"
@@ -106,12 +107,12 @@ export default function ServiceModule() {
                   className="text-xl leading-relaxed tracking-wide text-black-shade-100"
                 >
                   {item.brief}
-                  <a
+                  <Link
                     href={`/service/${item.slug}`}
                     className="tracking-wider transition-all duration-200 text-primary-accent hover:text-[#FF9E95] text-wiggle"
                   >
                     Read More
-                  </a>
+                  </Link>
                 </p>
               </div>
             ))}
@@ -129,7 +130,7 @@ export default function ServiceModule() {
                     : "text-black-shade-300"
                 }`}
               >
-                <a href={`/service/${item.slug}`}>
+                <Link href={`/service/${item.slug}`}>
                   <FontAwesomeIcon
                     className={`text-xl transition-all duration-200 lg:text-2xl mr-3 ${
                       index === currentItemIndex
@@ -139,7 +140,7 @@ export default function ServiceModule() {
                     icon={faRightLong}
                   />
                   {item.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

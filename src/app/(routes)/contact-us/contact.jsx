@@ -6,7 +6,7 @@ import { contactInfo, socialInfo } from "../../data/companyInfo.js";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen container-margin ">
+    <div className="container-margin ">
       <section className="top-section-p">
         <PageTitle
           textSize="large"

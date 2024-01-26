@@ -23,7 +23,7 @@ export default function Home() {
             inevitable.
           </p>
         </section>
-        <section className="margin-t padding-y-lg">
+        <section className="margin-t bg-gradient-to-t from-[#FFE9E8] padding-y-lg lg:pb-20">
           <PortfolioSlider />
         </section>
         <section className="container-margin margin-t padding-y">
@@ -32,7 +32,7 @@ export default function Home() {
         <section className="margin-t padding-y">
           <BrandModule />
         </section>
-        <section className="mb-10 margin-t">
+        <section className="mb-10">
           <Contact />
         </section>
       </div>
