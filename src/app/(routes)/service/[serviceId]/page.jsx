@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Testimonial from "@/app/components/testimonial/testimonial";
 import RecommendPortfolio from "@/app/components/recommendPortfolio/recommendPortfolio";
-import Feature from "../feature";
 
 export default function Service() {
   const params = useParams();
@@ -83,9 +82,6 @@ export default function Service() {
           </div>
         </div>
       </section>
-      {/*   <section className="margin-t">
-        <Feature />
-      </section> */}
       {/* Brand partners */}
       <section className="padding-y margin-t">
         <BrandModule />

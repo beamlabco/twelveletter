@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <div>
-        <section className="container-margin lg:pt-32 lg:pb-16">
+        <section className="pt-4 container-margin lg:pt-32 lg:pb-16">
           <PageTitle
             highlightTextEnd="Your Success, Our Mission"
             textSize="xl"
@@ -32,7 +32,7 @@ export default function Home() {
         <section className="margin-t padding-y">
           <BrandModule />
         </section>
-        <section className="mb-10">
+        <section className="mb-5">
           <Contact />
         </section>
       </div>

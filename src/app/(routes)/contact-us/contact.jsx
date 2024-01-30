@@ -7,14 +7,17 @@ import { contactInfo, socialInfo } from "../../data/companyInfo.js";
 import axios from "axios";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: "",
     email: "",
     organization: "",
     message: "",
-  });
+  };
 
+  const [formData, setFormData] = useState({ ...initialFormData });
   const [loading, setLoading] = useState(false);
+  const [sentStatus, setSentStatus] = useState(null);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -30,17 +33,29 @@ export default function Contact() {
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:3000/api/send", dataToSend, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const res = await axios.post(
+        "http://localhost:3000/api/send",
+        dataToSend,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       if (res.status === 200) {
-        console.log("Message sent successfully");
+        setSentStatus("success");
+        setTimeout(() => {
+          setSentStatus(null);
+          setFormData({ ...initialFormData });
+        }, 2000);
       }
       // Handle success
     } catch (error) {
       console.log(error);
+      setSentStatus("error");
+      setTimeout(() => {
+        setSentStatus(null);
+      }, 2000);
     } finally {
       setLoading(false);
     }
@@ -71,6 +86,8 @@ export default function Contact() {
                   type="text"
                   placeholder="John Doe"
                   name="name"
+                  required
+                  value={formData.name}
                   onChange={handleChange}
                   className="border-b-2 text-base outline-none text-black-shade-100 tracking-wide transition-all duration-200 border-[#E6E6E6] placeholder-[#9ba4a9] leading-10  focus:border-primary-accent focus:outline-none "
                 />
@@ -89,6 +106,8 @@ export default function Contact() {
                   placeholder="email@gmail.com"
                   name="email"
                   autoComplete="email"
+                  required
+                  value={formData.email}
                   onChange={handleChange}
                   className="border-b-2 text-base outline-none text-black-shade-100 tracking-wide transition-all duration-200 placeholder-[#9ba4a9] leading-10 border-[#E6E6E6] focus:border-primary-accent focus:outline-none "
                 />
@@ -104,9 +123,11 @@ export default function Contact() {
                 </label>
                 <input
                   id="sender_org"
+                  value={formData.organization}
                   type="text"
                   placeholder="org.co"
                   name="organization"
+                  required
                   onChange={handleChange}
                   className="border-b-2 outline-none text-base text-black-shade-100 tracking-wide transition-all duration-200 placeholder-[#9ba4a9] leading-10 border-[#E6E6E6] focus:border-primary-accent focus:outline-none "
                 />
@@ -121,6 +142,7 @@ export default function Contact() {
                 </label>
                 <textarea
                   id="sender_message"
+                  value={formData.message}
                   name="message"
                   required
                   onChange={handleChange}
@@ -130,7 +152,15 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="flex transition-all duration-200 hover:bg-[#FF988E] mt-2 w-full items-center max-w-[350px] lg:max-w-[200px] justify-center p-3 font-semibold tracking-wider rounded-md text-zinc-50 bg-primary-accent"
+                className={`flex transition-all duration-200 mt-2 w-full items-center max-w-[350px] lg:max-w-[220px] justify-center p-3 font-semibold tracking-wider rounded-md text-zinc-50 ${
+                  loading
+                    ? "bg-gray-400"
+                    : sentStatus === "success"
+                    ? "bg-green-500"
+                    : sentStatus === "error"
+                    ? "bg-red-500"
+                    : "bg-primary-accent"
+                }`}
               >
                 {loading ? (
                   <>
@@ -140,6 +170,10 @@ export default function Contact() {
                       icon={faSpinner}
                     />
                   </>
+                ) : sentStatus === "success" ? (
+                  "Sent Successfully"
+                ) : sentStatus === "error" ? (
+                  "Not Sent"
                 ) : (
                   "Send Message"
                 )}
