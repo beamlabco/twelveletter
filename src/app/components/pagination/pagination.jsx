@@ -10,8 +10,9 @@ const Pagination = ({ showPerPage, onPaginationChange, total }) => {
 
   useEffect(() => {
     const value = showPerPage * currentPage;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     onPaginationChange(value - showPerPage, value);
-  }, [currentPage]);
+  }, [currentPage, showPerPage]);
 
   return (
     <>

@@ -28,7 +28,7 @@ export default function PortfolioPage(props) {
         : portfolioData;
 
       setFilteredData(newData);
-      setLoading(false); // Set loading to false after fetching
+      setLoading(false);
     };
 
     fetchData();
@@ -38,10 +38,9 @@ export default function PortfolioPage(props) {
     setSelectedCategory(category);
   };
 
-  const [showPerPage] = useState(12);
   const [pagination, setPagination] = useState({
     start: 0,
-    end: showPerPage,
+    end: 12,
   });
   const onPaginationChange = (start, end) => {
     setPagination({ start: start, end: end });
@@ -118,7 +117,7 @@ export default function PortfolioPage(props) {
         </section>
         <section className="margin-t">
           <Pagination
-            showPerPage={showPerPage}
+            showPerPage="12"
             onPaginationChange={onPaginationChange}
             total={filteredData?.length}
           />

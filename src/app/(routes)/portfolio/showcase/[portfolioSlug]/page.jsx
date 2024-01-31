@@ -22,6 +22,14 @@ export default function Page() {
     (item) => item.slug === portfolioSlug
   );
 
+  useEffect(() => {
+    Aos.init({
+      duration: "500",
+      easing: "ease-in-out",
+      once: true,
+    });
+  });
+
   if (!portfolioItem) {
     return <p>Portfolio not found</p>;
   }
@@ -35,14 +43,6 @@ export default function Page() {
     category,
     image,
   } = portfolioItem;
-
-  useEffect(() => {
-    Aos.init({
-      duration: "500",
-      easing: "ease-in-out",
-      once: true,
-    });
-  });
 
   return (
     <>

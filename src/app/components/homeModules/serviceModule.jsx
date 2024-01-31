@@ -12,14 +12,6 @@ export default function ServiceModule() {
   const [isPaused, setIsPaused] = useState(false);
   const intervalRef = useRef(null);
 
-  useEffect(() => {
-    startInterval();
-
-    return () => {
-      clearInterval(intervalRef.current);
-    };
-  }, [isPaused]);
-
   const startInterval = () => {
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
@@ -30,6 +22,14 @@ export default function ServiceModule() {
       }
     }, 4000);
   };
+
+  useEffect(() => {
+    startInterval();
+
+    return () => {
+      clearInterval(intervalRef.current);
+    };
+  }, [isPaused, startInterval]);
 
   const handleTitleClick = (index) => {
     setIsPaused(true);

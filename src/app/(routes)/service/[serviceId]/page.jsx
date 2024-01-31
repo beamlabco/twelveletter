@@ -56,11 +56,7 @@ export default function Service() {
                   index % 2 === 0 ? "md:mt-0" : "md:mt-16"
                 } flex flex-col  max-w-[450px]`}
               >
-                <picture
-                  aria-label={feature ? feature.title : "Icon"}
-                  aria-description={feature.title}
-                  className="w-16 mb-6 lg:w-[5rem]"
-                >
+                <picture className="w-16 mb-6 lg:w-[5rem]">
                   <img alt={feature.title} src={feature?.icon} />
                 </picture>
                 <h3 className="heading-small lg:font-semibold text-primary-accent">
