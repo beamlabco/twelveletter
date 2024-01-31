@@ -43,11 +43,11 @@ export default function brandModule() {
       <div className="flex flex-col items-center w-full gap-5 pb-2 lg:gap-6 container-margin">
         <PageTitle
           heading="Brands We have Collaborated With"
-          textSize="medium"
+          textSize="large"
           highlightText="Connected Success:"
-          extraClass="text-center"
+          extraClass="text-center lg:text-[2.7rem]"
         />
-        <p className="text-center max-w-[500px] paragraph">
+        <p className="text-center max-w-[600px] paragraph lg:text-xl">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </p>

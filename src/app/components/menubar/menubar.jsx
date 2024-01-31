@@ -7,20 +7,34 @@ import Logo from "../brandLogo/brandLogo";
 export default function Menubar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasShadow, setHasShadow] = useState(false);
+  const [isPageLoaded, setPageLoaded] = useState(false);
+
+  useEffect(() => {
+    setPageLoaded(true);
+  }, []);
 
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    setHasShadow(scrollY > 0);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setHasShadow(scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const mainElement = document.getElementById("main");
     const footer = document.getElementById("footer");
-    if (mainElement) {
+
+    if (mainElement && footer) {
       if (isOpen) {
         mainElement.style.display = "none";
         footer.style.display = "none";
@@ -29,21 +43,16 @@ export default function Menubar() {
         footer.style.display = "";
       }
     }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (mainElement) {
-        mainElement.style.overflowY = "visible";
-      }
-    };
   }, [isOpen]);
 
   return (
     <header
       style={{
-        backgroundColor: !isOpen ? "#fff" : "#374852",
+        backgroundColor: hasShadow
+          ? "#fff"
+          : isOpen
+          ? "#374852"
+          : "transparent",
         boxShadow: hasShadow
           ? "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)"
           : "",
@@ -66,6 +75,7 @@ export default function Menubar() {
             autoComplete="off"
             type="checkbox"
             id="burger"
+            disabled={!isPageLoaded}
           />
           <span></span>
           <span></span>

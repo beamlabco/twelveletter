@@ -10,7 +10,9 @@ export default function ContactModule() {
         <PageTitle
           subHeading="Contact Us"
           textSize="medium"
-          heading="Get in Touch: Reach Out to Us for Inquiries, Assistance, or Collaborations"
+          maxWidth="max-w-[950px]"
+          highlightText="Get in Touch:"
+          heading="Reach Out to Us for Inquiries, Assistance, or Collaborations"
         />
         <div className="grid grid-cols-2 gap-6 mt-8 sm:mt-12 lg:gap-x-0 lg:gap-y-10 lg:mt-12">
           {contactInfo.slice(1).map((info, index) => (

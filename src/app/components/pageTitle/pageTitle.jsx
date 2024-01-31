@@ -15,13 +15,13 @@ export default function Title(props) {
   const determineTextSize = () => {
     switch (textSize) {
       case "small":
-        return "text-xl mt-2 font-semibold tracking-wider md:text-3xl text-black-shade-300";
+        return "text-xl mt-2 font-visby600  md:text-3xl text-black-shade-300";
       case "medium":
-        return "mt-2 lg:mt-3 text-2xl font-semibold tracking-wide sm:text-3xl lg:text-4xl";
+        return "mt-2 font-visby600 lg:mt-3 text-2xl sm:text-3xl lg:text-4xl leading-8 md:leading-9 lg:leading-snug";
       case "large":
-        return "text-3xl mt-3 font-semibold leading-10 tracking-wide md:text-4xl md:leading-snug lg:text-5xl lg:leading-snug text-black-shade-300";
+        return "text-3xl mt-3 font-visby700 leading-10  md:text-4xl md:leading-snug lg:text-5xl lg:leading-snug text-black-shade-300";
       case "xl":
-        return "text-4xl mt-3 font-semibold leading-tight tracking-wide md:text-5xl md:leading-snug lg:text-6xl lg:leading-tight text-black-shade-300";
+        return "text-4xl mt-3 font-visby700 leading-tight tracking-normal md:text-5xl md:leading-snug lg:text-7xl text-black-shade-300";
       default:
         return "";
     }
@@ -30,7 +30,7 @@ export default function Title(props) {
   return (
     <div className={`${maxWidth ? maxWidth : ""}`}>
       {subHeading && (
-        <h1 className="text-base font-semibold tracking-widest md:text-lg font-base text-primary-accent">
+        <h1 className="text-base tracking-wide font-visby600 md:text-lg font-base text-primary-accent">
           {subHeading}
         </h1>
       )}

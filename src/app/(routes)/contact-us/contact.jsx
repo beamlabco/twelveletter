@@ -67,7 +67,9 @@ export default function Contact() {
         <PageTitle
           textSize="large"
           subHeading="Contact Us"
-          heading="Get in Touch: Reach Out to Us for Inquiries, Assistance, or Collaborations"
+          highlightText="Get in Touch:"
+          highlightGradient={true}
+          heading="Reach Out to Us for Inquiries, Assistance, or Collaborations"
         />
       </section>
       <section className="margin-t">

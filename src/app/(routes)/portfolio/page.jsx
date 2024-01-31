@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import PageTitle from "../../components/pageTitle/pageTitle";
 import CategoryMenu from "./(components)/categoryMenu";
 import { portfolioData } from "@/app/data/portfolioData";
@@ -42,9 +42,13 @@ export default function PortfolioPage(props) {
     start: 0,
     end: 12,
   });
-  const onPaginationChange = (start, end) => {
-    setPagination({ start: start, end: end });
-  };
+
+  const onPaginationChange = useCallback(
+    (start, end) => {
+      setPagination({ start: start, end: end });
+    },
+    [setPagination]
+  );
 
   return (
     <>

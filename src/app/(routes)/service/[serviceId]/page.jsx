@@ -42,8 +42,25 @@ export default function Service() {
         </p>
       </section>
       {/* Features section */}
-      <section className="container-margin padding-y margin-t">
-        <div className="flex flex-col items-center gap-10 lg:gap-16 ">
+      <section className="relative padding-y margin-t">
+        <div className="absolute overflow-x-hidden z-0 w-full min-h-screen overflow-hidden blur-[100px]">
+          <div className="absolute top-0 right-0 w-16 h-16 opacity-60"></div>
+          <div
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            className="absolute w-full h-full"
+          >
+            <div className="absolute bottom-[-200px] bg-[#0084ff5e] h-[300px] w-[300px] left-[70px] lg:h-[700px] lg:w-[700px] opacity-50 lg:left-[-300px] lg:bottom-[-500px]"></div>
+          </div>
+          <div
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            className="absolute w-full h-full"
+          >
+            <div className="absolute h-[500px] w-[500px] right-[-350px] top-[-300px] lg:h-[700px] lg:w-[700px] lg:right-[-400px] opacity-30 lg:top-[-400px] bg-primary-accent"></div>
+          </div>
+        </div>
+        <div className="flex flex-col items-center gap-10 container-margin lg:gap-16 ">
           <p className="text-3xl lg:text-[3rem] font-semibold tracking-wider text-center">
             What&apos;s <span className=" text-primary-accent">Included?</span>
           </p>

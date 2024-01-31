@@ -10,7 +10,6 @@ import { useRouter } from "next/navigation";
 import RecommendPortfolio from "@/app/components/recommendPortfolio/recommendPortfolio";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { motion } from "framer-motion";
 
 export default function Page() {
   const router = useRouter();
