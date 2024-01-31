@@ -1,12 +1,10 @@
-import Link from "next/link";
-
 import "./category.css";
 
 const CategoryMenu = ({ categories, selectedCategory }) => {
   return (
     <ul className="flex flex-wrap gap-4">
       <li>
-        <Link
+        <a
           className={`text-sm whitespace-nowrap px-4 flex transition-all duration-200 items-center hover:bg-[#FFD3D0] leading-none font-semibold tracking-wider py-[0.6rem] rounded focus:outline-none ${
             selectedCategory === null
               ? "bg-primary-accent text-white hover:text-zinc-100 hover:bg-primary-accent"
@@ -15,14 +13,13 @@ const CategoryMenu = ({ categories, selectedCategory }) => {
           href="/portfolio"
         >
           Show All
-        </Link>
+        </a>
       </li>
 
       {categories.map((category) => (
         <li key={category}>
-          <Link
-            as={`/portfolio/${category.toLowerCase().replace(/\s+/g, "-")}`}
-            href="/portfolio/[categorySlug]"
+          <a
+            href={`/portfolio/${category.toLowerCase().replace(/\s+/g, "-")}`}
             className={`text-sm whitespace-nowrap font-semibold transition-all duration-200 hover:bg-[#FFD3D0] tracking-wider px-4 py-[0.6rem] leading-none flex items-center rounded focus:outline-none ${
               selectedCategory &&
               selectedCategory.toLowerCase() ===
@@ -32,7 +29,7 @@ const CategoryMenu = ({ categories, selectedCategory }) => {
             }`}
           >
             {category}
-          </Link>
+          </a>
         </li>
       ))}
     </ul>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
+import { useEffect } from "react";
 import PageTitle from "../../../components/pageTitle/pageTitle";
 import { serviceData } from "@/app/data/serviceData";
 import ContactModule from "@/app/components/contactModules/contactModule";
@@ -9,36 +10,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Testimonial from "@/app/components/testimonial/testimonial";
 import RecommendPortfolio from "@/app/components/recommendPortfolio/recommendPortfolio";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Service() {
   const params = useParams();
   const serviceId = params.serviceId;
 
-  /*  useEffect(() => {
-    // Fetch the service data based on serviceId (or slug)
-    const fetchData = async () => {
-      try {
-        const selectedServiceData = serviceData[0].services.find(
-          (service) => service.slug === serviceId
-        );
-
-        if (selectedServiceData) {
-          setService(selectedServiceData);
-        } else {
-          // Handle case where serviceId doesn't match any service
-          console.error(`Service with id ${serviceId} not found.`);
-        }
-      } catch (error) {
-        console.error("Error fetching service data:", error);
-      }
-    };
-
-    fetchData();
-  }, [serviceId]); */
-
   const selectedServiceData = serviceData[0].services.find(
     (service) => service.slug === serviceId
   );
+
+  useEffect(() => {
+    Aos.init({
+      duration: "1000",
+      easing: "ease-in-out",
+      once: true,
+    });
+  });
 
   return (
     <>
@@ -55,13 +44,14 @@ export default function Service() {
       {/* Features section */}
       <section className="container-margin padding-y margin-t">
         <div className="flex flex-col items-center gap-10 lg:gap-16 ">
-          <p className="text-3xl lg:text-[2.6rem] font-semibold tracking-wider text-center">
+          <p className="text-3xl lg:text-[3rem] font-semibold tracking-wider text-center">
             What&apos;s <span className=" text-primary-accent">Included?</span>
           </p>
-          <div className="grid grid-cols-1 mt-2 md:grid-cols-2 md:gap-x-10 lg:gap-x-32 gap-y-14">
+          <div className="grid grid-cols-1 mt-2 md:grid-cols-2 md:gap-x-10 lg:gap-x-36 gap-y-14">
             {selectedServiceData?.features?.map((feature, index) => (
               <div
                 key={index}
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                 className={`${
                   index % 2 === 0 ? "md:mt-0" : "md:mt-16"
                 } flex flex-col  max-w-[450px]`}
@@ -87,16 +77,22 @@ export default function Service() {
         <BrandModule />
       </section>
       {/* Benefits section */}
-      <section className="margin-t padding-y">
+      <section data-aos="fade-in" className="margin-t padding-y">
         <div className="flex container-margin lg:max-w-[1200px] flex-col gap-6 lg:flex-row lg:gap-4">
-          <picture className="flex items-center justify-center w-full">
+          <picture
+            data-aos="fade-right"
+            className="flex items-center justify-center w-full"
+          >
             <img
               alt={selectedServiceData?.benefits.title}
               className="md:max-w-[600px] lg:max-w-[500px] xl:max-w-xl"
               src={selectedServiceData?.benefits.image}
             ></img>
           </picture>
-          <div className="flex flex-col gap-3 lg:gap-4 md:px-11">
+          <div
+            data-aos="fade-left"
+            className="flex flex-col gap-3 lg:gap-4 md:px-11"
+          >
             <h3 className="font-semibold tracking-wider heading-medium text-black-shade-300">
               {selectedServiceData?.benefits.title}
             </h3>
@@ -118,10 +114,10 @@ export default function Service() {
       </section>
 
       {/* Testimonial section */}
-      <section className="margin-t padding-y">
+      <section data-aos="fade-in" className="margin-t padding-y">
         <Testimonial />
       </section>
-      <section className="margin-t padding-y">
+      <section data-aos="fade-in" className="margin-t padding-y">
         <RecommendPortfolio />
       </section>
       <ContactModule />

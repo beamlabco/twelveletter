@@ -17,7 +17,7 @@ export default function Home() {
             extraClass="lg:leading-[1.3]"
             maxWidth="max-w-[1200px]"
           />
-          <p className="text-lg leading-relaxed md:text-2xl font-normal md:leading-10 tracking-wide max-w-[1200px] mt-7 lg:mt-10 text-black-shade-200">
+          <p className="text-lg font-manrope leading-relaxed md:text-2xl font-normal md:leading-10 tracking-wide max-w-[1200px] mt-7 lg:mt-10 text-black-shade-200">
             Infuse brilliance into your brand journey with our expert design and
             marketing touch. Where creativity meets strategy, success is
             inevitable.

@@ -62,7 +62,7 @@ export default function ServiceModule() {
                 <li
                   key={item.id}
                   onClick={() => handleTitleClick(index)}
-                  className={`lg:text-[1.75rem] w-fit md:text-xl whitespace-nowrap ease-in hover:text-primary-accent transition-all duration-200 font-bold tracking-wider cursor-pointer ${
+                  className={`lg:text-[1.75rem] w-fit md:text-xl whitespace-nowrap ease-in hover:text-primary-accent transition-all duration-200 font-bold tracking-wide cursor-pointer ${
                     index === currentItemIndex
                       ? "text-primary-accent md:text-[1.8rem] lg:text-[2.1rem]"
                       : "text-black-shade-300"
@@ -71,7 +71,7 @@ export default function ServiceModule() {
                   <FontAwesomeIcon
                     className={`text-2xl transition-all duration-200 lg:text-2xl mr-4 ${
                       index === currentItemIndex
-                        ? "text-primary-accent lg:text-[1.8rem]"
+                        ? "text-primary-accent lg:text-[2rem]"
                         : "text-transparent"
                     }`}
                     icon={faRightLong}
@@ -132,7 +132,7 @@ export default function ServiceModule() {
               >
                 <Link href={`/service/${item.slug}`}>
                   <FontAwesomeIcon
-                    className={`text-xl transition-all duration-200 lg:text-2xl mr-3 ${
+                    className={`text-xl transition-all duration-200 lg:text-3xl mr-3 ${
                       index === currentItemIndex
                         ? "text-primary-accent lg:text-[1.8rem]"
                         : "hidden"

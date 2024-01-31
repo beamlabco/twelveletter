@@ -13,16 +13,6 @@ const Pagination = ({ showPerPage, onPaginationChange, total }) => {
     onPaginationChange(value - showPerPage, value);
   }, [currentPage]);
 
-  //changes page when next or previous button is clicked and scrolls to top
-  /*   const changePage = (type) => {
-    window.scrollTo({ top: 0 });
-    if (type === "prev") {
-      setCounter(currentPage - 1);
-    } else if (type === "next") {
-      setCounter(currentPage + 1);
-    }
-  }; */
-  //returns pagination structure design
   return (
     <>
       <div className="flex items-center justify-center gap-4">

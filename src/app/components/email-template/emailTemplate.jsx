@@ -52,7 +52,7 @@ export default function EmailTemplate({ formData }) {
               maxWidth: "500px",
             }}
           >
-            <strong>Message:</strong> "{message}"
+            <strong>Message:</strong> &quot;{message}&quot;
           </p>
         </div>
       </div>

@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import PageTitle from "../../components/pageTitle/pageTitle";
 import CategoryMenu from "./(components)/categoryMenu";
 import { portfolioData } from "@/app/data/portfolioData";
@@ -27,9 +26,6 @@ export default function PortfolioPage(props) {
               selectedCategory.toLowerCase().replace(/\s+/g, "-")
           )
         : portfolioData;
-
-      // Introduce a delay (simulating async operation)
-      await new Promise((resolve) => setTimeout(resolve, 100));
 
       setFilteredData(newData);
       setLoading(false); // Set loading to false after fetching
@@ -61,7 +57,7 @@ export default function PortfolioPage(props) {
             subHeading="Portfolio Showcase"
           />
         </section>
-        <section className="mb-8 my-7 md:my-12 lg:mt-14 lg:mb-10">
+        <section className="mb-8 my-7 md:my-12 lg:mt-12 lg:mb-10">
           <CategoryMenu
             categories={[
               ...Array.from(
@@ -86,11 +82,12 @@ export default function PortfolioPage(props) {
                       key={id}
                       className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group"
                     >
-                      <Link
+                      <a
                         href={`/portfolio/showcase/${slug}`}
                         className="relative w-full cursor-pointer card-container"
                       >
                         <img
+                          loading="lazy"
                           className="top-0 left-0 object-fill w-full overflow-hidden transition-opacity rounded-md "
                           src={image}
                           alt={title}
@@ -108,11 +105,11 @@ export default function PortfolioPage(props) {
                           </div>
                         </div>
                         <div className="mt-1 sm:hidden">
-                          <h4 className="font-semibold tracking-wide transition-colors duration-200 text-black-shade-200 group-hover:text-primary-accent">
+                          <h4 className="text-lg font-semibold tracking-wide transition-colors duration-200 text-black-shade-200 group-hover:text-primary-accent">
                             {title}
                           </h4>
                         </div>
-                      </Link>
+                      </a>
                     </li>
                   ))}
               </ul>

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import Testimonial from "@/app/components/testimonial/testimonial";
@@ -8,6 +8,9 @@ import { useParams } from "next/navigation";
 import { portfolioData } from "@/app/data/portfolioData";
 import { useRouter } from "next/navigation";
 import RecommendPortfolio from "@/app/components/recommendPortfolio/recommendPortfolio";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
 export default function Page() {
   const router = useRouter();
@@ -33,12 +36,21 @@ export default function Page() {
     image,
   } = portfolioItem;
 
+  useEffect(() => {
+    Aos.init({
+      duration: "500",
+      easing: "ease-in-out",
+      once: true,
+    });
+  });
+
   return (
     <>
       <section className="relative">
         <div className="absolute w-full h-2/3 -z-10 bg-[#FFF0EE]" />
         <div className="flex flex-col items-center justify-center container-margin">
           <button
+            data-aos="fade-left"
             onClick={() => router.back()}
             className="self-start mt-10 mb-8 text-xl font-semibold tracking-wide sm:mt-12 text-primary-accent"
           >
@@ -56,7 +68,7 @@ export default function Page() {
           <p className="mt-3 sm:mt-5 text-lg tracking-wide text-center max-w-[480px] text-black-shade-100">
             {description}
           </p>
-          <figure className="relative w-full max-w-3xl mt-6 overflow-hidden rounded-md shadow-md sm:mt-10">
+          <figure className="relative w-full max-w-2xl mt-6 overflow-hidden rounded-md shadow-md sm:mt-10">
             <img alt={title} className="w-full h-full" src={image}></img>
           </figure>
         </div>
@@ -74,15 +86,18 @@ export default function Page() {
           </p>
         </div>
       </section>
-      <section className="flex justify-center w-full padding-y margin-t">
+      <section
+        data-aos="fade-in"
+        className="flex justify-center w-full padding-y margin-t"
+      >
         <figure className="w-full overflow-hidden lg:rounded-md max-w-[1000px]">
           <img alt={title} className="w-full" src={contentImage}></img>
         </figure>
       </section>
-      <section className="margin-t padding-y">
+      <section data-aos="fade-in" className="margin-t padding-y">
         <Testimonial />
       </section>
-      <section className="margin-t padding-y">
+      <section data-aos="fade-in" className="margin-t padding-y">
         <RecommendPortfolio />
       </section>
       <ContactModule />
