@@ -5,7 +5,7 @@ import ServiceModule from "./components/homeModules/serviceModule";
 import PortfolioSlider from "./components/homeModules/portfolioSlider";
 import PageTitle from "./components/pageTitle/pageTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { contactInfo, socialInfo } from "./data/companyInfo.js";
+import { contactInfo } from "./data/companyInfo.js";
 import Link from "next/link";
 export default function Home() {
   return (
@@ -18,11 +18,12 @@ export default function Home() {
         </div>
         <section className=" relative z-10 flex min-h-[40vh] pt-10 flex-col justify-center  lg:min-h-[74vh] container-margin">
           <PageTitle
-            highlightTextEnd="Your Success, Our Mission"
+            highlightTextEnd="Your success, our mission"
             textSize="xl"
-            heading="Designing Dreams, Marketing Reality: "
+            heading="Designing dreams, marketing reality: "
             extraClass="lg:leading-[1.3]"
             maxWidth="max-w-[1200px]"
+            highlightGradient={true}
           />
           <p className="text-lg [word-spacing:2px] font-manrope leading-normal md:text-[22px] font-semibold md:leading-9  max-w-[1000px] mt-7 lg:mt-8 text-black-shade-200">
             Infuse brilliance into your brand journey with our expert design and

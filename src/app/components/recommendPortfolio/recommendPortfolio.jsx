@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import { portfolioData } from "@/app/data/portfolioData";
 import PageTitle from "../../components/pageTitle/pageTitle";
-import Aos from "aos";
 import "aos/dist/aos.css";
 export default function RecommendPortfolio({
   limit = 4,

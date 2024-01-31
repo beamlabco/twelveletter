@@ -54,7 +54,7 @@ export default function portfolioSlider() {
   return (
     <div className="flex flex-col gap-8 overflow-x-hidden lg:gap-16">
       <Slider {...commonSettings}>
-        {simplifiedPortfolioData?.slice(0, 6).map((portfolio, index) => (
+        {simplifiedPortfolioData?.slice(0, 5).map((portfolio, index) => (
           <div
             key={index}
             className="flex items-center justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
@@ -70,7 +70,7 @@ export default function portfolioSlider() {
         ))}
       </Slider>
       <Slider {...rtlSettings}>
-        {simplifiedPortfolioData?.slice(6, 12).map((portfolio, index) => (
+        {simplifiedPortfolioData?.slice(7, 12).map((portfolio, index) => (
           <div
             key={index}
             className="flex items-center justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"

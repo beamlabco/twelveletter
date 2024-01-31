@@ -6,6 +6,8 @@ import { portfolioData } from "@/app/data/portfolioData";
 import ContactModule from "@/app/components/contactModules/contactModule";
 import Loader from "@/app/components/loader/loader";
 import Pagination from "@/app/components/pagination/pagination";
+import Link from "next/link";
+
 export default function PortfolioPage(props) {
   const [selectedCategory, setSelectedCategory] = useState(
     props.selectedCategory !== undefined ? props.selectedCategory : null
@@ -85,7 +87,7 @@ export default function PortfolioPage(props) {
                       key={id}
                       className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group"
                     >
-                      <a
+                      <Link
                         href={`/portfolio/showcase/${slug}`}
                         className="relative w-full cursor-pointer card-container"
                       >
@@ -112,7 +114,7 @@ export default function PortfolioPage(props) {
                             {title}
                           </h4>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   ))}
               </ul>

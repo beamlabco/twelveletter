@@ -28,7 +28,7 @@ export default function Menubar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
 
   useEffect(() => {
     const mainElement = document.getElementById("main");
@@ -48,17 +48,17 @@ export default function Menubar() {
   return (
     <header
       style={{
-        backgroundColor: hasShadow
-          ? "#fff"
-          : isOpen
+        backgroundColor: isOpen
           ? "#374852"
+          : hasShadow
+          ? "#fff"
           : "transparent",
         boxShadow: hasShadow
           ? "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)"
           : "",
         zIndex: 1000,
       }}
-      className={`flex sticky justify-center transition-all duration-300 items-center top-0 w-full h-20 lg:h-24 bg-[#fff] `}
+      className={`flex sticky justify-center transition-all duration-100 items-center top-0 w-full h-20 lg:h-24 bg-[#fff] `}
     >
       <div className="flex items-center justify-between w-full h-full container-margin">
         <a href="/">

@@ -80,7 +80,7 @@ export default function Page() {
           <h3 className="mt-1 font-semibold tracking-wider text-black-shade-200 sm:mt-2 heading-medium">
             {briefTitle}
           </h3>
-          <p className="mt-2 font-medium tracking-wide sm:mt-4 text-black-shade-100 paragraph">
+          <p className="mt-2 font-semibold tracking-wide sm:mt-4 text-black-shade-200 paragraph">
             {brief}
           </p>
         </div>
