@@ -14,10 +14,7 @@ export const theme = {
       "2xl": "1536px",
     },
     fontFamily: {
-      visby400: ["Visby Regular", "sans-serif"],
-      visby500: ["Visby Medium", "sans-serif"],
-      visby600: ["Visby Semibold", "sans-serif"],
-      visby700: ["Visby Bold", "sans-serif"],
+      visby: ["var(--font-visby)", "sans-serif"],
       manrope: ["var(--font-manrope)", "sans-serif"],
     },
     backgroundImage: {

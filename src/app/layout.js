@@ -4,6 +4,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import Menubar from "./components/menubar/menubar";
 import Footer from "./components/footer/footer";
 import { Manrope } from "next/font/google";
+import localFont from "next/font/local";
 
 config.autoAddCss = false;
 export const metadata = {
@@ -18,9 +19,35 @@ const manrope = Manrope({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
+const visby = localFont({
+  src: [
+    {
+      path: "./fonts/VisbyRegular.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/VisbyMedium.woff",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/VisbySemibold.woff",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/VisbyBold.woff",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-visby",
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${manrope.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${visby.variable}`}>
       <body>
         <Menubar />
         <div id="main">{children}</div>

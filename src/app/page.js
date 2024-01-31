@@ -16,16 +16,15 @@ export default function Home() {
           <div className="absolute bg-[#0084ff5e] h-[300px] w-[300px] left-[-170px] top-1/2 lg:h-[400px] lg:w-[500px] opacity-30 lg:left-[-300px] lg:top-1/2 "></div>
           <div className="absolute h-[500px] w-[500px] bg-primary-accent right-[-350px] top-[-300px] lg:h-[600px] lg:w-[600px] lg:right-[-400px] opacity-60 lg:top-[-500px]"></div>
         </div>
-        <section className=" relative z-10 flex min-h-[40vh] pt-10 flex-col justify-center  lg:min-h-[74vh] container-margin">
+        <section className="relative z-10 flex min-h-[40vh] pt-10 flex-col justify-center  lg:min-h-[74vh] container-margin-compact">
           <PageTitle
             highlightTextEnd="Your success, our mission"
             textSize="xl"
             heading="Designing dreams, marketing reality: "
             extraClass="lg:leading-[1.3]"
-            maxWidth="max-w-[1200px]"
             highlightGradient={true}
           />
-          <p className="text-lg [word-spacing:2px] font-manrope leading-normal md:text-[22px] font-semibold md:leading-9  max-w-[1000px] mt-7 lg:mt-8 text-black-shade-200">
+          <p className="text-lg [word-spacing:2px] font-manrope leading-normal md:text-[22px] font-semibold md:leading-9 max-w-[1000px] mt-7 lg:mt-8 text-black-shade-200">
             Infuse brilliance into your brand journey with our expert design and
             marketing touch. Where creativity meets strategy, success is
             inevitable.
@@ -33,7 +32,7 @@ export default function Home() {
           <div className="flex flex-wrap items-center md:gap-12 md:justify-between w-full gap-7 mt-10 md:max-w-[500px] sm:mt-12 lg:mt-14">
             <Link
               href="/contact-us"
-              className="px-5 py-3 font-visby600 whitespace-nowrap  sm:text-lg text-lg tracking-wide text-white rounded cursor-pointer transition-all ease duration-300  bg-primary-accent hover:bg-[#ff968f]"
+              className="px-5 py-3 font-visby font-semibold whitespace-nowrap  sm:text-lg text-lg tracking-wide text-white rounded cursor-pointer transition-all ease duration-300  bg-primary-accent hover:bg-[#ff968f]"
             >
               Quick Message Form
             </Link>
