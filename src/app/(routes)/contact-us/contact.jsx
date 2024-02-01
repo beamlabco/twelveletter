@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import PageTitle from "../../components/pageTitle/pageTitle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { contactInfo, socialInfo } from "../../data/companyInfo.js";
 import axios from "axios";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 export default function Contact() {
   const initialFormData = {
@@ -17,6 +18,16 @@ export default function Contact() {
   const [formData, setFormData] = useState({ ...initialFormData });
   const [loading, setLoading] = useState(false);
   const [sentStatus, setSentStatus] = useState(null);
+  const [token, setToken] = useState(null);
+  const captchaRef = useRef(null);
+  const sitekey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
+  const [skeletons, setSkeletons] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSkeletons(false);
+    }, 7000);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,12 +35,18 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!token) {
+      alert("Please complete the CAPTCHA first!");
+      return;
+    }
+
     const dataToSend = new FormData();
     // Append form data fields
     dataToSend.append("name", formData.name);
     dataToSend.append("email", formData.email);
     dataToSend.append("organization", formData.organization);
     dataToSend.append("message", formData.message);
+    dataToSend.append("token", token); // Include the token with form data
 
     try {
       setLoading(true);
@@ -58,9 +75,13 @@ export default function Contact() {
       }, 2000);
     } finally {
       setLoading(false);
+      captchaRef.current?.resetCaptcha();
     }
   };
 
+  const handleVerifyCaptcha = (token) => {
+    setToken(token);
+  };
   return (
     <div className="container-margin ">
       <section className="top-section-p">
@@ -152,45 +173,59 @@ export default function Contact() {
                   placeholder="Send your message here..."
                 />
               </div>
-              <button
-                type="submit"
-                className={`flex transition-all duration-200 mt-2 w-full items-center max-w-[350px] lg:max-w-[220px] justify-center p-3 font-semibold tracking-wider rounded-md text-zinc-50 ${
-                  loading
-                    ? "bg-gray-400"
-                    : sentStatus === "success"
-                    ? "bg-green-500"
-                    : sentStatus === "error"
-                    ? "bg-red-500"
-                    : "bg-primary-accent"
-                }`}
-              >
-                {loading ? (
-                  <>
-                    Sending{" "}
-                    <FontAwesomeIcon
-                      className="ml-2 animate-spin"
-                      icon={faSpinner}
-                    />
-                  </>
-                ) : sentStatus === "success" ? (
-                  "Sent Successfully"
-                ) : sentStatus === "error" ? (
-                  "Not Sent"
-                ) : (
-                  "Send Message"
-                )}
-              </button>
+              <div className="flex flex-col gap-6 mt-2">
+                <HCaptcha
+                  sitekey={sitekey}
+                  onVerify={handleVerifyCaptcha}
+                  ref={captchaRef}
+                  size="normal"
+                />
+
+                <button
+                  type="submit"
+                  className={`flex whitespace-nowrap transition-all h-fit duration-200  w-full items-center max-w-[350px] lg:max-w-[300px] justify-center p-3 text-lg font-semibold tracking-wider rounded-md text-zinc-50 ${
+                    loading
+                      ? "bg-gray-400"
+                      : sentStatus === "success"
+                      ? "bg-green-500"
+                      : sentStatus === "error"
+                      ? "bg-red-500"
+                      : "bg-primary-accent"
+                  }`}
+                >
+                  {loading ? (
+                    <>
+                      Sending{" "}
+                      <FontAwesomeIcon
+                        className="ml-2 animate-spin"
+                        icon={faSpinner}
+                      />
+                    </>
+                  ) : sentStatus === "success" ? (
+                    "Sent Successfully"
+                  ) : sentStatus === "error" ? (
+                    "Not Sent"
+                  ) : (
+                    "Send Message"
+                  )}
+                </button>
+              </div>
             </div>
           </form>
 
-          <div className="w-full">
+          <div className="relative w-full">
+            {/* Skeleton element */}
+            {skeletons ? (
+              <div className="absolute max-w-[700px] md:min-w-[400px] top-0 left-0 w-full h-[480px] bg-gray-300 rounded-sm animate-pulse"></div>
+            ) : null}
+            {/* Iframe */}
             <iframe
               src="https://www.google.com/maps/d/embed?mid=1BQL9p2tnGAJW3qAgNf1kOwkuA-j74eE&ehbc=2E312F&noprof=1"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-[480px] max-w-[700px] md:min-w-[400px]"
+              className="relative rounded-sm z-10 w-full h-[480px] max-w-[700px] md:min-w-[400px]"
             ></iframe>
           </div>
         </div>
