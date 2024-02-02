@@ -6,6 +6,8 @@ import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { contactInfo, socialInfo } from "../../data/companyInfo.js";
 import axios from "axios";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 
 export default function Contact() {
   const initialFormData = {
@@ -22,12 +24,19 @@ export default function Contact() {
   const captchaRef = useRef(null);
   const sitekey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
   const [skeletons, setSkeletons] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setSkeletons(false);
     }, 7000);
   }, []);
+
+  useEffect(() => {
+    if (token) {
+      setVisible(false);
+    }
+  }, [token]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -36,9 +45,11 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!token) {
-      alert("Please complete the CAPTCHA first!");
+      setVisible(true);
       return;
     }
+
+    setVisible(false);
 
     const dataToSend = new FormData();
     // Append form data fields
@@ -64,6 +75,7 @@ export default function Contact() {
         setTimeout(() => {
           setSentStatus(null);
           setFormData({ ...initialFormData });
+          captchaRef.current?.resetCaptcha();
         }, 2000);
       }
       // Handle success
@@ -75,12 +87,12 @@ export default function Contact() {
       }, 2000);
     } finally {
       setLoading(false);
-      captchaRef.current?.resetCaptcha();
     }
   };
 
   const handleVerifyCaptcha = (token) => {
     setToken(token);
+    setVisible(false);
   };
   return (
     <div className="container-margin ">
@@ -174,13 +186,20 @@ export default function Contact() {
                 />
               </div>
               <div className="flex flex-col gap-6 mt-2">
-                <HCaptcha
-                  sitekey={sitekey}
-                  onVerify={handleVerifyCaptcha}
-                  ref={captchaRef}
-                  size="normal"
-                />
-
+                <Tippy
+                  trigger="manual"
+                  content={<span>Click to complete CAPTCHA</span>}
+                  visible={visible}
+                >
+                  <div ref="tippy">
+                    <HCaptcha
+                      sitekey={sitekey}
+                      onVerify={handleVerifyCaptcha}
+                      ref={captchaRef}
+                      size="normal"
+                    />
+                  </div>
+                </Tippy>
                 <button
                   type="submit"
                   className={`flex whitespace-nowrap transition-all h-fit duration-200  w-full items-center max-w-[350px] lg:max-w-[300px] justify-center p-3 text-lg font-semibold tracking-wider rounded-md text-zinc-50 ${
@@ -220,9 +239,9 @@ export default function Contact() {
             ) : null}
             {/* Iframe */}
             <iframe
-              src="https://www.google.com/maps/d/embed?mid=1BQL9p2tnGAJW3qAgNf1kOwkuA-j74eE&ehbc=2E312F&noprof=1"
+              src="https://www.google.com/maps/d/u/0/embed?mid=1BQL9p2tnGAJW3qAgNf1kOwkuA-j74eE&ehbc=2E312F&noprof=1"
               style={{ border: 0 }}
-              allowFullScreen=""
+              allowFullScreen="true"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="relative rounded-sm z-10 w-full h-[480px] max-w-[700px] md:min-w-[400px]"

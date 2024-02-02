@@ -11,16 +11,19 @@ export default function Menubar() {
 
   useEffect(() => {
     setPageLoaded(true);
+    // Restore scroll position from localStorage
+    const scrollY = localStorage.getItem("scrollY");
+    if (scrollY) {
+      window.scrollTo(0, parseInt(scrollY, 10));
+    }
   }, []);
-
-  const handleMenuToggle = () => {
-    setIsOpen(!isOpen);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setHasShadow(scrollY > 0);
+      // Save scroll position to localStorage
+      localStorage.setItem("scrollY", scrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -28,7 +31,11 @@ export default function Menubar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+  }, []);
+
+  const handleMenuToggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     const mainElement = document.getElementById("main");
