@@ -37,7 +37,7 @@ export default function Title(props) {
       <p className={`${determineTextSize()} ${extraClass}`}>
         {highlightText ? (
           <span
-            className={`${extraClass} ${
+            className={`${extraClass} ${determineTextSize()}  ${
               highlightGradient ? "gradient" : "text-primary-accent"
             }`}
           >

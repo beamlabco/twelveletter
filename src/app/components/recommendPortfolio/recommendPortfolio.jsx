@@ -31,10 +31,11 @@ export default function RecommendPortfolio({
         highlightText="Explore More:"
         highlightGradient={true}
         textSize="medium"
+        extraClass="text-3xl"
       />
       <ul
         data-aos="fade-left"
-        className="grid grid-cols-1 gap-6 mt-10 md:mt-10 lg:mt-12 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6"
+        className="grid grid-cols-1 gap-6 mt-8 md:mt-10 lg:mt-8 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6"
       >
         {filteredData.map(({ id, slug, image, title }) => (
           <li

@@ -148,7 +148,7 @@ export default function ServiceModule() {
               >
                 <Link href={`/service/${item.slug}`}>
                   <FontAwesomeIcon
-                    className={`text-xl transition-all duration-200 lg:text-3xl mr-3 ${
+                    className={`text-xl transition-all duration-200 lg:text-3xl mr-2 ${
                       index === currentItemIndex
                         ? "text-primary-accent lg:text-[1.8rem]"
                         : "hidden"

@@ -58,8 +58,10 @@ export default function PortfolioPage(props) {
         <section>
           <PageTitle
             textSize="large"
-            heading="Explore Our Portfolio: A Showcase of Creativity, Innovation, and Success Stories"
+            heading="A Showcase of Creativity, Innovation, and Success Stories"
             subHeading="Portfolio Showcase"
+            highlightText="Explore Our Portfolio:"
+            highlightGradient="true"
           />
         </section>
         <section className="mb-8 my-7 md:my-12 lg:mt-12 lg:mb-10">

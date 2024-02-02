@@ -91,7 +91,7 @@ export default function Service() {
       </section>
       {/* Benefits section */}
       <section data-aos="fade-in" className="margin-t padding-y">
-        <div className="flex container-margin lg:max-w-[1200px] flex-col gap-6 lg:flex-row lg:gap-4">
+        <div className="flex items-center container-margin lg:max-w-[1200px] flex-col gap-6 lg:flex-row lg:gap-4">
           <picture
             data-aos="fade-right"
             className="flex items-center justify-center w-full"
@@ -127,7 +127,7 @@ export default function Service() {
       </section>
 
       {/* Testimonial section */}
-      <section data-aos="fade-in" className="margin-t padding-y">
+      <section data-aos="fade-in" className="margin-t ">
         <Testimonial />
       </section>
       <section data-aos="fade-in" className="margin-t padding-y">

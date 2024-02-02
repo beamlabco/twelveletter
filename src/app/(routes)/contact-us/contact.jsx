@@ -264,7 +264,7 @@ export default function Contact() {
                   width={20}
                 />
                 <p
-                  className={`text-base sm:text-lg text-black-shade-300 tracking-wider font-semibold relative overflow-hidden lg:text-xl`}
+                  className={`text-lg sm:text-lg text-black-shade-300 tracking-wider font-semibold relative overflow-hidden lg:text-xl`}
                 >
                   {info.title}
                   <span className="underline"></span>
@@ -285,14 +285,14 @@ export default function Contact() {
                   width={20}
                 />
                 <p
-                  className={`text-base sm:text-lg text-black-shade-300 tracking-wider font-semibold relative overflow-hidden lg:text-xl`}
+                  className={`text-lg sm:text-lg text-black-shade-300 tracking-wider font-semibold relative overflow-hidden lg:text-xl`}
                 >
                   {info.title}
                   <span className="underline"></span>
                 </p>
               </a>
             ))}
-            <div className="flex items-center col-span-2 gap-10 sm:gap-8 sm:col-span-1">
+            <div className="flex items-center col-span-2 gap-8 sm:gap-8 sm:col-span-1">
               {socialInfo.map((socialInfo, index) => (
                 <a
                   key={index}
