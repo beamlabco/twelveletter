@@ -57,7 +57,7 @@ export default function Contact() {
     dataToSend.append("email", formData.email);
     dataToSend.append("organization", formData.organization);
     dataToSend.append("message", formData.message);
-    dataToSend.append("token", token); // Include the token with form data
+    dataToSend.append("token", token);
 
     try {
       setLoading(true);
@@ -124,7 +124,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="border-b-2 text-base outline-none text-black-shade-100 tracking-wide transition-all duration-200 border-[#E6E6E6] placeholder-[#9ba4a9] leading-10  focus:border-primary-accent focus:outline-none "
+                  className="border-b-2 font-medium text-base outline-none text-black-shade-100 tracking-wide transition-all duration-200 border-[#E6E6E6] placeholder-[#9ba4a9] leading-10  focus:border-primary-accent focus:outline-none "
                 />
               </div>
 
@@ -144,7 +144,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="border-b-2 text-base outline-none text-black-shade-100 tracking-wide transition-all duration-200 placeholder-[#9ba4a9] leading-10 border-[#E6E6E6] focus:border-primary-accent focus:outline-none "
+                  className="border-b-2 text-base font-medium outline-none text-black-shade-100 tracking-wide transition-all duration-200 placeholder-[#9ba4a9] leading-10 border-[#E6E6E6] focus:border-primary-accent focus:outline-none "
                 />
               </div>
 
@@ -164,7 +164,7 @@ export default function Contact() {
                   name="organization"
                   required
                   onChange={handleChange}
-                  className="border-b-2 outline-none text-base text-black-shade-100 tracking-wide transition-all duration-200 placeholder-[#9ba4a9] leading-10 border-[#E6E6E6] focus:border-primary-accent focus:outline-none "
+                  className="border-b-2 font-medium outline-none text-base text-black-shade-100 tracking-wide transition-all duration-200 placeholder-[#9ba4a9] leading-10 border-[#E6E6E6] focus:border-primary-accent focus:outline-none "
                 />
               </div>
 
@@ -181,7 +181,7 @@ export default function Contact() {
                   name="message"
                   required
                   onChange={handleChange}
-                  className="px-3 text-base text-black-shade-100 tracking-wide focus:border-primary-accent placeholder-[#9ba4a9] py-2 border-2 outline-none transition-all duration-200 rounded-md min-h-40 "
+                  className="px-3 font-medium text-base text-black-shade-100 tracking-wide focus:border-primary-accent placeholder-[#9ba4a9] py-2 border-2 outline-none transition-all duration-200 rounded-md min-h-40 "
                   placeholder="Send your message here..."
                 />
               </div>
@@ -191,7 +191,7 @@ export default function Contact() {
                   content={<span>Click to complete CAPTCHA</span>}
                   visible={visible}
                 >
-                  <div ref="tippy">
+                  <div>
                     <HCaptcha
                       sitekey={sitekey}
                       onVerify={handleVerifyCaptcha}
@@ -202,7 +202,7 @@ export default function Contact() {
                 </Tippy>
                 <button
                   type="submit"
-                  className={`flex whitespace-nowrap transition-all h-fit duration-200  w-full items-center max-w-[350px] lg:max-w-[300px] justify-center p-3 text-lg font-semibold tracking-wider rounded-md text-zinc-50 ${
+                  className={`flex hover:bg-[#ff968f] whitespace-nowrap transition-all h-fit duration-200  w-full items-center max-w-[350px] lg:max-w-[300px] justify-center p-3 text-lg font-semibold tracking-wider rounded-md text-zinc-50 ${
                     loading
                       ? "bg-gray-400"
                       : sentStatus === "success"

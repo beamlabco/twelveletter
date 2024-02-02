@@ -21,10 +21,9 @@ export default function Home() {
             highlightTextEnd="Your success, our mission"
             textSize="xl"
             heading="Designing dreams, marketing reality: "
-            extraClass="lg:leading-[1.3]"
             highlightGradient={true}
           />
-          <p className="text-lg [word-spacing:2px] font-manrope leading-normal md:text-[22px] font-semibold md:leading-9 max-w-[1000px] mt-7 lg:mt-8 text-black-shade-200">
+          <p className="text-lg [word-spacing:2px] font-manrope leading-normal md:text-[22px] font-semibold md:leading-9 max-w-[1000px] mt-7 lg:mt-9 text-black-shade-200">
             Infuse brilliance into your brand journey with our expert design and
             marketing touch. Where creativity meets strategy, success is
             inevitable.
