@@ -14,11 +14,11 @@ export default function portfolioSlider() {
     slidesToScroll: 1,
     swipeToSlide: false,
     autoplay: true,
-    speed: 8000,
+    useTransform: true,
+    speed: 9000,
     autoplaySpeed: 0,
     cssEase: "linear",
     pauseOnHover: false,
-
     responsive: [
       {
         breakpoint: 1024,
@@ -42,6 +42,7 @@ export default function portfolioSlider() {
     ],
   };
 
+  /* Slider Right to Left */
   const rtlSettings = {
     ...commonSettings,
     rtl: true,
@@ -57,9 +58,12 @@ export default function portfolioSlider() {
         {simplifiedPortfolioData?.slice(0, 5).map((portfolio, index) => (
           <div
             key={index}
-            className="flex items-center justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
+            className="flex items-center  justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
           >
-            <Link href={`/portfolio/showcase/${portfolio.slug}`}>
+            <Link
+              className="outline-none"
+              href={`/portfolio/showcase/${portfolio.slug}`}
+            >
               <img
                 className="transition-all duration-200 rounded-md hover:group hover:shadow-md"
                 src={portfolio?.image}
@@ -75,7 +79,10 @@ export default function portfolioSlider() {
             key={index}
             className="flex items-center justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
           >
-            <Link className="" href={`/portfolio/showcase/${portfolio.slug}`}>
+            <Link
+              className="outline-none"
+              href={`/portfolio/showcase/${portfolio.slug}`}
+            >
               <img
                 className="transition-all duration-200 rounded-md hover:group hover:shadow-md"
                 src={portfolio?.image}

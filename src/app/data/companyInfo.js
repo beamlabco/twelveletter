@@ -8,49 +8,66 @@ import {
   faLinkedinIn,
   faFacebookF,
   faXTwitter,
+  faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 
 export const contactInfo = [
   {
     icon: faLocationDot,
-    title: "Your Location",
+    title: "Kupondole, Lalitpur, Nepal",
     link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
   },
-  { icon: faPhone, title: "+977 9801020202", link: "tel:+97798010202020" },
+  { icon: faPhone, title: "+977 9802366500", link: "tel:+9779802366500" },
   {
     icon: faEnvelope,
-    title: "email@gmail.com",
-    link: "mailto:twelveletter@gmail.com",
+    title: "pranisha@twelveletter.co",
+    link: "mailto:pranisha@twelveletter.co",
   },
   {
     icon: faLocationDot,
     title: "Your Location",
     link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
   },
-  { icon: faPhone, title: "+977 9801020202", link: "tel:+97798010202020" },
+  { icon: faPhone, title: "+977 90000000", link: "tel:+977900000000" },
 ];
 
 export const socialInfo = [
   {
     icon: faInstagram,
     title: "Instagram",
-    link: "https://www.instagram.com/twelveletter.company/",
+    link: "https://www.instagram.com/twelveletter.company",
     color: "#E1306C",
   },
-  { icon: faLinkedinIn, title: "Linkedin", link: "#", color: "#0a66c2" },
-  { icon: faFacebookF, title: "Facebook", link: "#", color: "#316FF6" },
-  { icon: faXTwitter, title: "X", link: "#", color: "#000" },
+  {
+    icon: faLinkedinIn,
+    title: "Linkedin",
+    link: "https://www.linkedin.com/company/79433400/",
+    color: "#0a66c2",
+  },
+  {
+    icon: faFacebookF,
+    title: "Facebook",
+    link: "https://www.facebook.com/profile.php?id=61554349688894",
+    color: "#316FF6",
+  },
+  { icon: faTiktok, title: "Tiktok", link: "#", color: "#000" },
 ];
 
 export const menuData = [
   {
     title: "Services",
     items: [
-      { title: "Branding", link: "/service/branding" },
       { title: "Digital Marketing", link: "/service/digital-marketing" },
-      { title: "SEO and Analysis", link: "/service/seo-analyasis" },
-      { title: "Graphic Contents", link: "/service/graphic-content" },
-      { title: "Motion Graphics", link: "/service/motion-graphics" },
+      {
+        title: "Web Design & Development",
+        link: "/service/web-design-and-development",
+      },
+      {
+        title: "Graphic Design Expertise",
+        link: "/service/graphic-design-expertise",
+      },
+      { title: "Content Creation", link: "/service/content-creation" },
+      { title: "In-House Photoshoot", link: "/service/in-house-photoshoot" },
     ],
   },
   {

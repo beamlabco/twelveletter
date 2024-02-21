@@ -75,9 +75,9 @@ export default function ServiceModule() {
                 <li
                   key={item.id}
                   onClick={() => handleTitleClick(index)}
-                  className={`lg:text-[1.75rem] w-fit md:text-xl whitespace-nowrap ease-in hover:text-primary-accent transition-all duration-200 font-bold font-manrope cursor-pointer ${
+                  className={`lg:text-[1.75rem] w-fit md:text-xl whitespace-nowrap ease-in hover:text-primary-accent transition-all duration-200 font-extrabold font-manrope cursor-pointer ${
                     index === currentItemIndex
-                      ? "text-primary-accent md:text-[1.8rem] lg:text-[2.1rem]"
+                      ? "text-primary-accent md:text-[1.8rem] lg:text-[1.8rem]"
                       : "text-black-shade-200"
                   }`}
                 >
@@ -120,7 +120,7 @@ export default function ServiceModule() {
                   style={{
                     display: index === currentItemIndex ? "block" : "none",
                   }}
-                  className="text-xl  [word-spacing:2px] font-manrope text-black-shade-100"
+                  className="text-lg  [word-spacing:2px] font-manrope text-black-shade-100"
                 >
                   {item.brief}
                   <Link

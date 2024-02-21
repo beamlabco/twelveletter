@@ -20,13 +20,15 @@ export default function aboutUs() {
           ></img>
           <div>
             <h2 className="tracking-wide heading-medium">
-              Your end goals are our No. 1 Priority
+              Understanding Our Vision
             </h2>
             <p className="mt-3 paragraph md:mt-4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s, when an unknown printer took a galley
-              of type and scrambled it to make a type specimen book.
+              At Twelveletter, we blend creativity with technology to create
+              digital experiences that resonate. Our team is committed to
+              pushing boundaries and delivering unparalleled results. Our
+              mission is simple: empower brands to thrive in today's digital
+              landscape. With our expertise and dedication, we exceed
+              expectations and unlock your brand's full potential.
             </p>
           </div>
         </section>
@@ -41,10 +43,10 @@ export default function aboutUs() {
               Your end goals are our No. 1 Priority
             </h2>
             <p className="mt-3 paragraph md:mt-4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s, when an unknown printer took a galley
-              of type and scrambled it to make a type specimen book.
+              At Twelveletter, we're on a journey to revolutionize digital
+              marketing. We're driven by a simple belief: every brand deserves
+              to shine. With creativity and dedication, we're here to make that
+              happen. Join us as we redefine the future of digital together.
             </p>
           </div>
         </section>

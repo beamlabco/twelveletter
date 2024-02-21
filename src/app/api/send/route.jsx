@@ -38,6 +38,6 @@ export async function POST(request, response) {
       );
     }
   } catch (error) {
-    return NextResponse.json({ error: error }, { status: 400 });
+    return NextResponse.json({ error: error }, { status: 500 });
   }
 }

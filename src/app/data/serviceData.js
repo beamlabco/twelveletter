@@ -12,29 +12,26 @@ export const serviceData = [
 
         features: [
           {
+            title: "SEO Strategies",
+            icon: "/assets/Service/DM-seo.png",
+            description:
+              "Elevate your online presence with strategic optimization.",
+          },
+          {
             title: "Social Media Management",
             icon: "/assets/Service/DM-seo.png",
-            description:
-              "Developing and executing social media strategies to engage the target audience, increase brand awareness, and drive conversions through platforms like Facebook, Twitter, Instagram, LinkedIn, etc.",
-          },
-
-          {
-            title: "SEO Optimization",
-            icon: "/assets/Service/DM-seo.png",
-            description:
-              "Optimizing website content, structure, and technical aspects to improve visibility on search engines, thereby increasing organic traffic and enhancing online discoverability.",
+            description: "Engaging campaigns that spark conversations.",
           },
           {
-            title: "Strategic Planning",
+            title: "PPC (Pay Per Click)",
             icon: "/assets/Service/DM-seo.png",
-            description:
-              "Crafting comprehensive digital marketing strategies tailored to the client's goals, including market analysis, target audience identification, and goal setting.",
+            description: "Targeted advertising for maximum impact.",
           },
           {
-            title: "Online Advertisment Campaigns",
+            title: "Email Marketing",
             icon: "/assets/Service/DM-seo.png",
             description:
-              "Implementing and managing targeted online advertising campaigns across platforms such as Google Ads, Facebook, Instagram, LinkedIn, and other relevant channels.",
+              "Crafting impactful email campaigns for audience engagement",
           },
         ],
         benefits: {
@@ -50,10 +47,11 @@ export const serviceData = [
           ],
         },
       },
+
       {
         id: 2,
-        serviceType: "Branding",
-        slug: "branding",
+        serviceType: "Web Design & Development",
+        slug: "web-design-and-development",
         title:
           "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",
         brief:
@@ -61,22 +59,165 @@ export const serviceData = [
 
         features: [
           {
-            title: "Social Media Management",
-            icon: "marketing-icon.png",
-            description: "Effective management of your social media presence.",
+            title: "Custom Web Solutions",
+            icon: "/assets/Service/DM-seo.png",
+            description: "Tailored designs for a unique digital footprint.",
           },
           {
-            title: "SEO Optimization",
-            icon: "marketing-icon.png",
-            description: "Improve your website's search engine ranking.",
+            title: "Responsive Web Experiences",
+            icon: "/assets/Service/DM-seo.png",
+            description: "Seamless web solutions across devices.",
           },
-          // Add more features as needed
+          {
+            title: "E-Commerce Expertise",
+            icon: "/assets/Service/DM-seo.png",
+            description: "Targeted advertising for maximum impact.",
+          },
+          {
+            title: "User Experience Design",
+            icon: "/assets/Service/DM-seo.png",
+            description: "Maximizing user experience for optimal engagement.",
+          },
         ],
         benefits: {
-          image: "digital-marketing-benefit.png",
+          image: "/assets/Service/egpic.jpg",
           title: "Increased Visibility",
           description:
-            "Enhance your brand visibility and attract more customers.",
+            "Enhance your brand visibility and attract more customers.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ",
+          bulletPoints: [
+            "Increase your profits",
+            "Increase your conversions",
+            "Increase your conversions",
+            "Increase your conversions",
+          ],
+        },
+      },
+
+      {
+        id: 3,
+        serviceType: "Graphic Design Expertise",
+        slug: "graphic-design-expertise",
+        title:
+          "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",
+        brief:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+
+        features: [
+          {
+            title: "Striking Branding",
+            icon: "/assets/Service/DM-seo.png",
+            description: "Visual identities that leave an indelible mark.",
+          },
+          {
+            title: "Print Magic",
+            icon: "/assets/Service/DM-seo.png",
+            description:
+              "Creative designs for brochures, flyers, and promotions.",
+          },
+          {
+            title: "Digital Creativity",
+            icon: "/assets/Service/DM-seo.png",
+            description:
+              "Engaging visuals for social media and online presence.",
+          },
+        ],
+        benefits: {
+          image: "/assets/Service/egpic.jpg",
+          title: "Increased Visibility",
+          description:
+            "Enhance your brand visibility and attract more customers.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ",
+          bulletPoints: [
+            "Increase your profits",
+            "Increase your conversions",
+            "Increase your conversions",
+            "Increase your conversions",
+          ],
+        },
+      },
+
+      {
+        id: 4,
+        serviceType: "Content Creation",
+        slug: "content-creation",
+        title:
+          "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",
+        brief:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+
+        features: [
+          {
+            title: "Research-Based Content",
+            icon: "/assets/Service/DM-seo.png",
+            description:
+              "In-depth content creation grounded in research and industry insights.",
+          },
+          {
+            title: "Compelling Copy",
+            icon: "/assets/Service/DM-seo.png",
+            description: "Narratives that resonate and inspire",
+          },
+          {
+            title: "Visual Storytelling",
+            icon: "/assets/Service/DM-seo.png",
+            description: "Bringing ideas to life through captivating imagery.",
+          },
+          {
+            title: "Dynamic Video Production",
+            icon: "/assets/Service/DM-seo.png",
+            description: "Elevating brands through visual storytelling.",
+          },
+        ],
+        benefits: {
+          image: "/assets/Service/egpic.jpg",
+          title: "Increased Visibility",
+          description:
+            "Enhance your brand visibility and attract more customers.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ",
+          bulletPoints: [
+            "Increase your profits",
+            "Increase your conversions",
+            "Increase your conversions",
+            "Increase your conversions",
+          ],
+        },
+      },
+
+      {
+        id: 5,
+        serviceType: "In-House Photoshoot",
+        slug: "in-house-photoshoot",
+        title:
+          "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",
+        brief:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+
+        features: [
+          {
+            title: "Photo Retouching",
+            icon: "/assets/Service/DM-seo.png",
+            description: "Photo Retouching",
+          },
+          {
+            title: "Product Photography",
+            icon: "/assets/Service/DM-seo.png",
+            description: "Narratives that resonate and inspire",
+          },
+          {
+            title: "Event Photography",
+            icon: "/assets/Service/DM-seo.png",
+            description: "Bringing ideas to life through captivating imagery.",
+          },
+        ],
+        benefits: {
+          image: "/assets/Service/egpic.jpg",
+          title: "Increased Visibility",
+          description:
+            "Enhance your brand visibility and attract more customers.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ",
+          bulletPoints: [
+            "Increase your profits",
+            "Increase your conversions",
+            "Increase your conversions",
+            "Increase your conversions",
+          ],
         },
       },
       // Add more services as needed
@@ -95,32 +236,32 @@ export const homeServiceData = [
   },
   {
     id: 2,
-    title: "Graphic Content",
-    slug: "graphic-content",
+    title: "Web Design & Development",
+    slug: "web-design-and-development",
     image: "/assets/Service/illustrationg2.png",
     brief:
       "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
   },
   {
     id: 3,
-    title: "Branding",
-    slug: "branding",
+    title: "Graphic Design Expertise",
+    slug: "graphic-design-expertise",
     image: "/assets/Service/illustrationg3.png",
     brief:
       "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
   },
   {
     id: 4,
-    title: "SEO & Analysis",
-    slug: "digital-marketing",
+    title: "Content Creation",
+    slug: "content-creation",
     image: "/assets/Service/illustrationg4.png",
     brief:
       "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
   },
   {
     id: 5,
-    title: "Motion Graphics",
-    slug: "motion-graphics",
+    title: "In-House Photoshoot",
+    slug: "in-house-photoshoot",
     image: "/assets/Service/illustrationg1.png",
     brief:
       "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
