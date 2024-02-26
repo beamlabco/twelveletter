@@ -33,8 +33,8 @@ export default function ContactModule() {
               </a>
             </div>
           ))}
-          <div className="col-span-2 my-4 sm:col-span-1 lg:my-0">
-            <a className="px-4 py-3 whitespace-nowrap  sm:text-lg text-xl font-base tracking-wider text-white rounded cursor-pointer transition-all ease duration-300  bg-primary-accent hover:bg-[#ff968f]">
+          <div className="col-span-2 my-4 sm:col-span-1 lg:my-2">
+            <a className="px-4 py-3 whitespace-nowrap  sm:text-lg text-xl font-medium tracking-wider text-white rounded cursor-pointer transition-all ease duration-300  bg-primary-accent hover:bg-[#ff968f]">
               Quick Message Form
             </a>
           </div>

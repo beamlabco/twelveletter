@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import RecommendPortfolio from "@/app/components/recommendPortfolio/recommendPortfolio";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import PDFSlide from "../../(components)/pdfSlide";
 
 export default function Page() {
   const router = useRouter();
@@ -80,7 +81,7 @@ export default function Page() {
           <h3 className="mt-1 font-semibold tracking-wider text-black-shade-200 sm:mt-2 heading-medium">
             {briefTitle}
           </h3>
-          <p className="mt-2 font-semibold tracking-wide sm:mt-4 text-black-shade-200 paragraph">
+          <p className="mt-2 font-semibold leading-relaxed tracking-wide sm:mt-4 text-black-shade-100 paragraph">
             {brief}
           </p>
         </div>
@@ -89,9 +90,32 @@ export default function Page() {
         data-aos="fade-in"
         className="flex justify-center w-full padding-y margin-t"
       >
-        <figure className="w-full overflow-hidden lg:rounded-md max-w-[1000px]">
-          <img alt={title} className="w-full" src={contentImage}></img>
-        </figure>
+        <div className="w-full flex flex-col gap-14 md:gap-20 overflow-hidden lg:rounded-md md:px-5  max-w-[1000px]">
+          {portfolioItem.media.map((mediaItem, index) => (
+            <div key={index} className="mb-10">
+              {mediaItem.type === "image" && (
+                <img alt={title} className="w-full" src={mediaItem.url} />
+              )}
+              {mediaItem.type === "video" && (
+                <video className="w-full" controls>
+                  <source src={mediaItem.url} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
+              {mediaItem.type === "slider" && (
+                <>
+                  <h3 className="text-3xl font-semibold text-center mb-7 md:text-4xl text-black-shade-300 md:mb-10">
+                    Brand Guidelines
+                  </h3>
+                  <PDFSlide
+                    url={mediaItem.url}
+                    numberOfImages={mediaItem.numberOfImages}
+                  />
+                </>
+              )}
+            </div>
+          ))}
+        </div>
       </section>
       <section data-aos="fade-in" className="margin-t padding-y">
         <Testimonial />

@@ -25,6 +25,16 @@ export const portfolioData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p2.png",
     contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
   {
     id: 3,
@@ -39,6 +49,17 @@ export const portfolioData = [
 
     image: "/assets/Portfolio/p3.png",
     contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "slider",
+        url: "/assets/Portfolio/Guidelines/Cafe_Rupa/cafe-rupa-branding-page",
+        numberOfImages: "21",
+      },
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
   {
     id: 4,
@@ -53,6 +74,12 @@ export const portfolioData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p4.png",
     contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
   {
     id: 5,
@@ -67,6 +94,12 @@ export const portfolioData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p1.png",
     contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
   {
     id: 6,
@@ -80,6 +113,12 @@ export const portfolioData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p2.png",
     contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
   {
     id: 7,
@@ -94,6 +133,12 @@ export const portfolioData = [
 
     image: "/assets/Portfolio/p3.png",
     contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
   {
     id: 8,
@@ -108,6 +153,12 @@ export const portfolioData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p4.png",
     contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
   {
     id: 9,
@@ -122,6 +173,12 @@ export const portfolioData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p1.png",
     contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
   {
     id: 10,
@@ -135,6 +192,12 @@ export const portfolioData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p2.png",
     contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
   {
     id: 11,
@@ -149,6 +212,12 @@ export const portfolioData = [
 
     image: "/assets/Portfolio/p3.png",
     contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
   {
     id: 12,
@@ -163,6 +232,12 @@ export const portfolioData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p4.png",
     contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
   {
     id: 13,
@@ -177,5 +252,11 @@ export const portfolioData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p1.png",
     contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
 ];

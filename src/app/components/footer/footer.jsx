@@ -25,17 +25,17 @@ const socialInfo = [
 
 const contactInfo = [
   {
-    info: "email@gmail.com",
+    info: "pranisha@twelveletter.co",
     subHeading: "MAIL US",
-    link: "mailto:twelveletter@gmail.com",
+    link: "mailto:pranisha@twelveletter.co",
   },
   {
     info: "+977 9801020202",
     subHeading: "CALL US",
-    link: "tel:+97798010202020",
+    link: "tel:+9779802366500",
   },
   {
-    info: "Your Location",
+    info: "Kupondole, Lalitpur, Nepal",
     subHeading: "VISIT US",
     link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
   },
@@ -185,7 +185,7 @@ export default function footer() {
             </div>
           </div>
         </div>
-        <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 dark:opacity-50"></hr>
+        <hr className="my-12 h-[0.1rem] border-t-0 bg-neutral-100 dark:opacity-50"></hr>
         <div className="flex flex-wrap justify-between gap-2">
           <Link
             className="text-s text-zinc-400 font-manrope hover:text-primary-accent"

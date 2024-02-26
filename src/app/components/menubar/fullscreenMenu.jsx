@@ -42,7 +42,7 @@ export default function FullscreenMenu() {
             Collaborate with us
           </h4>
           <div className="flex flex-col gap-4 lg:gap-5">
-            {contactInfo.map((info, index) => (
+            {contactInfo.slice(0, 3).map((info, index) => (
               <a
                 target="_blank"
                 href={info.link}

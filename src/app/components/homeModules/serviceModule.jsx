@@ -68,7 +68,7 @@ export default function ServiceModule() {
           {/* Left side: List of titles */}
           <div
             data-aos="fade-right"
-            className="relative md:max-w-[300px] lg:max-w-[350px] xl:max-w-full w-full"
+            className="relative md:max-w-[300px] lg:max-w-[350px] xl:max-w-full w-full h-fit"
           >
             <ul className="flex flex-col md:gap-8 lg:gap-10">
               {homeServiceData.map((item, index) => (

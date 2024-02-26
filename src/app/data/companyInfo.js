@@ -7,7 +7,6 @@ import {
   faInstagram,
   faLinkedinIn,
   faFacebookF,
-  faXTwitter,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -25,7 +24,7 @@ export const contactInfo = [
   },
   {
     icon: faLocationDot,
-    title: "Your Location",
+    title: "Kupondole, Lalitpur, Nepal",
     link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
   },
   { icon: faPhone, title: "+977 90000000", link: "tel:+977900000000" },
@@ -50,7 +49,12 @@ export const socialInfo = [
     link: "https://www.facebook.com/profile.php?id=61554349688894",
     color: "#316FF6",
   },
-  { icon: faTiktok, title: "Tiktok", link: "#", color: "#000" },
+  {
+    icon: faTiktok,
+    title: "Tiktok",
+    link: "https://www.tiktok.com/@twelveletter.co?_t=8ju1IwyaRcI&_r=1",
+    color: "#000",
+  },
 ];
 
 export const menuData = [

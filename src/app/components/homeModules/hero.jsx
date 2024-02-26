@@ -16,8 +16,8 @@ export default function hero() {
       <p className="text-lg [word-spacing:2px] font-manrope leading-normal md:text-[20px] font-semibold md:leading-9 max-w-[1000px] mt-7 lg:mt-9 text-black-shade-200">
         Unlocking the Potential of Your Online Presence with Innovative
         Solutions, Strategic Insights, and Tailored Strategies Designed to
-        Elevate Your Brand's Visibility, Drive Engagement, and Fuel Sustainable
-        Growth in the Ever-Evolving Digital Landscape
+        Elevate Your Brand&apos;s Visibility, Drive Engagement, and Fuel
+        Sustainable Growth in the Ever-Evolving Digital Landscape
       </p>
       <div className="flex flex-wrap items-center md:gap-12 md:justify-between w-full gap-7 mt-10 md:max-w-[500px] sm:mt-12 lg:mt-14">
         <Link
@@ -37,7 +37,7 @@ export default function hero() {
               icon={contactInfo[2].icon}
             />
             <p
-              className={`text-lg  text-black-shade-300 tracking-wider font-semibold relative overflow-hidden lg:text-xl`}
+              className={`text-lg  text-black-shade-200 tracking-wider font-semibold relative overflow-hidden lg:text-xl`}
             >
               {contactInfo[2].title}
               <span className="underline"></span>

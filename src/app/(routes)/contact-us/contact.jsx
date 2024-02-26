@@ -252,6 +252,7 @@ export default function Contact() {
       </section>
       <section className="mb-20 lg:mb-36 margin-t ">
         <div className="grid grid-cols-2 gap-6 mt-8 sm:mt-12 lg:gap-x-0 lg:gap-y-10 lg:mt-20">
+          {/* Left side info */}
           <div className="col-span-2 space-y-8 sm:col-span-1">
             {contactInfo.slice(0, 3).map((info, index) => (
               <a
@@ -273,6 +274,7 @@ export default function Contact() {
               </a>
             ))}
           </div>
+          {/* Right side info */}
           <div className="col-span-2 space-y-8 sm:col-span-1">
             {contactInfo.slice(3, 5).map((info, index) => (
               <a

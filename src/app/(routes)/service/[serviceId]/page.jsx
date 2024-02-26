@@ -73,10 +73,10 @@ export default function Service() {
                   index % 2 === 0 ? "md:mt-0" : "md:mt-16"
                 } flex flex-col  max-w-[450px]`}
               >
-                <picture className="w-16 mb-6 lg:w-[5rem]">
+                <picture className="w-16 mb-2 lg:mb-4 lg:w-[5rem]">
                   <img alt={feature.title} src={feature?.icon} />
                 </picture>
-                <h3 className="heading-small lg:font-semibold text-primary-accent">
+                <h3 className="font-medium heading-small text-primary-accent">
                   {feature.title}
                 </h3>
                 <p className="mt-2 paragraph">{feature.description}</p>

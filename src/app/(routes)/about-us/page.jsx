@@ -19,16 +19,16 @@ export default function aboutUs() {
             src="/assets/AboutUs/AboutUsPic.png"
           ></img>
           <div>
-            <h2 className="tracking-wide heading-medium">
+            <h2 className="text-2xl font-semibold tracking-wide md:text-4xl text-black-shade-300">
               Understanding Our Vision
             </h2>
-            <p className="mt-3 paragraph md:mt-4">
+            <p className="mt-2 paragraph md:mt-4">
               At Twelveletter, we blend creativity with technology to create
               digital experiences that resonate. Our team is committed to
               pushing boundaries and delivering unparalleled results. Our
-              mission is simple: empower brands to thrive in today's digital
-              landscape. With our expertise and dedication, we exceed
-              expectations and unlock your brand's full potential.
+              mission is simple: empower brands to thrive in today&apos;s
+              digital landscape. With our expertise and dedication, we exceed
+              expectations and unlock your brand&apos;s full potential.
             </p>
           </div>
         </section>
@@ -39,14 +39,15 @@ export default function aboutUs() {
             src="/assets/AboutUs/AboutUsPic.png"
           ></img>
           <div>
-            <h2 className="tracking-wide heading-medium">
+            <h2 className="text-2xl font-semibold tracking-wide md:text-4xl text-black-shade-300">
               Your end goals are our No. 1 Priority
             </h2>
-            <p className="mt-3 paragraph md:mt-4">
-              At Twelveletter, we're on a journey to revolutionize digital
-              marketing. We're driven by a simple belief: every brand deserves
-              to shine. With creativity and dedication, we're here to make that
-              happen. Join us as we redefine the future of digital together.
+            <p className="mt-2 paragraph md:mt-4">
+              At Twelveletter, we&apos;re on a journey to revolutionize digital
+              marketing. We&apos;re driven by a simple belief: every brand
+              deserves to shine. With creativity and dedication, we&apos;re here
+              to make that happen. Join us as we redefine the future of digital
+              together.
             </p>
           </div>
         </section>
