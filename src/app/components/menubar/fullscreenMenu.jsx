@@ -37,7 +37,7 @@ export default function FullscreenMenu() {
           </div>
         ))}
         {/* Collaboration Info */}
-        <div className="flex flex-col gap-5 sm:flex-wrap lg:gap-7">
+        <div className="flex flex-col gap-5 sm:flex-wrap lg:gap-6">
           <h4 className="text-2xl font-bold text-col lg:text-3xl text-zinc-50">
             Collaborate with us
           </h4>
@@ -63,7 +63,7 @@ export default function FullscreenMenu() {
             ))}
           </div>
           {/* Social Info */}
-          <div className="flex items-center gap-10 mt-2 lg:mt-0">
+          <div className="flex items-center gap-10 mt-2 lg:mt-2">
             {socialInfo.map((socialInfo, index) => (
               <a
                 key={index}

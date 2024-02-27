@@ -34,15 +34,8 @@ export default function Page() {
     return <p>Portfolio not found</p>;
   }
 
-  const {
-    title,
-    contentImage,
-    briefTitle,
-    brief,
-    description,
-    category,
-    image,
-  } = portfolioItem;
+  const { title, briefTitle, brief, description, category, image } =
+    portfolioItem;
 
   return (
     <>
@@ -61,11 +54,11 @@ export default function Page() {
             <h1 className="font-semibold tracking-wide text-center text-black-shade-300 heading-medium">
               {title}
             </h1>
-            <p className="mt-1 text-sm font-semibold tracking-wider text-center sm:text-base sm:mt-2 text-primary-accent">
+            <p className="mt-1 text-sm font-medium tracking-wider text-center sm:text-base sm:mt-2 text-primary-accent">
               {category}
             </p>
           </div>
-          <p className="mt-3 sm:mt-5 text-lg tracking-wide text-center max-w-[480px] text-black-shade-100">
+          <p className="mt-3 sm:mt-5 text-lg tracking-wide font-medium text-center max-w-[480px] text-black-shade-200">
             {description}
           </p>
           <figure className="relative w-full max-w-2xl mt-6 overflow-hidden rounded-md shadow-md sm:mt-10">
@@ -81,7 +74,7 @@ export default function Page() {
           <h3 className="mt-1 font-semibold tracking-wider text-black-shade-200 sm:mt-2 heading-medium">
             {briefTitle}
           </h3>
-          <p className="mt-2 font-semibold leading-relaxed tracking-wide sm:mt-4 text-black-shade-100 paragraph">
+          <p className="mt-2 font-medium leading-relaxed tracking-wide sm:mt-4 text-black-shade-200 paragraph">
             {brief}
           </p>
         </div>
@@ -91,21 +84,17 @@ export default function Page() {
         className="flex justify-center w-full padding-y margin-t"
       >
         <div className="w-full flex flex-col gap-14 md:gap-20 overflow-hidden lg:rounded-md md:px-5  max-w-[1000px]">
-          {portfolioItem.media.map((mediaItem, index) => (
+          {portfolioItem?.media.map((mediaItem, index) => (
             <div key={index} className="mb-10">
-              {mediaItem.type === "image" && (
+              {mediaItem?.type === "image" && (
                 <img alt={title} className="w-full" src={mediaItem.url} />
               )}
-              {mediaItem.type === "video" && (
-                <video className="w-full" controls>
-                  <source src={mediaItem.url} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              )}
-              {mediaItem.type === "slider" && (
+
+              {mediaItem?.type === "slider" && (
                 <>
                   <h3 className="text-3xl font-semibold text-center mb-7 md:text-4xl text-black-shade-300 md:mb-10">
-                    Brand Guidelines
+                    <span className="text-primary-accent">Brand</span>{" "}
+                    Guidelines
                   </h3>
                   <PDFSlide
                     url={mediaItem.url}

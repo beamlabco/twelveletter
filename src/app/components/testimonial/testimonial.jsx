@@ -16,7 +16,7 @@ export default function testimonial() {
           industry. Lorem Ipsum has been the industry standard dummy text
           ever&quot;
         </p>
-        <p className="mt-5 text-xl font-semibold font-manrope text-black-shade-100">
+        <p className="mt-5 text-lg font-medium font-manrope text-black-shade-100">
           Shaya Bajracharya | NY-City Florence
         </p>
       </div>

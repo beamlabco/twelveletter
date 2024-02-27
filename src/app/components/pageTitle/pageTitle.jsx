@@ -17,7 +17,7 @@ export default function Title(props) {
       case "small":
         return "text-xl mt-2 font-visby font-semibold  md:text-3xl text-black-shade-300";
       case "medium":
-        return "mt-2 font-visby font-semibold lg:mt-3 text-2xl sm:text-3xl lg:text-4xl leading-8 md:leading-9 lg:leading-snug";
+        return "mt-2 font-visby font-semibold lg:mt-2 text-2xl sm:text-3xl lg:text-4xl leading-8 md:leading-9 lg:leading-snug";
       case "large":
         return "text-3xl mt-2 font-visby font-bold leading-10  md:text-4xl md:leading-snug lg:text-5xl lg:leading-snug text-black-shade-300";
       case "xl":
@@ -30,7 +30,7 @@ export default function Title(props) {
   return (
     <div className={`${maxWidth ? maxWidth : ""}`}>
       {subHeading && (
-        <h1 className="text-base font-semibold font-visby md:text-lg font-base text-primary-accent">
+        <h1 className="text-base font-semibold font-manrope md:text-lg font-base text-primary-accent">
           {subHeading}
         </h1>
       )}

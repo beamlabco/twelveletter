@@ -75,16 +75,16 @@ export default function ServiceModule() {
                 <li
                   key={item.id}
                   onClick={() => handleTitleClick(index)}
-                  className={`lg:text-[1.75rem] w-fit md:text-xl whitespace-nowrap ease-in hover:text-primary-accent transition-all duration-200 font-extrabold font-manrope cursor-pointer ${
+                  className={`lg:text-[1.7rem] w-fit md:text-xl whitespace-nowrap ease-in hover:text-primary-accent transition-all duration-200 font-bold font-manrope cursor-pointer ${
                     index === currentItemIndex
-                      ? "text-primary-accent md:text-[1.8rem] lg:text-[1.8rem]"
+                      ? "text-primary-accent"
                       : "text-black-shade-200"
                   }`}
                 >
                   <FontAwesomeIcon
-                    className={`text-2xl transition-all duration-200 lg:text-2xl mr-3 ${
+                    className={`text-2xl transition-all duration-200 lg:text-[1.6rem] mr-3 ${
                       index === currentItemIndex
-                        ? "text-primary-accent lg:text-[2rem]"
+                        ? "text-primary-accent"
                         : "text-transparent"
                     }`}
                     icon={faRightLong}
@@ -120,7 +120,7 @@ export default function ServiceModule() {
                   style={{
                     display: index === currentItemIndex ? "block" : "none",
                   }}
-                  className="text-lg  [word-spacing:2px] font-manrope text-black-shade-100"
+                  className="text-lg font-medium [word-spacing:2px] font-manrope text-black-shade-100"
                 >
                   {item.brief}
                   <Link
@@ -140,9 +140,9 @@ export default function ServiceModule() {
               <li
                 key={item.id}
                 onClick={() => handleTitleClick(index)}
-                className={`text-2xl w-fit hover:text-primary-accent transition-all duration-200 font-semibold tracking-wider cursor-pointer ${
+                className={`text-xl w-fit hover:text-primary-accent transition-all duration-200 font-semibold tracking-wider cursor-pointer ${
                   index === currentItemIndex
-                    ? "text-primary-accent lg:text-[1.8rem]"
+                    ? "text-primary-accent"
                     : "text-black-shade-300"
                 }`}
               >
@@ -150,7 +150,7 @@ export default function ServiceModule() {
                   <FontAwesomeIcon
                     className={`text-xl transition-all duration-200 lg:text-3xl mr-2 ${
                       index === currentItemIndex
-                        ? "text-primary-accent lg:text-[1.8rem]"
+                        ? "text-primary-accent"
                         : "hidden"
                     }`}
                     icon={faRightLong}

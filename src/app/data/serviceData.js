@@ -8,7 +8,7 @@ export const serviceData = [
         title:
           "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",
         brief:
-          "Our Digital Marketing Mastery services encompass a range of strategies and tactics aimed at enhancing your brand's online presence, engagement, and conversion rates. Our team combines expertise in SEO, social media marketing, PPC advertising, and more to create holistic campaigns that drive results.",
+          "Our Digital Marketing services optimize your online presence, boost engagement, and increase conversion rates through SEO, social media, PPC, and more. Get results with our holistic campaigns.",
 
         features: [
           {
@@ -53,10 +53,9 @@ export const serviceData = [
         id: 2,
         serviceType: "Web Design & Development",
         slug: "web-design-and-development",
-        title:
-          "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",
+        title: "Maximizing Impact: Strategic Web Design & Development",
         brief:
-          " Ipsum is simply dummy texLoremt of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "Web design and development create captivating, user-friendly websites with visually appealing layouts, coding for functionality, and SEO-friendly practices. The goal is to effectively represent a brand and engage the audience.",
 
         features: [
           {
@@ -101,10 +100,9 @@ export const serviceData = [
         id: 3,
         serviceType: "Graphic Design Expertise",
         slug: "graphic-design-expertise",
-        title:
-          "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",
+        title: "Visual Dynamics: Impactful Graphic Design Solutions",
         brief:
-          "Discover our Graphics Design Expertise, where creativity meets precision. From logo creation to brand identity development, we craft visually captivating designs that leave a lasting impact. With meticulous attention to detail and a passion for innovation, we elevate brands and engage audiences across all platforms",
+          "Experience our creative graphics design expertise. From logos to brand identity, we craft captivating designs that elevate your brand and engage audiences on all platforms.",
 
         features: [
           {
@@ -128,14 +126,13 @@ export const serviceData = [
         ],
         benefits: {
           image: "/assets/Service/egpic.jpg",
-          title: "Increased Visibility",
+          title: "Audience Alchemist: Transforming Connections",
           description:
-            "Enhance your brand visibility and attract more customers.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ",
+            "Our graphic design services provide clients with enhanced brand image, increased engagement, and professional consistency. Through visually striking designs, we help clients capture attention, drive brand recognition, and foster trust among their audience. Ultimately, our expertise empowers clients to strengthen their brand presence and achieve success.",
           bulletPoints: [
-            "Increase your profits",
-            "Increase your conversions",
-            "Increase your conversions",
-            "Increase your conversions",
+            "Increased Brand Recognition",
+            "Professionalism and Consistency",
+            "Amplified Marketing Impact",
           ],
         },
       },
@@ -144,10 +141,9 @@ export const serviceData = [
         id: 4,
         serviceType: "Content Creation",
         slug: "content-creation",
-        title:
-          "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",
+        title: "Content Catalyst: Strategic Creation for Maximum Impact",
         brief:
-          "Web design and development involves creating visually appealing and user-friendly websites. This includes designing layouts, visuals, and interfaces, as well as coding for functionality and performance. The goal is to create responsive, accessible, and SEO-friendly websites that effectively represent a brand and engage its audience",
+          "We craft engaging, tailored content that resonates with your audience, driving brand awareness and fostering relationships.",
 
         features: [
           {
@@ -181,10 +177,9 @@ export const serviceData = [
           description:
             "Enhance your brand visibility and attract more customers.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ",
           bulletPoints: [
-            "Increase your profits",
-            "Increase your conversions",
-            "Increase your conversions",
-            "Increase your conversions",
+            "Enhanced Brand Awareness",
+            "Driving Conversions",
+            "Adapting to Trends",
           ],
         },
       },
@@ -194,7 +189,7 @@ export const serviceData = [
         serviceType: "In-House Photoshoot",
         slug: "in-house-photoshoot",
         title:
-          "Digital Triumph: Maximizing Impact through Strategic Digital Marketing Solutions",
+          "Lens Innovations: Amplifying Impact with In-House Photoshoot Solutions",
         brief:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 

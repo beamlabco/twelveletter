@@ -4,24 +4,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ReactSlickOverride.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCaretRight,
-  faCaretLeft,
-  faArrowRight,
-  faArrowLeft,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCaretRight, faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className="absolute hidden md:block right-0 cursor-pointer top-[47%]"
+      className="absolute hidden md:block right-[1%] cursor-pointer top-[47%]"
       onClick={onClick}
     >
       <FontAwesomeIcon
         className="p-2 text-xl rounded-sm bg-[#37485291] hover:bg-[#374852]"
         color="#fff"
-        icon={faArrowRight}
+        icon={faCaretRight}
       />
     </div>
   );
@@ -31,13 +26,13 @@ function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className="absolute hidden md:block left-0 z-10 cursor-pointer top-[47%]"
+      className="absolute hidden md:block left-[1%] z-10 cursor-pointer top-[47%]"
       onClick={onClick}
     >
       <FontAwesomeIcon
         className="p-2 text-xl rounded-sm bg-[#37485291] hover:bg-[#374852]"
         color="#fff"
-        icon={faArrowLeft}
+        icon={faCaretLeft}
       />
     </div>
   );
@@ -68,7 +63,7 @@ export default function PdfSlide(props) {
           <div className="flex items-center justify-center w-full" key={index}>
             <img
               src={imageUrl}
-              className="w-full rounded-sm max-w-[850px] h-auto m-auto"
+              className="w-full h-auto m-auto rounded-sm"
               alt={`Slide ${index + 1}`}
             />
           </div>

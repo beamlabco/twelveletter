@@ -30,19 +30,26 @@ export default function Service() {
   });
 
   return (
-    <>
-      <section className="container-margin top-section-p">
-        <PageTitle
-          subHeading={selectedServiceData?.serviceType}
-          textSize="large"
-          heading={selectedServiceData?.title}
-        />
-        <p className="mt-6 paragraph lg:max-w-[1000px]">
-          {selectedServiceData?.brief}
-        </p>
+    <div className="overflow-hidden">
+      <section className="flex flex-col relative justify-center min-h-[68vh] md:min-h-[84vh] ">
+        <div className="absolute z-0 w-full min-h-screen overflow-hidden blur-[80px]">
+          <div className="absolute bg-[#0084ff5e] h-[300px] w-[300px] left-[-170px] top-1/2 lg:h-[500px] lg:w-[500px] opacity-40 lg:left-[-300px] lg:top-1/2 "></div>
+          <div className="absolute h-[500px] w-[500px] bg-[#fa78ff] right-[-350px] top-[-300px] lg:h-[600px] lg:w-[600px] lg:right-[-400px] opacity-60 lg:top-[-500px]"></div>
+        </div>
+        <div className="container-margin-compact">
+          <PageTitle
+            subHeading={selectedServiceData?.serviceType}
+            textSize="xl"
+            extraClass="text-2xl"
+            heading={selectedServiceData?.title}
+          />
+          <p className="mt-6 text-black-shade-200 font-manrope font-medium md:text-[22px] md:leading-[1.7] lg:max-w-[1100px]">
+            {selectedServiceData?.brief}
+          </p>
+        </div>
       </section>
       {/* Features section */}
-      <section className="relative padding-y margin-t">
+      <section className="relative margin-t">
         <div className="absolute overflow-x-hidden z-0 w-full min-h-screen overflow-hidden blur-[100px]">
           <div className="absolute top-0 right-0 w-16 h-16 opacity-60"></div>
           <div
@@ -60,7 +67,7 @@ export default function Service() {
             <div className="absolute h-[500px] w-[500px] right-[-350px] top-[-300px] lg:h-[700px] lg:w-[700px] lg:right-[-400px] opacity-30 lg:top-[-400px] bg-primary-accent"></div>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-10 container-margin lg:gap-16 ">
+        <div className="flex flex-col items-center gap-6 md:gap-10 container-margin lg:gap-16 ">
           <p className="text-3xl lg:text-[3rem] font-semibold tracking-wider text-center">
             What&apos;s <span className=" text-primary-accent">Included?</span>
           </p>
@@ -86,7 +93,7 @@ export default function Service() {
         </div>
       </section>
       {/* Brand partners */}
-      <section className="padding-y margin-t">
+      <section className="mt-8 md:mt-32 padding-y">
         <BrandModule />
       </section>
       {/* Benefits section */}
@@ -134,6 +141,6 @@ export default function Service() {
         <RecommendPortfolio />
       </section>
       <ContactModule />
-    </>
+    </div>
   );
 }

@@ -87,7 +87,7 @@ export default function footer() {
   return (
     <footer id="footer" className="bg-secondary-accent">
       <div className="pt-16 pb-16 space-y-8 tracking-wider lg:pt-20 container-margin">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 mb-20 lg:grid-cols-3">
           <div className="w-full max-w-[300px]">
             <Link href="/">
               <Logo whiteLogo={true} />
@@ -185,7 +185,7 @@ export default function footer() {
             </div>
           </div>
         </div>
-        <hr className="my-12 h-[0.1rem] border-t-0 bg-neutral-100 dark:opacity-50"></hr>
+        <hr className="h-[0.1rem] border-t-0 bg-neutral-100 dark:opacity-50"></hr>
         <div className="flex flex-wrap justify-between gap-2">
           <Link
             className="text-s text-zinc-400 font-manrope hover:text-primary-accent"

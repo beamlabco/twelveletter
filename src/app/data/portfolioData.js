@@ -11,7 +11,16 @@ export const portfolioData = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p1.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+    media: [
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+      {
+        type: "image",
+        url: "/assets/Portfolio/pmain.png",
+      },
+    ],
   },
   {
     id: 2,
@@ -24,7 +33,7 @@ export const portfolioData = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p2.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+
     media: [
       {
         type: "image",
@@ -48,7 +57,7 @@ export const portfolioData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
 
     image: "/assets/Portfolio/p3.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+
     media: [
       {
         type: "slider",
@@ -73,7 +82,7 @@ export const portfolioData = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p4.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+
     media: [
       {
         type: "image",
@@ -93,7 +102,7 @@ export const portfolioData = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p1.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+
     media: [
       {
         type: "image",
@@ -112,7 +121,7 @@ export const portfolioData = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p2.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+
     media: [
       {
         type: "image",
@@ -132,7 +141,7 @@ export const portfolioData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
 
     image: "/assets/Portfolio/p3.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+
     media: [
       {
         type: "image",
@@ -152,7 +161,7 @@ export const portfolioData = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p4.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+
     media: [
       {
         type: "image",
@@ -172,7 +181,7 @@ export const portfolioData = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p1.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+
     media: [
       {
         type: "image",
@@ -191,7 +200,7 @@ export const portfolioData = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p2.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+
     media: [
       {
         type: "image",
@@ -211,7 +220,7 @@ export const portfolioData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
 
     image: "/assets/Portfolio/p3.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+
     media: [
       {
         type: "image",
@@ -231,7 +240,7 @@ export const portfolioData = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p4.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+
     media: [
       {
         type: "image",
@@ -251,7 +260,7 @@ export const portfolioData = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image: "/assets/Portfolio/p1.png",
-    contentImage: "/assets/Portfolio/pmain.png",
+
     media: [
       {
         type: "image",
