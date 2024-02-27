@@ -5,8 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "./ReactSlickOverride.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArrowCircleRight,
-  faRightLong,
   faCaretRight,
   faCaretLeft,
   faArrowRight,
@@ -21,9 +19,9 @@ function SampleNextArrow(props) {
       onClick={onClick}
     >
       <FontAwesomeIcon
-        className="p-2 text-xl rounded-sm bg-[#374852a4] hover:bg-[#374852]"
+        className="p-2 text-xl rounded-sm bg-[#37485291] hover:bg-[#374852]"
         color="#fff"
-        icon={faCaretRight}
+        icon={faArrowRight}
       />
     </div>
   );
@@ -37,9 +35,9 @@ function SamplePrevArrow(props) {
       onClick={onClick}
     >
       <FontAwesomeIcon
-        className="p-2 text-xl rounded-sm bg-[#374852a4] hover:bg-[#374852]"
+        className="p-2 text-xl rounded-sm bg-[#37485291] hover:bg-[#374852]"
         color="#fff"
-        icon={faCaretLeft}
+        icon={faArrowLeft}
       />
     </div>
   );

@@ -87,8 +87,8 @@ export default function footer() {
   return (
     <footer id="footer" className="bg-secondary-accent">
       <div className="pt-16 pb-16 space-y-8 tracking-wider lg:pt-20 container-margin">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
-          <div>
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div className="w-full max-w-[300px]">
             <Link href="/">
               <Logo whiteLogo={true} />
             </Link>
@@ -113,28 +113,7 @@ export default function footer() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
-            {/* Contact Info */}
-            <div className="-mt-2 lg:mt-2">
-              <ul className="mt-2 space-y-6 text-sm">
-                {contactInfo.map((contactInfo, index) => (
-                  <li key={index} className="flex flex-col gap-1">
-                    <span className="font-semibold tracking-wider text-md text-primary-accent">
-                      {contactInfo.subHeading}
-                    </span>
-
-                    <a
-                      href={contactInfo.link}
-                      className={`${FooterCSS.link} w-fit relative overflow-hidden text-xl font-medium text-zinc-100`}
-                    >
-                      {contactInfo.info}
-
-                      <span className={FooterCSS.underline}></span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
             {/* Services Info */}
             <div>
               <p className="text-2xl font-bold tracking-wider text-zinc-100">
@@ -179,6 +158,27 @@ export default function footer() {
                       />
                       {service.title}
                     </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Contact Info */}
+            <div className="-mt-2 lg:mt-2">
+              <ul className="mt-2 space-y-6 text-sm">
+                {contactInfo.map((contactInfo, index) => (
+                  <li key={index} className="flex flex-col gap-1">
+                    <span className="font-semibold tracking-wider text-md text-primary-accent">
+                      {contactInfo.subHeading}
+                    </span>
+
+                    <a
+                      href={contactInfo.link}
+                      className={`${FooterCSS.link} w-fit relative overflow-hidden text-lg font-medium text-zinc-100`}
+                    >
+                      {contactInfo.info}
+
+                      <span className={FooterCSS.underline}></span>
+                    </a>
                   </li>
                 ))}
               </ul>
