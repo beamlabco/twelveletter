@@ -24,10 +24,10 @@ export const contactInfo = [
   },
   {
     icon: faLocationDot,
-    title: "Kupondole, Lalitpur, Nepal",
+    title: "Florida, USA",
     link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
   },
-  { icon: faPhone, title: "+977 90000000", link: "tel:+977900000000" },
+  { icon: faPhone, title: "+01 9802366500", link: "tel:+9779802366500" },
 ];
 
 export const socialInfo = [
@@ -81,7 +81,7 @@ export const menuData = [
       { title: "Portfolio", link: "/portfolio" },
       { title: "About Us", link: "/about-us" },
       { title: "Contact Us", link: "/contact-us" },
-      { title: "Policies", link: "/policies" },
+      { title: "Terms & Conditions", link: "/terms-and-conditions" },
     ],
   },
 ];

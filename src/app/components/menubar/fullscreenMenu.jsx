@@ -47,7 +47,7 @@ export default function FullscreenMenu() {
                 target="_blank"
                 href={info.link}
                 key={index}
-                className={`${FullMenuCSS.link} w-fit flex items-center space-x-4 cursor-pointer`}
+                className={`${FullMenuCSS.link} font-medium w-fit flex items-center space-x-4 cursor-pointer`}
               >
                 <FontAwesomeIcon
                   icon={info.icon}

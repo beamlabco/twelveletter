@@ -1,6 +1,23 @@
 import React from "react";
 import PageTitle from "../../components/pageTitle/pageTitle";
 import ContactModule from "@/app/components/contactModules/contactModule";
+
+export const metadata = {
+  title: "Discover Our Visions",
+  description:
+    "At Twelveletter, we blend creativity with technology to create digital experiences that resonate. Our team is committed to pushing boundaries and delivering unparalleled results.",
+  keywords: [
+    "Twelveletter",
+    "digital experiences",
+    "brand empowerment",
+    "digital marketing",
+    "vision and mission",
+  ],
+  alternates: {
+    canonical: "/about-us",
+  },
+};
+
 export default function aboutUs() {
   return (
     <>
@@ -19,7 +36,7 @@ export default function aboutUs() {
             src="/assets/AboutUs/AboutUsPic.png"
           ></img>
           <div>
-            <h2 className="text-2xl font-semibold tracking-wide md:text-4xl text-black-shade-300">
+            <h2 className="text-2xl font-bold tracking-wide md:text-4xl text-black-shade-300">
               Understanding Our Vision
             </h2>
             <p className="mt-2 paragraph md:mt-4">
@@ -39,7 +56,7 @@ export default function aboutUs() {
             src="/assets/AboutUs/AboutUsPic.png"
           ></img>
           <div>
-            <h2 className="text-2xl font-semibold tracking-wide md:text-4xl text-black-shade-300">
+            <h2 className="text-2xl font-bold tracking-wide md:text-4xl text-black-shade-300">
               Your end goals are our No. 1 Priority
             </h2>
             <p className="mt-2 paragraph md:mt-4">

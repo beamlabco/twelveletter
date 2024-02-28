@@ -1,11 +1,10 @@
-"use client";
-import { useParams } from "next/navigation";
-import PortfolioPage from "../page";
+import React from "react";
+import CategoryPortfolioPage from "./category";
 
-const CategoryPortfolioPage = () => {
-  const { categorySlug } = useParams();
-
-  return <PortfolioPage selectedCategory={categorySlug} />;
-};
-
-export default CategoryPortfolioPage;
+export default function page() {
+  return (
+    <>
+      <CategoryPortfolioPage />
+    </>
+  );
+}

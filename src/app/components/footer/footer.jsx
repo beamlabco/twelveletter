@@ -77,10 +77,6 @@ const companyInfo = [
     title: "Contact Us",
     link: "/contact-us",
   },
-  {
-    title: "Policies",
-    link: "/policies",
-  },
 ];
 
 export default function footer() {
@@ -94,8 +90,8 @@ export default function footer() {
             </Link>
 
             <p className="max-w-xs mt-4 leading-loose text-regular text-zinc-100">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
-              cupiditate quae nam molestias.
+              Twelveletter- Empowering Your Digital Success, One Click at a
+              Time.
             </p>
 
             <ul className="flex gap-8 mt-8">
@@ -189,7 +185,7 @@ export default function footer() {
         <div className="flex flex-wrap justify-between gap-2">
           <Link
             className="text-s text-zinc-400 font-manrope hover:text-primary-accent"
-            href="#"
+            href="/terms-and-conditions"
           >
             Terms & Conditions
           </Link>

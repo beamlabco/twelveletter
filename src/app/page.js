@@ -1,9 +1,9 @@
-"use client";
 import Contact from "./(routes)/contact-us/contact";
 import BrandModule from "./components/brandModule/brandModule";
 import ServiceModule from "./components/homeModules/serviceModule";
 import PortfolioSlider from "./components/homeModules/portfolioSlider";
 import Hero from "./components/homeModules/hero";
+
 export default function Home() {
   return (
     <>

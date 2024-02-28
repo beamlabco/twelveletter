@@ -242,7 +242,7 @@ export default function Contact() {
               title="map"
               src="https://www.google.com/maps/d/u/0/embed?mid=1BQL9p2tnGAJW3qAgNf1kOwkuA-j74eE&ehbc=2E312F&noprof=1"
               style={{ border: 0 }}
-              allowFullScreen="true"
+              allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="relative rounded-sm z-10 w-full h-[480px] max-w-[700px] md:min-w-[300px]"

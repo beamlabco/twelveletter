@@ -19,7 +19,7 @@ export default function Title(props) {
       case "medium":
         return "mt-2 font-visby font-semibold lg:mt-2 text-2xl sm:text-3xl lg:text-4xl leading-8 md:leading-9 lg:leading-snug";
       case "large":
-        return "text-3xl mt-2 font-visby font-bold leading-10  md:text-4xl md:leading-snug lg:text-5xl lg:leading-snug text-black-shade-300";
+        return "text-3xl mt-2 font-visby font-bold leading-10  md:text-4xl md:leading-snug lg:text-5xl lg:leading-tight text-black-shade-300";
       case "xl":
         return "text-4xl mt-2 font-visby font-bold leading-tight md:text-5xl lg:leading-tight md:leading-snug lg:text-[68px] lg:leading-[1.2] text-black-shade-300";
       default:
@@ -30,11 +30,11 @@ export default function Title(props) {
   return (
     <div className={`${maxWidth ? maxWidth : ""}`}>
       {subHeading && (
-        <h1 className="text-base font-semibold font-manrope md:text-lg font-base text-primary-accent">
+        <span className="text-base font-semibold font-manrope md:text-lg font-base text-primary-accent">
           {subHeading}
-        </h1>
+        </span>
       )}
-      <p className={`${determineTextSize()} ${extraClass}`}>
+      <h1 className={`${determineTextSize()} ${extraClass}`}>
         {highlightText ? (
           <span
             className={`${extraClass} ${determineTextSize()}  ${
@@ -58,7 +58,7 @@ export default function Title(props) {
         ) : (
           ""
         )}
-      </p>
+      </h1>
     </div>
   );
 }

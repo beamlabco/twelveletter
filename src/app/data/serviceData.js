@@ -238,7 +238,7 @@ export const homeServiceData = [
     slug: "digital-marketing",
     image: "/assets/Service/illustrationg1.png",
     brief:
-      "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
+      "Elevating brands: Our digital marketing services redefine your online presence.",
   },
   {
     id: 2,
@@ -246,7 +246,7 @@ export const homeServiceData = [
     slug: "web-design-and-development",
     image: "/assets/Service/illustrationg2.png",
     brief:
-      "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
+      "Crafting dynamic websites: Our comprehensive web design & development services enhance your online presence.",
   },
   {
     id: 3,
@@ -254,15 +254,14 @@ export const homeServiceData = [
     slug: "graphic-design-expertise",
     image: "/assets/Service/illustrationg3.png",
     brief:
-      "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
+      "Crafting visual excellence: our graphic design services redefine your brand's aesthetic.",
   },
   {
     id: 4,
     title: "Content Creation",
     slug: "content-creation",
     image: "/assets/Service/illustrationg4.png",
-    brief:
-      "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
+    brief: "Content Catalyst: Strategic Creation for Maximum Impact. ",
   },
   {
     id: 5,
@@ -270,6 +269,6 @@ export const homeServiceData = [
     slug: "in-house-photoshoot",
     image: "/assets/Service/illustrationg1.png",
     brief:
-      "Crafting visual excellence: our graphic design services redefine your brand's aesthetic. ",
+      "Distinctive Visuals: Elevate Your Brand with Our Professional In-House Photoshoots.",
   },
 ];
