@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Title(props) {
   const {
+    tag: Tag = "h1", // Default tag is <h1>
     subHeading,
     heading,
     highlightTextEnd,
@@ -34,8 +35,8 @@ export default function Title(props) {
           {subHeading}
         </span>
       )}
-      <h1 className={`${determineTextSize()} ${extraClass}`}>
-        {highlightText ? (
+      <Tag className={`${determineTextSize()} ${extraClass}`}>
+        {highlightText && (
           <span
             className={`${extraClass} ${determineTextSize()}  ${
               highlightGradient ? "gradient" : "text-primary-accent"
@@ -43,11 +44,9 @@ export default function Title(props) {
           >
             {highlightText}{" "}
           </span>
-        ) : (
-          ""
         )}
         {heading}
-        {highlightTextEnd ? (
+        {highlightTextEnd && (
           <span
             className={`${extraClass} ${
               highlightGradient ? "gradient" : "text-primary-accent"
@@ -55,10 +54,8 @@ export default function Title(props) {
           >
             {highlightTextEnd}
           </span>
-        ) : (
-          ""
         )}
-      </h1>
+      </Tag>
     </div>
   );
 }

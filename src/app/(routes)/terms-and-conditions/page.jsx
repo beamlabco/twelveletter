@@ -44,8 +44,9 @@ export default function page() {
             Disclaimer of Liability
           </h2>
           <p className="max-w-5xl text-lg font-medium font-manrope text-black-shade-100">
-            We do not guarantee the accuracy or completeness of our website's
-            content, and we are not liable for any errors or omissions.
+            We do not guarantee the accuracy or completeness of our
+            website&apos;s content, and we are not liable for any errors or
+            omissions.
           </p>
         </div>
         <div className="flex flex-col gap-3">
@@ -73,7 +74,7 @@ export default function page() {
             Intellectual Property
           </h2>
           <p className="max-w-5xl text-lg font-medium font-manrope text-black-shade-100">
-            Our website's content and materials are all free to use.
+            Our website&apos;s content and materials are all free to use.
           </p>
         </div>
         <div className="flex flex-col gap-3">

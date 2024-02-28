@@ -61,6 +61,7 @@ export default function ServiceModule() {
           textSize="large"
           subHeading="Services"
           heading="Tailored Design and Marketing Expertise for a Polished Professional Image."
+          tag="h2"
         />
       </section>
       <section className="w-full mt-8 padding-y md:mt-10 lg:mt-12">

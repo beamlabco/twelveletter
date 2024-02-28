@@ -25,7 +25,7 @@ export default function Home() {
           <BrandModule />
         </section>
         <section>
-          <Contact />
+          <Contact tag="h2" />
         </section>
       </div>
     </>

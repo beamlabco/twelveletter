@@ -32,6 +32,7 @@ export default function RecommendPortfolio({
         highlightGradient={true}
         textSize="medium"
         extraClass="text-3xl"
+        tag="h2"
       />
       <ul
         data-aos="fade-left"
@@ -60,15 +61,15 @@ export default function RecommendPortfolio({
                   }}
                   className="relative w-full transition-transform ease-in transform translate-y-2 opacity-0 ease duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:translate-y-0 group-hover:opacity-100"
                 >
-                  <h4 className="bottom-0 px-4 pt-4 pb-3 text-lg font-medium tracking-wider text-white transition-all duration-300 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
+                  <p className="bottom-0 px-4 pt-4 pb-3 text-lg font-medium tracking-wider text-white transition-all duration-300 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
                     {title}
-                  </h4>
+                  </p>
                 </div>
               </div>
               <div className="mt-1 sm:hidden">
-                <h4 className="text-lg font-semibold tracking-wide transition-colors duration-200 text-black-shade-200 group-hover:text-primary-accent">
+                <p className="text-lg font-semibold tracking-wide transition-colors duration-200 text-black-shade-200 group-hover:text-primary-accent">
                   {title}
-                </h4>
+                </p>
               </div>
             </Link>
           </li>

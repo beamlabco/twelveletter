@@ -1,21 +1,21 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { contactInfo, socialInfo } from "../../data/companyInfo.js";
+import PageTitle from "../pageTitle/pageTitle.jsx";
 
 export default function ContactModule() {
   return (
     <section className="margin-t padding-y-lg lg:pb-24 bg-[#F5F5F7] w-full flex justify-center">
       <div className="max-w-[1250px]">
-        <div className="w-full">
-          <span className="text-base font-semibold font-manrope md:text-lg font-base text-primary-accent">
-            Contact Us
-          </span>
+        <PageTitle
+          subHeading="Contact Us"
+          highlightText="Get in touch:"
+          textSize="large"
+          extraClass="font-semibold"
+          heading=" Reach out to us for inquiries, assistance, or collaborations"
+          tag="h2"
+        />
 
-          <p className="mt-2 text-2xl font-semibold leading-8 text-black-shade-300 font-visby lg:mt-2 sm:text-3xl lg:text-5xl md:leading-9 lg:leading-snug">
-            <span className="text-primary-accent">Get in touch: </span>
-            Reach out to us for inquiries, assistance, or collaborations
-          </p>
-        </div>
         <div className="grid grid-cols-2 gap-6 mt-8 sm:mt-12 lg:gap-x-0 lg:gap-y-10 lg:mt-14">
           {contactInfo.slice(1, 3).map((info, index) => (
             <div key={index} className="col-span-2 sm:col-span-1">

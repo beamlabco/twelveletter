@@ -46,6 +46,7 @@ export default function brandModule() {
           textSize="medium"
           highlightText="Connected Success:"
           extraClass="text-center lg:text-[2.7rem]"
+          tag="h2"
         />
         <p className="text-center max-w-[600px] paragraph lg:text-lg">
           Lorem Ipsum is simply dummy text of the printing and typesetting

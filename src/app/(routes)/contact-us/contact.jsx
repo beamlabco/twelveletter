@@ -9,7 +9,8 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
-export default function Contact() {
+export default function Contact(props) {
+  const { tag } = props;
   const initialFormData = {
     name: "",
     email: "",
@@ -103,6 +104,7 @@ export default function Contact() {
           highlightText="Get in Touch:"
           highlightGradient={true}
           heading="Reach Out to Us for Inquiries, Assistance, or Collaborations"
+          tag={tag ? tag : "h1"}
         />
       </section>
       <section className="margin-t">

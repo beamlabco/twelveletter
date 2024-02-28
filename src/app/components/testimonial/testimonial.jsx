@@ -10,6 +10,7 @@ export default function testimonial() {
           heading="Discover the words of our client"
           highlightText="Voices of Satisfaction:"
           textSize="medium"
+          tag="h2"
         />
         <p className="mt-5 text-xl font-manrope font-medium tracking-wide max-w-[1200px] leading-relaxed text-black-shade-100 md:mt-7 ">
           &quot;Lorem Ipsum is simply dummy text of the printing and typesetting

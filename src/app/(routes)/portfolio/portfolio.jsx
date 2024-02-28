@@ -105,15 +105,15 @@ export default function PortfolioPage(props) {
                             }}
                             className="relative w-full transition-transform ease-in transform translate-y-2 opacity-0 ease duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:translate-y-0 group-hover:opacity-100"
                           >
-                            <h4 className="bottom-0 px-4 pt-4 pb-3 font-medium tracking-wider text-white transition-all duration-300 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
+                            <h2 className="bottom-0 px-4 pt-4 pb-3 font-medium tracking-wider text-white transition-all duration-300 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
                               {title}
-                            </h4>
+                            </h2>
                           </div>
                         </div>
                         <div className="mt-1 sm:hidden">
-                          <h4 className="text-lg font-semibold tracking-wide transition-colors duration-200 text-black-shade-200 group-hover:text-primary-accent">
+                          <h2 className="text-lg font-semibold tracking-wide transition-colors duration-200 text-black-shade-200 group-hover:text-primary-accent">
                             {title}
-                          </h4>
+                          </h2>
                         </div>
                       </Link>
                     </li>
