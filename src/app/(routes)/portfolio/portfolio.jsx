@@ -2,7 +2,7 @@
 import { useState, useEffect, useCallback } from "react";
 import PageTitle from "../../components/pageTitle/pageTitle";
 import CategoryMenu from "./(components)/categoryMenu";
-import { portfolioData } from "@/app/data/portfolioData";
+import portfolioData from "@/app/data/portfolioData"; // Import portfolioData from the correct path
 import ContactModule from "@/app/components/contactModules/contactModule";
 import Loader from "@/app/components/loader/loader";
 import Pagination from "@/app/components/pagination/pagination";
@@ -23,9 +23,7 @@ export default function PortfolioPage(props) {
       // Simulate API call or data filtering
       const newData = selectedCategory
         ? portfolioData.filter(
-            (item) =>
-              item.category.toLowerCase().replace(/\s+/g, "-") ===
-              selectedCategory.toLowerCase().replace(/\s+/g, "-")
+            (category) => category.categorySlug === selectedCategory
           )
         : portfolioData;
 
@@ -66,9 +64,9 @@ export default function PortfolioPage(props) {
         </section>
         <section className="mb-8 my-7 md:my-12 lg:mt-12 lg:mb-10">
           <CategoryMenu
-            categories={[
+            categorySlug={[
               ...Array.from(
-                new Set(portfolioData.map((item) => item.category))
+                new Set(portfolioData.map((item) => item.categorySlug))
               ),
             ]}
             selectedCategory={props.selectedCategory || selectedCategory}
@@ -83,41 +81,46 @@ export default function PortfolioPage(props) {
               <ul className="grid grid-cols-1 gap-6 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
                 {filteredData
                   .slice(pagination.start, pagination.end)
-                  .map(({ id, slug, image, title }) => (
-                    <li
-                      key={id}
-                      className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group"
-                    >
-                      <Link
-                        href={`/portfolio/showcase/${slug}`}
-                        className="relative w-full cursor-pointer card-container"
-                      >
-                        <img
-                          loading="lazy"
-                          className="top-0 left-0 object-fill w-full overflow-hidden transition-opacity rounded-md "
-                          src={image}
-                          alt={title}
-                        />
-                        <div className="absolute bottom-0 hidden w-full sm:flex group">
-                          <div
-                            style={{
-                              transition: "all 100ms",
-                            }}
-                            className="relative w-full transition-transform ease-in transform translate-y-2 opacity-0 ease duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:translate-y-0 group-hover:opacity-100"
+                  .map((category) =>
+                    category.portfolioItems.map(
+                      ({ id, slug, image, title }) => (
+                        <li
+                          key={id}
+                          className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group"
+                        >
+                          <Link
+                            href="/portfolio/[categorySlug]/[portfolioSlug]"
+                            as={`/portfolio/${category.categorySlug}/${slug}`}
+                            className="relative w-full cursor-pointer card-container"
                           >
-                            <h2 className="bottom-0 px-4 pt-4 pb-3 font-medium tracking-wider text-white transition-all duration-300 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
-                              {title}
-                            </h2>
-                          </div>
-                        </div>
-                        <div className="mt-1 sm:hidden">
-                          <h2 className="text-lg font-semibold tracking-wide transition-colors duration-200 text-black-shade-200 group-hover:text-primary-accent">
-                            {title}
-                          </h2>
-                        </div>
-                      </Link>
-                    </li>
-                  ))}
+                            <img
+                              loading="lazy"
+                              className="top-0 left-0 object-fill w-full overflow-hidden transition-opacity rounded-md "
+                              src={image}
+                              alt={title}
+                            />
+                            <div className="absolute bottom-0 hidden w-full sm:flex group">
+                              <div
+                                style={{
+                                  transition: "all 100ms",
+                                }}
+                                className="relative w-full transition-transform ease-in transform translate-y-2 opacity-0 ease duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:translate-y-0 group-hover:opacity-100"
+                              >
+                                <h2 className="bottom-0 px-4 pt-4 pb-3 font-medium tracking-wider text-white transition-all duration-300 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
+                                  {title}
+                                </h2>
+                              </div>
+                            </div>
+                            <div className="mt-1 sm:hidden">
+                              <h2 className="text-lg font-semibold tracking-wide transition-colors duration-200 text-black-shade-200 group-hover:text-primary-accent">
+                                {title}
+                              </h2>
+                            </div>
+                          </Link>
+                        </li>
+                      )
+                    )
+                  )}
               </ul>
             )}
           </div>
@@ -126,7 +129,10 @@ export default function PortfolioPage(props) {
           <Pagination
             showPerPage="12"
             onPaginationChange={onPaginationChange}
-            total={filteredData?.length}
+            total={filteredData?.reduce(
+              (acc, category) => acc + category.portfolioItems.length,
+              0
+            )}
           />
         </section>
       </div>

@@ -1,27 +1,47 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
-import { portfolioData } from "@/app/data/portfolioData";
+import portfolioData from "@/app/data/portfolioData";
 import PageTitle from "../../components/pageTitle/pageTitle";
 import "aos/dist/aos.css";
 export default function RecommendPortfolio({
   limit = 4,
-  random = false,
+  random = true,
   category = null,
+  currentPortfolioSlug,
 }) {
-  // Filter or randomize the data based on options
   let filteredData = portfolioData;
 
   if (category) {
-    filteredData = filteredData.filter((item) => item.category === category);
+    filteredData = filteredData.filter(
+      (categoryItem) => categoryItem.categorySlug === category
+    );
   }
+
+  if (currentPortfolioSlug) {
+    filteredData = filteredData.map((categoryItem) => ({
+      ...categoryItem,
+      portfolioItems: categoryItem.portfolioItems.filter(
+        (portfolioItem) => portfolioItem.slug !== currentPortfolioSlug
+      ),
+    }));
+  }
+
+  // Combine all portfolio items from different categories into one array
+  let allPortfolioItems = filteredData.reduce(
+    (accumulator, categoryItem) => [
+      ...accumulator,
+      ...categoryItem.portfolioItems,
+    ],
+    []
+  );
 
   if (random) {
-    // Shuffle the array to get random items
-    filteredData = [...filteredData].sort(() => Math.random() - 0.5);
+    // Shuffle all portfolio items if randomization is enabled
+    allPortfolioItems = allPortfolioItems.sort(() => Math.random() - 0.5);
   }
 
-  // Limit the data to the specified number
-  filteredData = filteredData.slice(0, limit);
+  // Apply the overall limit to the combined portfolio items
+  allPortfolioItems = allPortfolioItems.slice(0, limit);
 
   return (
     <div className="pb-6 lg:pb-20 container-margin">
@@ -38,7 +58,7 @@ export default function RecommendPortfolio({
         data-aos="fade-left"
         className="grid grid-cols-1 gap-6 mt-8 md:mt-10 lg:mt-8 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6"
       >
-        {filteredData.map(({ id, slug, image, title }) => (
+        {allPortfolioItems.map(({ id, slug, image, title }) => (
           <li
             data-aos="fade-in"
             key={id}

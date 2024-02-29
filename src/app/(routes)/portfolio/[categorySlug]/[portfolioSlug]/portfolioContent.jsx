@@ -5,22 +5,19 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import Testimonial from "@/app/components/testimonial/testimonial";
 import ContactModule from "@/app/components/contactModules/contactModule";
 import { useParams } from "next/navigation";
-import { portfolioData } from "@/app/data/portfolioData";
-import { useRouter } from "next/navigation";
+import portfolioData from "@/app/data/portfolioData";
 import RecommendPortfolio from "@/app/components/recommendPortfolio/recommendPortfolio";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import PDFSlide from "../../(components)/pdfSlide";
+import { useRouter } from "next/navigation";
 
 export default function PortfolioContent() {
   const router = useRouter();
   const params = useParams();
   const portfolioSlug = params.portfolioSlug;
-
+  const categorySlug = params.categorySlug;
   // Find the portfolio item based on the slug
-  const portfolioItem = portfolioData.find(
-    (item) => item.slug === portfolioSlug
-  );
 
   useEffect(() => {
     Aos.init({
@@ -30,12 +27,29 @@ export default function PortfolioContent() {
     });
   });
 
-  if (!portfolioItem) {
+  if (!portfolioSlug || !categorySlug) {
     return <p>Portfolio not found</p>;
   }
 
-  const { title, briefTitle, brief, description, category, image } =
-    portfolioItem;
+  // Find the category in the portfolioData
+  const category = portfolioData.find(
+    (item) => item.categorySlug === categorySlug
+  );
+
+  if (!category) {
+    return <p>Category not found</p>;
+  }
+
+  // Find the portfolio item within the category
+  const portfolioItem = category.portfolioItems.find(
+    (item) => item.slug === portfolioSlug
+  );
+
+  if (!portfolioItem) {
+    return <p>Portfolio item not found</p>;
+  }
+
+  const { title, briefTitle, brief, description, image } = portfolioItem;
 
   return (
     <>
@@ -55,7 +69,7 @@ export default function PortfolioContent() {
               {title}
             </h1>
             <p className="mt-1 text-sm font-medium tracking-wider text-center sm:text-base sm:mt-2 text-primary-accent">
-              {category}
+              {category.category}
             </p>
           </div>
           <p className="mt-3 sm:mt-5 text-lg tracking-wide font-medium text-center max-w-[480px] text-black-shade-200">
@@ -110,7 +124,7 @@ export default function PortfolioContent() {
         <Testimonial />
       </section>
       <section data-aos="fade-in" className="margin-t padding-y">
-        <RecommendPortfolio />
+        <RecommendPortfolio currentPortfolioSlug={portfolioSlug} />
       </section>
       <ContactModule />
     </>

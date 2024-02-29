@@ -3,10 +3,8 @@ import PortfolioPage from "../portfolio";
 
 /* Dynamic SEO */
 export async function generateMetadata({ params }) {
-  // read route params
-  const categorySlug = params.categorySlug;
-  const categoryName =
-    categorySlug.charAt(0).toUpperCase() + categorySlug.slice(1);
+  const category = params.categorySlug;
+  const categoryName = category.charAt(0).toUpperCase() + category.slice(1);
 
   return {
     title: `${categoryName} Portfolio`,
@@ -24,12 +22,12 @@ export async function generateMetadata({ params }) {
       "3D design",
     ],
     alternates: {
-      canonical: `/portfolio/${categorySlug}`,
+      canonical: `/portfolio/${category}`,
     },
   };
 }
 
 export default function page({ params }) {
-  const categorySlug = params.categorySlug;
-  return <PortfolioPage selectedCategory={categorySlug} />;
+  const category = params.categorySlug;
+  return <PortfolioPage selectedCategory={category} />;
 }
