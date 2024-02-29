@@ -15,7 +15,7 @@ export const metadata = {
       "Empowering Your Digital Success, One Click at a Time|TwelveLetter",
   },
   description:
-    "Unlocking the Potential of Your Online Presence with Innovative Solutions, Strategic Insights, and Tailored Strategies Designed to Elevate Your Brand's Visibility, Drive Engagement, and Fuel Sustainable Growth in the Ever-Evolving Digital Landscape. Phone: +977 9802366500, Email: pranisha@twelveletter.co, Location: Kupondole, Lalitpur, Nepal",
+    "Unlocking the Potential of Your Online Presence with Innovative Solutions, Strategic Insights, and Tailored Strategies Designed to Elevate Your Brand's Visibility, Drive Engagement, and Fuel Sustainable Growth in the Ever-Evolving Digital Landscape.",
 };
 
 const manrope = Manrope({
