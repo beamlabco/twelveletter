@@ -6,6 +6,26 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
 
+// Function to add categorySlug to portfolioItems
+function addCategorySlugsToPortfolioItems(data) {
+  return data.map((categoryItem) => {
+    const categorySlug = categoryItem.categorySlug;
+    const portfolioItemsWithCategorySlug = categoryItem.portfolioItems.map(
+      (portfolioItem) => {
+        return {
+          ...portfolioItem,
+          categorySlug: categorySlug,
+        };
+      }
+    );
+
+    return {
+      ...categoryItem,
+      portfolioItems: portfolioItemsWithCategorySlug,
+    };
+  });
+}
+
 export default function PortfolioSlider() {
   const commonSettings = {
     dots: false,
@@ -48,7 +68,12 @@ export default function PortfolioSlider() {
     rtl: true,
   };
 
-  const simplifiedPortfolioData = portfolioData.flatMap(
+  // Use the function to add categorySlug to portfolioData
+  const portfolioDataWithCategorySlugs =
+    addCategorySlugsToPortfolioItems(portfolioData);
+
+  // Flatten the data to get simplifiedPortfolioData
+  const simplifiedPortfolioData = portfolioDataWithCategorySlugs.flatMap(
     (category) => category.portfolioItems
   );
 
@@ -62,7 +87,7 @@ export default function PortfolioSlider() {
           >
             <Link
               title={portfolio.title}
-              href={`/portfolio/showcase/${portfolio.slug}`}
+              href={`/portfolio/${portfolio.categorySlug}/${portfolio.slug}`} // Include category slug
             >
               <img
                 title={portfolio.title}
@@ -82,7 +107,7 @@ export default function PortfolioSlider() {
           >
             <Link
               title={portfolio.title}
-              href={`/portfolio/showcase/${portfolio.slug}`}
+              href={`/portfolio/showcase/${portfolio.categorySlug}/${portfolio.slug}`} // Include category slug
             >
               <img
                 title={portfolio.title}
