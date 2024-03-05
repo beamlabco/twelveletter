@@ -11,6 +11,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import PDFSlide from "../../(components)/pdfSlide";
 import { useRouter } from "next/navigation";
+import NotFound from "@/app/not-found";
 
 export default function PortfolioContent() {
   const router = useRouter();
@@ -28,7 +29,7 @@ export default function PortfolioContent() {
   });
 
   if (!portfolioSlug || !categorySlug) {
-    return <p>Portfolio not found</p>;
+    return <NotFound message={`${portfolioSlug} page not found`} />;
   }
 
   // Find the category in the portfolioData
@@ -37,7 +38,7 @@ export default function PortfolioContent() {
   );
 
   if (!category) {
-    return <p>Category not found</p>;
+    return <NotFound message={`${categorySlug} page not found`} />;
   }
 
   // Find the portfolio item within the category
@@ -46,7 +47,7 @@ export default function PortfolioContent() {
   );
 
   if (!portfolioItem) {
-    return <p>Portfolio item not found</p>;
+    return <NotFound message={`${portfolioSlug} page not found`} />;
   }
 
   const { title, briefTitle, brief, description, image } = portfolioItem;

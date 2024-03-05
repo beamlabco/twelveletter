@@ -1,6 +1,7 @@
 import React from "react";
 import PortfolioContent from "./portfolioContent";
 import portfolioData from "@/app/data/portfolioData";
+import NotFound from "@/app/not-found";
 
 /* Dynamic SEO */
 export async function generateMetadata({ params }) {
@@ -10,7 +11,7 @@ export async function generateMetadata({ params }) {
 
   // Find the portfolio item based on the slug
   if (!portfolioSlug || !categorySlug) {
-    return <p>Portfolio not found</p>;
+    return <NotFound message={`${portfolioSlug} page not found`} />;
   }
 
   // Find the category in the portfolioData
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }) {
   );
 
   if (!categoryName) {
-    return <p>Category not found</p>;
+    return <NotFound message={`${categorySlug} page not found`} />;
   }
 
   // Find the portfolio item within the category
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }) {
   );
 
   if (!portfolioItem) {
-    return <p>Portfolio item not found</p>;
+    return <NotFound message={`${portfolioSlug} page not found`} />;
   }
 
   const { title, description, category } = portfolioItem;
