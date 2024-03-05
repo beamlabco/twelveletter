@@ -16,6 +16,12 @@ export const metadata = {
   },
   description:
     "Unlocking the Potential of Your Online Presence with Innovative Solutions, Strategic Insights, and Tailored Strategies Designed to Elevate Your Brand's Visibility, Drive Engagement, and Fuel Sustainable Growth in the Ever-Evolving Digital Landscape.",
+  icons: {
+    icon: ["/favicon.ico"],
+    apple: ["/apple-touch-icon.png"],
+    shortcut: ["/apple-touch-icon.png"],
+  },
+  manifest: "/site.webmanifest",
 };
 
 const manrope = Manrope({
