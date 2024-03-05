@@ -65,7 +65,7 @@ export default function PortfolioContent() {
             &nbsp; Go Back
           </button>
           <div>
-            <h1 className="font-semibold tracking-wide text-center text-black-shade-300 heading-medium">
+            <h1 className="font-bold tracking-wide text-center text-black-shade-300 heading-medium">
               {title}
             </h1>
             <p className="mt-1 text-sm font-medium tracking-wider text-center sm:text-base sm:mt-2 text-primary-accent">

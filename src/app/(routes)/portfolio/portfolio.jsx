@@ -99,14 +99,14 @@ export default function PortfolioPage(props) {
                               src={image}
                               alt={title}
                             />
-                            <div className="absolute bottom-0 hidden w-full sm:flex group">
+                            <div className="absolute bottom-0 hidden w-full h-1/3 sm:flex group">
                               <div
                                 style={{
                                   transition: "all 100ms",
                                 }}
-                                className="relative w-full transition-transform ease-in transform translate-y-2 opacity-0 ease duration-400 bg-gradient-to-t from-black-shade-300 to-transparent group-hover:translate-y-0 group-hover:opacity-100"
+                                className="relative w-full h-full transition-transform ease-in transform translate-y-2 opacity-0 ease duration-400 bg-gradient-to-t from-[#11111169] to-transparent group-hover:translate-y-0 group-hover:opacity-100"
                               >
-                                <h2 className="bottom-0 px-4 pt-4 pb-3 font-medium tracking-wider text-white transition-all duration-300 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
+                                <h2 className="absolute bottom-[5px] px-5 pt-4 pb-4 font-medium tracking-wider text-white transition-all duration-300 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
                                   {title}
                                 </h2>
                               </div>

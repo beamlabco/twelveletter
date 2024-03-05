@@ -94,42 +94,181 @@ const portfolioData = [
   },
   {
     id: 3,
-    category: "Graphic Design",
-    categorySlug: "graphic-design",
+    category: "Logo Design",
+    categorySlug: "logo-design",
     portfolioItems: [
       {
-        id: "g1",
-        title: "Sakura Web Design",
-        slug: "sakura-web-design",
-        category: "Graphic Design",
-        briefTitle: "SAMI Web Design",
+        id: "ld1",
+        title: "TwelveLetter Logo Design",
+        slug: "twelveletter",
+        briefTitle: "Twelve Letter Logo Design",
         brief:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        image: "/assets/Portfolio/p3.png",
+        image: "/assets/Portfolio/Logo/TwelveLetter/twelveletter-cover.webp",
         media: [
           {
             type: "image",
-            url: "/assets/Portfolio/pmain.png",
+            url: "/assets/Portfolio/Logo/TwelveLetter/twelveletter-logo.webp",
           },
         ],
       },
       {
-        id: "g2",
-        title: "Mockup Product Design",
-        slug: "mockup-product-designing",
-        category: "Illustration",
-        briefTitle: "SAMI Web Design",
+        id: "ld2",
+        title: "Vesper Logo Design",
+        slug: "vesper",
+        briefTitle: "Vesper Logo Design",
         brief:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        image: "/assets/Portfolio/p2.png",
+        image: "/assets/Portfolio/Logo/Vesper/vesper-cover.webp",
         media: [
           {
             type: "image",
-            url: "/assets/Portfolio/pmain.png",
+            url: "/assets/Portfolio/Logo/Vesper/vesper-content.webp",
+          },
+        ],
+      },
+      {
+        id: "ld3",
+        title: "Kosah Nepal Logo Design",
+        slug: "kosah-nepal",
+        briefTitle: "Kosah Nepal Logo Design",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Logo/Kosah_Nepal/kosah-nepal-cover.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Logo/Kosah_Nepal/kosah-nepal-content.webp",
+          },
+        ],
+      },
+
+      {
+        id: "ld4",
+        title: "Litaliano Logo Design",
+        slug: "litaliano",
+        briefTitle: "Litaliano Logo Design",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Logo/Litaliano/litaliano-cover.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Logo/Litaliano/litaliano-content.webp",
+          },
+        ],
+      },
+
+      {
+        id: "ld5",
+        title: "Smartworks Logo Design",
+        slug: "smartworks",
+        briefTitle: "Smart Works Logo Design",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Logo/SmartWorks/sw-codeworks-cover.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Logo/SmartWorks/sw-codeworks-content.webp",
+          },
+        ],
+      },
+
+      // Add more items as needed
+    ],
+  },
+
+  {
+    id: 3,
+    category: "Digital Post Creatives",
+    categorySlug: "digital-post-creatives",
+    portfolioItems: [
+      {
+        id: "dpc1",
+        title: "KTM Uncorked Digital Post",
+        slug: "ktm-uncorked",
+        briefTitle: "KTM Uncorked Digital Post",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Digital_Post_Creatives/KTM_Uncorked_Vesper/ktm-uncorked-cover.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Digital_Post_Creatives/KTM_Uncorked_Vesper/ktm-uncorked.webp",
+          },
+        ],
+      },
+      {
+        id: "dpc2",
+        title: "Celermart Creatives",
+        slug: "celermart-creatives",
+        briefTitle: "Celermart",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Digital_Post_Creatives/Celermart/celermart-digital-cover.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Digital_Post_Creatives/Celermart/celermart-bennevis.webp",
+          },
+          {
+            type: "image",
+            url: "/assets/Portfolio/Digital_Post_Creatives/Celermart/celermart-dashain.webp",
+          },
+          {
+            type: "image",
+            url: "/assets/Portfolio/Digital_Post_Creatives/Celermart/celermart-happiness.webp",
+          },
+          {
+            type: "image",
+            url: "/assets/Portfolio/Digital_Post_Creatives/Celermart/celermart-to-rescue.webp",
+          },
+        ],
+      },
+      {
+        id: "dpc3",
+        title: "Vesper creatives",
+        slug: "vesper-creatives",
+        briefTitle: "Vesper",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Digital_Post_Creatives/Vesper/vesper-cover.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Digital_Post_Creatives/Vesper/vesper-bogo.webp",
+          },
+          {
+            type: "image",
+            url: "/assets/Portfolio/Digital_Post_Creatives/Vesper/vesper-dig.webp",
+          },
+          {
+            type: "image",
+            url: "/assets/Portfolio/Digital_Post_Creatives/Vesper/vesper-offer.webp",
+          },
+          {
+            type: "image",
+            url: "/assets/Portfolio/Digital_Post_Creatives/Vesper/vesper-week-offer.webp",
           },
         ],
       },
