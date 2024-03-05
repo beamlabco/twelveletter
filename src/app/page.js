@@ -3,6 +3,7 @@ import BrandModule from "./components/brandModule/brandModule";
 import ServiceModule from "./components/homeModules/serviceModule";
 import PortfolioSlider from "./components/homeModules/portfolioSlider";
 import Hero from "./components/homeModules/hero";
+const hcaptcha_site_key = process.env.HCAPTCHA_SITE_KEY;
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
           <BrandModule />
         </section>
         <section>
-          <Contact tag="h2" />
+          <Contact hcaptcha_site_key={hcaptcha_site_key} tag="h2" />
         </section>
       </div>
     </>
