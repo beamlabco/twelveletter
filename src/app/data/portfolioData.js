@@ -75,7 +75,6 @@ const portfolioData = [
         id: "i1",
         title: "Mockup Product Design",
         slug: "mockup-product-designing",
-        category: "Illustration",
         briefTitle: "SAMI Web Design",
         brief:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",

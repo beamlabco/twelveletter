@@ -3,45 +3,25 @@ import Link from "next/link";
 import portfolioData from "@/app/data/portfolioData";
 import PageTitle from "../../components/pageTitle/pageTitle";
 import "aos/dist/aos.css";
+
 export default function RecommendPortfolio({
   limit = 4,
   random = true,
   category = null,
   currentPortfolioSlug,
 }) {
-  let filteredData = portfolioData;
+  // Separate logical parts into functions
+  const updatedPortfolioData = addCategorySlugsToPortfolioItems(portfolioData);
 
-  if (category) {
-    filteredData = filteredData.filter(
-      (categoryItem) => categoryItem.categorySlug === category
-    );
-  }
-
-  if (currentPortfolioSlug) {
-    filteredData = filteredData.map((categoryItem) => ({
-      ...categoryItem,
-      portfolioItems: categoryItem.portfolioItems.filter(
-        (portfolioItem) => portfolioItem.slug !== currentPortfolioSlug
-      ),
-    }));
-  }
-
-  // Combine all portfolio items from different categories into one array
-  let allPortfolioItems = filteredData.reduce(
-    (accumulator, categoryItem) => [
-      ...accumulator,
-      ...categoryItem.portfolioItems,
-    ],
-    []
+  let filteredData = filterPortfolioData(
+    updatedPortfolioData,
+    category,
+    currentPortfolioSlug
   );
 
-  if (random) {
-    // Shuffle all portfolio items if randomization is enabled
-    allPortfolioItems = allPortfolioItems.sort(() => Math.random() - 0.5);
-  }
+  let allPortfolioItems = combinePortfolioItems(filteredData, random, limit);
 
-  // Apply the overall limit to the combined portfolio items
-  allPortfolioItems = allPortfolioItems.slice(0, limit);
+  console.log(allPortfolioItems);
 
   return (
     <div className="pb-6 lg:pb-20 container-margin">
@@ -58,7 +38,7 @@ export default function RecommendPortfolio({
         data-aos="fade-left"
         className="grid grid-cols-1 gap-6 mt-8 md:mt-10 lg:mt-8 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6"
       >
-        {allPortfolioItems.map(({ id, slug, image, title }) => (
+        {allPortfolioItems.map(({ id, slug, image, title, categorySlug }) => (
           <li
             data-aos="fade-in"
             key={id}
@@ -66,7 +46,7 @@ export default function RecommendPortfolio({
           >
             <Link
               title={title}
-              as={`/portfolio/showcase/${slug}`}
+              as={`/portfolio/${categorySlug}/${slug}`}
               href="/portfolio/showcase/[portfolioSlug]"
               className="relative w-full cursor-pointer card-container"
             >
@@ -106,4 +86,65 @@ export default function RecommendPortfolio({
       </Link>
     </div>
   );
+}
+
+// Function to add category slug to each portfolio item
+function addCategorySlugsToPortfolioItems(portfolioData) {
+  return portfolioData.map((categoryItem) => {
+    const categorySlug = categoryItem.categorySlug;
+    const portfolioItemsWithCategorySlug = categoryItem.portfolioItems.map(
+      (portfolioItem) => {
+        return {
+          ...portfolioItem,
+          categorySlug: categorySlug,
+        };
+      }
+    );
+
+    return {
+      ...categoryItem,
+      portfolioItems: portfolioItemsWithCategorySlug,
+    };
+  });
+}
+
+// Function to filter portfolio data based on category and current portfolio slug
+function filterPortfolioData(portfolioData, category, currentPortfolioSlug) {
+  let filteredData = portfolioData;
+
+  if (category) {
+    filteredData = filteredData.filter(
+      (categoryItem) => categoryItem.categorySlug === category
+    );
+  }
+
+  if (currentPortfolioSlug) {
+    filteredData = filteredData.map((categoryItem) => ({
+      ...categoryItem,
+      portfolioItems: categoryItem.portfolioItems.filter(
+        (portfolioItem) => portfolioItem.slug !== currentPortfolioSlug
+      ),
+    }));
+  }
+
+  return filteredData;
+}
+
+// Function to combine portfolio items from different categories into one array
+function combinePortfolioItems(filteredData, random, limit) {
+  let allPortfolioItems = filteredData.reduce(
+    (accumulator, categoryItem) => [
+      ...accumulator,
+      ...categoryItem.portfolioItems,
+    ],
+    []
+  );
+
+  if (random) {
+    // Shuffle all portfolio items if randomization is enabled
+    allPortfolioItems = allPortfolioItems.sort(() => Math.random() - 0.5);
+  }
+
+  // Apply the overall limit to the combined portfolio items
+  return allPortfolioItems.slice(0, limit);
 }

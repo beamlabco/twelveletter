@@ -108,9 +108,10 @@ export default function PortfolioContent() {
             <div key={index} className="mb-10">
               {mediaItem?.type === "image" && (
                 <img
+                  loading="lazy"
                   title={title}
                   alt={title}
-                  className="w-full"
+                  className="h-auto mx-auto rounded-md shadow-md w-fit"
                   src={mediaItem.url}
                 />
               )}

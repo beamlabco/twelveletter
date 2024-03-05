@@ -6,7 +6,7 @@ import PageTitle from "../pageTitle/pageTitle.jsx";
 export default function ContactModule() {
   return (
     <section className="margin-t padding-y-lg lg:pb-24 bg-[#F5F5F7] w-full flex justify-center">
-      <div className="max-w-[1250px]">
+      <div className="w-full container-margin">
         <PageTitle
           subHeading="Contact Us"
           highlightText="Get in touch:"
