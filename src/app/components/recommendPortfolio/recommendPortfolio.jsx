@@ -65,11 +65,13 @@ export default function RecommendPortfolio({
             className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group"
           >
             <Link
+              title={title}
               as={`/portfolio/showcase/${slug}`}
               href="/portfolio/showcase/[portfolioSlug]"
               className="relative w-full cursor-pointer card-container"
             >
               <img
+                title={title}
                 className="top-0 left-0 object-cover w-full overflow-hidden transition-opacity rounded-md"
                 src={image}
                 alt="Card"
@@ -96,6 +98,7 @@ export default function RecommendPortfolio({
         ))}
       </ul>
       <Link
+        title="Check All Portfolio"
         href="/portfolio"
         className="float-right mt-6 text-base font-semibold tracking-wider lg:text-lg text-primary-accent lg:mt-12"
       >

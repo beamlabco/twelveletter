@@ -21,6 +21,7 @@ export default function hero() {
       </p>
       <div className="flex flex-wrap items-center md:gap-12 md:justify-between w-full gap-7 mt-10 md:max-w-[500px] sm:mt-12 lg:mt-14">
         <Link
+          title="Quick message form"
           href="/contact-us"
           className="px-5 py-3 font-visby font-semibold whitespace-nowrap  sm:text-lg text-lg tracking-wide text-white rounded cursor-pointer transition-all ease duration-300  bg-primary-accent hover:bg-[#ff968f]"
         >
@@ -29,6 +30,7 @@ export default function hero() {
 
         <div>
           <a
+            title="Email"
             href={contactInfo[2].link}
             className="flex items-center space-x-4 cursor-pointer link w-fit "
           >

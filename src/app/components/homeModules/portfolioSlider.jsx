@@ -60,8 +60,12 @@ export default function PortfolioSlider() {
             key={index}
             className="flex items-center  justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
           >
-            <Link href={`/portfolio/showcase/${portfolio.slug}`}>
+            <Link
+              title={portfolio.title}
+              href={`/portfolio/showcase/${portfolio.slug}`}
+            >
               <img
+                title={portfolio.title}
                 className="transition-all duration-200 rounded-md hover:group hover:shadow-md"
                 src={portfolio.image}
                 alt={portfolio.title}
@@ -76,8 +80,12 @@ export default function PortfolioSlider() {
             key={index}
             className="flex items-center justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
           >
-            <Link href={`/portfolio/showcase/${portfolio.slug}`}>
+            <Link
+              title={portfolio.title}
+              href={`/portfolio/showcase/${portfolio.slug}`}
+            >
               <img
+                title={portfolio.title}
                 className="transition-all duration-200 rounded-md hover:group hover:shadow-md"
                 src={portfolio.image}
                 alt={portfolio.title}

@@ -21,6 +21,7 @@ export default function FullscreenMenu() {
               {category.items.map((menuItem, itemIndex) => (
                 <li key={itemIndex}>
                   <a
+                    title={`${menuItem.title} Page`}
                     href={menuItem.link}
                     className={`${FullMenuCSS.list} font-medium whitespace-nowrap w-fit flex items-center gap-3 text-lg hover:text-primary-accent transition-all duration-200 lg:text-xl`}
                   >
@@ -44,6 +45,7 @@ export default function FullscreenMenu() {
           <div className="flex flex-col gap-4 lg:gap-5">
             {contactInfo.slice(0, 3).map((info, index) => (
               <a
+                title={info.title}
                 target="_blank"
                 href={info.link}
                 key={index}

@@ -89,11 +89,13 @@ export default function PortfolioPage(props) {
                           className="relative w-full h-full min-w-0 col-span-1 overflow-hidden rounded-md group"
                         >
                           <Link
+                            title={title}
                             href="/portfolio/[categorySlug]/[portfolioSlug]"
                             as={`/portfolio/${category.categorySlug}/${slug}`}
                             className="relative w-full cursor-pointer card-container"
                           >
                             <img
+                              title={title}
                               loading="lazy"
                               className="top-0 left-0 object-fill w-full overflow-hidden transition-opacity rounded-md "
                               src={image}

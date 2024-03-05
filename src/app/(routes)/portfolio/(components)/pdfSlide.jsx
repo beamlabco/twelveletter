@@ -62,6 +62,7 @@ export default function PdfSlide(props) {
         {imageUrls.map((imageUrl, index) => (
           <div className="flex items-center justify-center w-full" key={index}>
             <img
+              title={`Slide ${index}`}
               src={imageUrl}
               className="w-full h-auto m-auto rounded-sm"
               alt={`Slide ${index + 1}`}

@@ -24,6 +24,7 @@ const Pagination = ({ showPerPage, onPaginationChange, total }) => {
               className="flex items-center justify-center w-8 h-8 overflow-hidden text-lg border border-gray-200 rounded-md cursor-pointer"
             >
               <a
+                title={`Page ${index + 1}`}
                 onClick={() => setCounter(index + 1)}
                 href="# "
                 className={

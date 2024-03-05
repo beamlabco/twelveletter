@@ -62,6 +62,7 @@ export default function brandModule() {
               className="flex items-center justify-center my-auto pointer-events-none select-none"
             >
               <img
+                title={brand?.name}
                 className="pointer-events-none max-w-36 sm:max-w-[270px]"
                 src={brand?.icon}
                 alt={brand?.name}

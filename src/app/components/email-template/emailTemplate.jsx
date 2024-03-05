@@ -39,6 +39,7 @@ export default function EmailTemplate({ formData }) {
           <p style={{ fontSize: "1.1rem" }}>
             <strong>Email: </strong>{" "}
             <a
+              title="Email"
               style={{ color: "#FF867A", textDecoration: "underline" }}
               href={`mailto:${email}`}
             >

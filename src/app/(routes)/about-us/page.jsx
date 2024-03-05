@@ -31,6 +31,7 @@ export default function aboutUs() {
       <div className="flex flex-col gap-10 page-container margin-t lg:gap-28">
         <section className="flex flex-col items-center gap-6 sm:gap-7 lg:flex-row lg:gap-11">
           <img
+            title="aboutUs"
             alt="aboutUs"
             className="w-full lg:w-1/2"
             src="/assets/AboutUs/AboutUsPic.png"
@@ -51,6 +52,7 @@ export default function aboutUs() {
         </section>
         <section className="flex flex-col items-center gap-6 mb-6 sm:gap-7 lg:flex-row-reverse lg:gap-11">
           <img
+            title="aboutUs"
             alt="aboutUs"
             className="w-full lg:w-1/2"
             src="/assets/AboutUs/AboutUsPic.png"

@@ -54,7 +54,7 @@ export default function PortfolioContent() {
   return (
     <>
       <section className="relative">
-        <div className="absolute w-full h-2/3 -z-10 bg-[#FFF0EE]" />
+        <div className="absolute w-full h-2/3 -z-10 bg-[#eef8ff]" />
         <div className="flex flex-col items-center justify-center container-margin">
           <button
             data-aos="fade-left"
@@ -76,7 +76,12 @@ export default function PortfolioContent() {
             {description}
           </p>
           <figure className="relative w-full max-w-2xl mt-6 overflow-hidden rounded-md shadow-md sm:mt-10">
-            <img alt={title} className="w-full h-full" src={image}></img>
+            <img
+              title={title}
+              alt={title}
+              className="w-full h-full"
+              src={image}
+            ></img>
           </figure>
         </div>
       </section>
@@ -101,7 +106,12 @@ export default function PortfolioContent() {
           {portfolioItem?.media.map((mediaItem, index) => (
             <div key={index} className="mb-10">
               {mediaItem?.type === "image" && (
-                <img alt={title} className="w-full" src={mediaItem.url} />
+                <img
+                  title={title}
+                  alt={title}
+                  className="w-full"
+                  src={mediaItem.url}
+                />
               )}
 
               {mediaItem?.type === "slider" && (

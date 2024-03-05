@@ -20,6 +20,7 @@ export default function ContactModule() {
           {contactInfo.slice(1, 3).map((info, index) => (
             <div key={index} className="col-span-2 sm:col-span-1">
               <a
+                title={info.title}
                 href={info.link}
                 className="flex items-center space-x-4 cursor-pointer link w-fit "
               >
@@ -37,7 +38,10 @@ export default function ContactModule() {
             </div>
           ))}
           <div className="col-span-2 my-4 sm:col-span-1 lg:my-2">
-            <a className="px-4 py-3 whitespace-nowrap  sm:text-lg text-base font-manrope font-medium tracking-wider text-white rounded cursor-pointer transition-all ease duration-300  bg-primary-accent hover:bg-[#ff968f]">
+            <a
+              title="Quick message form"
+              className="px-4 py-3 whitespace-nowrap  sm:text-lg text-base font-manrope font-medium tracking-wider text-white rounded cursor-pointer transition-all ease duration-300  bg-primary-accent hover:bg-[#ff968f]"
+            >
               Quick Message Form
             </a>
           </div>

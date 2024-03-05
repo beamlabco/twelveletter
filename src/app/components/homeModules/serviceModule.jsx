@@ -112,6 +112,7 @@ export default function ServiceModule() {
                   }}
                 >
                   <img
+                    title={item.title}
                     src={item.image}
                     alt={item.title}
                     className="w-full h-auto mx-auto"
@@ -125,6 +126,7 @@ export default function ServiceModule() {
                 >
                   {item.brief}
                   <Link
+                    title="Read More"
                     href={`/service/${item.slug}`}
                     className="tracking-wider transition-all duration-200 text-primary-accent hover:text-[#FF9E95] text-wiggle"
                   >
@@ -147,7 +149,7 @@ export default function ServiceModule() {
                     : "text-black-shade-300"
                 }`}
               >
-                <Link href={`/service/${item.slug}`}>
+                <Link title={item.title} href={`/service/${item.slug}`}>
                   <FontAwesomeIcon
                     className={`text-xl transition-all duration-200 lg:text-3xl mr-2 ${
                       index === currentItemIndex

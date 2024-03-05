@@ -84,7 +84,11 @@ export default function Service() {
                 } flex flex-col  max-w-[450px]`}
               >
                 <picture className="w-16 mb-2 lg:mb-4 lg:w-[5rem]">
-                  <img alt={feature.title} src={feature?.icon} />
+                  <img
+                    title={feature?.title}
+                    alt={feature?.title}
+                    src={feature?.icon}
+                  />
                 </picture>
                 <h3 className="font-medium heading-small text-primary-accent">
                   {feature.title}
@@ -107,6 +111,7 @@ export default function Service() {
             className="flex items-center justify-center w-full"
           >
             <img
+              title="Service Benefits Image"
               alt={selectedServiceData?.benefits.title}
               className="md:max-w-[600px] lg:max-w-[500px] xl:max-w-xl"
               src={selectedServiceData?.benefits.image}

@@ -85,7 +85,7 @@ export default function footer() {
       <div className="pt-16 pb-16 space-y-8 tracking-wider lg:pt-20 container-margin">
         <div className="grid grid-cols-1 gap-8 mb-20 lg:grid-cols-3">
           <div className="w-full max-w-[300px]">
-            <Link href="/">
+            <Link title="Logo" href="/">
               <Logo whiteLogo={true} />
             </Link>
 
@@ -120,6 +120,7 @@ export default function footer() {
                 {servicesInfo.map((service, index) => (
                   <li key={index}>
                     <Link
+                      title={service.title}
                       href={service.link}
                       className={`${FooterCSS.list} whitespace-nowrap w-fit flex items-center gap-3 text-base hover:text-primary-accent  transition-all duration-200 lg:text-lg`}
                     >
@@ -144,6 +145,7 @@ export default function footer() {
                 {companyInfo.map((service, index) => (
                   <li key={index}>
                     <Link
+                      title={service.title}
                       href={service.link}
                       className={`${FooterCSS.list} w-fit flex items-center gap-3 text-base hover:text-primary-accent  transition-all duration-200 lg:text-lg`}
                     >
@@ -168,6 +170,7 @@ export default function footer() {
                     </span>
 
                     <a
+                      title={contactInfo.info}
                       href={contactInfo.link}
                       className={`${FooterCSS.link} w-fit relative overflow-hidden text-lg font-medium text-zinc-100`}
                     >
@@ -184,6 +187,7 @@ export default function footer() {
         <hr className="h-[0.1rem] border-t-0 bg-neutral-100 dark:opacity-50"></hr>
         <div className="flex flex-wrap justify-between gap-2">
           <Link
+            title="Terms and conditions"
             className="text-s text-zinc-400 font-manrope hover:text-primary-accent"
             href="/terms-and-conditions"
           >

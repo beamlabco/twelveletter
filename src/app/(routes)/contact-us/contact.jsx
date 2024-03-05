@@ -258,6 +258,7 @@ export default function Contact(props) {
           <div className="col-span-2 space-y-8 sm:col-span-1">
             {contactInfo.slice(0, 3).map((info, index) => (
               <a
+                title={info.title}
                 key={index}
                 href={info.link}
                 className="flex items-center space-x-4 cursor-pointer link w-fit "
@@ -280,6 +281,7 @@ export default function Contact(props) {
           <div className="col-span-2 space-y-8 sm:col-span-1">
             {contactInfo.slice(3, 5).map((info, index) => (
               <a
+                title={info.title}
                 key={index}
                 href={info.link}
                 className="flex items-center space-x-4 cursor-pointer link w-fit "
