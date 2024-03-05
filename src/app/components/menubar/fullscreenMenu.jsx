@@ -21,6 +21,7 @@ export default function FullscreenMenu() {
               {category.items.map((menuItem, itemIndex) => (
                 <li key={itemIndex}>
                   <a
+                    onClick={() => window.scrollTo(0, 0)}
                     title={`${menuItem.title} Page`}
                     href={menuItem.link}
                     className={`${FullMenuCSS.list} font-medium whitespace-nowrap w-fit flex items-center gap-3 text-lg hover:text-primary-accent transition-all duration-200 lg:text-xl`}
