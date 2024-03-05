@@ -10,7 +10,7 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
 export default function Contact(props) {
-  const { tag } = props;
+  const { tag, hcaptcha_site_key } = props;
   const initialFormData = {
     name: "",
     email: "",
@@ -23,7 +23,6 @@ export default function Contact(props) {
   const [sentStatus, setSentStatus] = useState(null);
   const [token, setToken] = useState(null);
   const captchaRef = useRef(null);
-  const sitekey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
   const [skeletons, setSkeletons] = useState(true);
   const [visible, setVisible] = useState(false);
 
@@ -195,7 +194,7 @@ export default function Contact(props) {
                 >
                   <div>
                     <HCaptcha
-                      sitekey={sitekey}
+                      sitekey={hcaptcha_site_key}
                       onVerify={handleVerifyCaptcha}
                       ref={captchaRef}
                       size="normal"

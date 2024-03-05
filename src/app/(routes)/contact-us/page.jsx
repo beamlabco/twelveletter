@@ -1,5 +1,7 @@
 import Contact from "./contact";
 
+const hcaptcha_site_key = process.env.HCAPTCHA_SITE_KEY;
+
 export const metadata = {
   title: "Contact Us and leave us a line",
   description:
@@ -18,7 +20,7 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <Contact />
+      <Contact hcaptcha_site_key={hcaptcha_site_key} />
     </>
   );
 }
