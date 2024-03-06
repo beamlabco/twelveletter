@@ -246,7 +246,7 @@ export const homeServiceData = [
     slug: "web-design-and-development",
     image: "/assets/Service/illustrationg2.png",
     brief:
-      "Crafting dynamic websites: Our comprehensive web design & development services enhance your online presence.",
+      "Crafting dynamic websites: Our web design & development services enhance your online presence.",
   },
   {
     id: 3,
@@ -261,7 +261,7 @@ export const homeServiceData = [
     title: "Content Creation",
     slug: "content-creation",
     image: "/assets/Service/illustrationg4.png",
-    brief: "Content Catalyst: Strategic Creation for Maximum Impact. ",
+    brief: "Content Catalyst: Strategic Creation for Maximum Impact.",
   },
   {
     id: 5,

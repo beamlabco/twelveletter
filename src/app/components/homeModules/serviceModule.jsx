@@ -122,15 +122,15 @@ export default function ServiceModule() {
                   style={{
                     display: index === currentItemIndex ? "block" : "none",
                   }}
-                  className="text-lg font-medium [word-spacing:2px] font-manrope text-black-shade-100"
+                  className="text-base line-clamp-2 font-medium [word-spacing:1px] font-manrope text-black-shade-100"
                 >
                   {item.brief}
                   <Link
                     title="Read More"
                     href={`/service/${item.slug}`}
-                    className="tracking-wider transition-all duration-200 text-primary-accent hover:text-[#FF9E95] text-wiggle"
+                    className="tracking-wider whitespace-nowrap transition-all duration-200 text-primary-accent hover:text-[#FF9E95] text-wiggle"
                   >
-                    Read More
+                    &nbsp;Read More
                   </Link>
                 </p>
               </div>

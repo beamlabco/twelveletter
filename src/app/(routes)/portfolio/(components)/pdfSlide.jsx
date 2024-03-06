@@ -1,42 +1,17 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import "./ReactSlickOverride.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight, faCaretLeft } from "@fortawesome/free-solid-svg-icons";
-
-function SampleNextArrow(props) {
-  const { onClick } = props;
-  return (
-    <div
-      className="absolute hidden md:block right-[1%] cursor-pointer top-[47%]"
-      onClick={onClick}
-    >
-      <FontAwesomeIcon
-        className="p-2 text-xl rounded-sm bg-[#37485291] hover:bg-[#374852]"
-        color="#fff"
-        icon={faCaretRight}
-      />
-    </div>
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { onClick } = props;
-  return (
-    <div
-      className="absolute hidden md:block left-[1%] z-10 cursor-pointer top-[47%]"
-      onClick={onClick}
-    >
-      <FontAwesomeIcon
-        className="p-2 text-xl rounded-sm bg-[#37485291] hover:bg-[#374852]"
-        color="#fff"
-        icon={faCaretLeft}
-      />
-    </div>
-  );
-}
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCreative } from "swiper/modules";
+import "swiper/css/effect-creative";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper/modules";
+import "./pdfCarouseloverride.css";
 
 export default function PdfSlide(props) {
   const { url, numberOfImages } = props;
@@ -47,29 +22,45 @@ export default function PdfSlide(props) {
     (_, index) => `${url}-${index + 1}.webp`
   );
 
-  const config = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  };
-
   return (
     <div className="pdfslide">
-      <Slider {...config}>
-        {imageUrls.map((imageUrl, index) => (
-          <div className="flex items-center justify-center w-full" key={index}>
-            <img
-              title={`Slide ${index}`}
-              src={imageUrl}
-              className="w-full h-auto m-auto rounded-sm"
-              alt={`Slide ${index + 1}`}
-            />
-          </div>
-        ))}
-      </Slider>
+      <Swiper
+        grabCursor={true}
+        effect={"creative"}
+        pagination={{
+          dynamicBullets: true,
+        }}
+        navigation={true}
+        modules={[Pagination, EffectCreative, Navigation]}
+        className="mySwiper"
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ["100%", 0, 0],
+          },
+        }}
+      >
+        {imageUrls.map((imageUrl, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <div
+                className="flex items-center justify-center w-full select-none"
+                key={index}
+              >
+                <img
+                  title={`Slide ${index}`}
+                  src={imageUrl}
+                  className="w-full max-w-[850px] h-auto m-auto rounded-sm"
+                  alt={`Slide ${index + 1}`}
+                />
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </div>
   );
 }

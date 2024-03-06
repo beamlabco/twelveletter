@@ -85,6 +85,7 @@
   --ct-margin: 40px;
   --ct-margin-compact: 80px;
   --pct-margin-top: 40px;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
 }
 
 * {

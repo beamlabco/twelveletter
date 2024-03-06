@@ -71,7 +71,7 @@ export default function PortfolioSlider(props) {
               <SwiperSlide key={index}>
                 <div
                   key={index}
-                  className="flex items-center  justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
+                  className="flex items-center justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
                 >
                   <Link
                     title={portfolio.title}
@@ -122,7 +122,7 @@ export default function PortfolioSlider(props) {
               <SwiperSlide key={index}>
                 <div
                   key={index}
-                  className="flex items-center  justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
+                  className="flex items-center justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
                 >
                   <Link
                     title={portfolio.title}

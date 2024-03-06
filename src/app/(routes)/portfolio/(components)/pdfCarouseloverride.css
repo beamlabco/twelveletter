@@ -1,0 +1,18 @@
+.pdfslide .swiper-button-prev,
+.swiper-button-next {
+  color: #ff7062;
+}
+
+.pdfslide .swiper-pagination-bullet {
+  background: #ff7062;
+}
+
+.swiper-button-prev {
+  /* positioning */
+  left: 10;
+}
+
+.swiper-button-next {
+  /* positioning */
+  right: 10;
+}

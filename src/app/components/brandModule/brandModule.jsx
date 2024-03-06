@@ -24,7 +24,7 @@ export default function brandModule() {
         </p>
       </div>
 
-      <div className="w-full mt-6 mb-4 md:mt-14 lg:mt-12">
+      <div className="w-full mt-6 mb-4 md:mt-14 lg:mt-12 ">
         <Swiper
           className="sample-slider"
           modules={[Autoplay]}
