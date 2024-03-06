@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import portfolioData from "@/app/data/portfolioData";
+// Import Swiper styles
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -35,9 +36,7 @@ const simplifiedPortfolioData = portfolioDataWithCategorySlugs.flatMap(
   (category) => category.portfolioItems
 );
 
-export default function PortfolioSlider(props) {
-  const { inverse, startIndex, endIndex } = props;
-
+export default function PortfolioSlider() {
   return (
     <>
       <div>
@@ -45,12 +44,10 @@ export default function PortfolioSlider(props) {
           className="sample-slider"
           modules={[Autoplay]}
           loop={true}
+          preventClicks={false}
           allowTouchMove={false}
           autoplay={{
             delay: 0,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-            reverseDirection: inverse ? inverse : false,
           }}
           slidesPerView={2}
           speed={10000}
@@ -74,8 +71,10 @@ export default function PortfolioSlider(props) {
                   className="flex items-center justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
                 >
                   <Link
+                    scroll={true}
                     title={portfolio.title}
-                    href={`/portfolio/${portfolio.categorySlug}/${portfolio.slug}`} // Include category slug
+                    href="/portfolio/[categorySlug]/[portfolioSlug]"
+                    as={`/portfolio/${portfolio.categorySlug}/${portfolio.slug}`} // Include category slug
                   >
                     <img
                       title={portfolio.title}
@@ -95,10 +94,10 @@ export default function PortfolioSlider(props) {
           className="sample-slider"
           modules={[Autoplay]}
           loop={true}
+          preventClicks={false}
           allowTouchMove={false}
           autoplay={{
             delay: 0,
-
             disableOnInteraction: false,
             pauseOnMouseEnter: false,
             reverseDirection: true,
@@ -125,6 +124,7 @@ export default function PortfolioSlider(props) {
                   className="flex items-center justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
                 >
                   <Link
+                    scroll={true}
                     title={portfolio.title}
                     href={`/portfolio/${portfolio.categorySlug}/${portfolio.slug}`} // Include category slug
                   >

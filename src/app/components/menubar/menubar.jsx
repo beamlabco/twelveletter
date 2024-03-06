@@ -7,24 +7,24 @@ import Logo from "../brandLogo/brandLogo";
 export default function Menubar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasShadow, setHasShadow] = useState(false);
-  const [isPageLoaded, setPageLoaded] = useState(false);
 
   useEffect(() => {
-    setPageLoaded(true);
-    // Restore scroll position from localStorage
-    const scrollY = localStorage.getItem("scrollY");
-    if (scrollY) {
-      window.scrollTo(0, parseInt(scrollY, 10));
-    }
-  }, []);
+    // Immediately check and apply the correct menu bar state based on scroll position
+    const initialHandleScroll = () => {
+      const scrollY = window.scrollY;
+      setHasShadow(scrollY > 0);
+    };
 
-  useEffect(() => {
+    // Set up the scroll event listener
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setHasShadow(scrollY > 0);
-      // Save scroll position to localStorage
-      localStorage.setItem("scrollY", scrollY);
+      // Optionally, save scroll position to localStorage if needed
+      localStorage.setItem("scrollY", scrollY.toString());
     };
+
+    // Call handleScroll immediately to set the initial state correctly
+    initialHandleScroll();
 
     window.addEventListener("scroll", handleScroll);
 
@@ -41,14 +41,12 @@ export default function Menubar() {
     const mainElement = document.getElementById("main");
     const footer = document.getElementById("footer");
 
-    if (mainElement && footer) {
-      if (isOpen) {
-        mainElement.style.display = "none";
-        footer.style.display = "none";
-      } else {
-        mainElement.style.display = "";
-        footer.style.display = "";
-      }
+    if (isOpen) {
+      mainElement.style.display = "none";
+      footer.style.display = "none";
+    } else {
+      mainElement.style.display = "";
+      footer.style.display = "";
     }
   }, [isOpen]);
 
@@ -62,10 +60,10 @@ export default function Menubar() {
           : "transparent",
         boxShadow: hasShadow
           ? "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)"
-          : "",
+          : "none",
         zIndex: 1000,
       }}
-      className={`flex sticky justify-center transition-all duration-100 items-center top-0 w-full h-20 lg:h-24 bg-[#fff] `}
+      className={`flex sticky justify-center transition-all duration-100 items-center top-0 w-full h-20 lg:h-24`}
     >
       <div className="flex items-center justify-between w-full h-full container-margin">
         <a title="Logo" href="/">
@@ -82,7 +80,6 @@ export default function Menubar() {
             autoComplete="off"
             type="checkbox"
             id="burger"
-            disabled={!isPageLoaded}
           />
           <span></span>
           <span></span>

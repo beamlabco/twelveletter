@@ -1,8 +1,4 @@
 import React from "react";
-
-import "./ReactSlickOverride.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretRight, faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCreative } from "swiper/modules";
 import "swiper/css/effect-creative";
