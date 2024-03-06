@@ -3,6 +3,7 @@ import BrandModule from "./components/brandModule/brandModule";
 import ServiceModule from "./components/homeModules/serviceModule";
 import PortfolioSlider from "./components/homeModules/portfolioSlider";
 import Hero from "./components/homeModules/hero";
+
 const hcaptcha_site_key = process.env.HCAPTCHA_SITE_KEY;
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
         <section className="relative z-10 flex min-h-[40vh] pt-10 flex-col justify-center lg:min-h-[76vh] container-margin-compact">
           <Hero />
         </section>
-        <section className="margin-t bg-gradient-to-t from-[#FFE9E8] padding-y-lg lg:pb-32">
+        <section className="margin-t  bg-gradient-to-t from-[#FFE9E8] padding-y-lg lg:pb-32">
           <PortfolioSlider />
         </section>
         <section className="container-margin lg:max-w-[1250px] margin-t padding-y">
