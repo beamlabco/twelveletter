@@ -56,7 +56,7 @@ export default function PortfolioContent() {
     <>
       <section className="relative">
         <div className="absolute w-full h-2/3 -z-10 bg-[#eef8ff]" />
-        <div className="flex flex-col items-center justify-center container-margin">
+        <div className="flex flex-col items-center justify-center overflow-x-hidden container-margin">
           <button
             data-aos="fade-left"
             onClick={() => router.back()}
@@ -115,7 +115,15 @@ export default function PortfolioContent() {
                   src={mediaItem.url}
                 />
               )}
-
+              {mediaItem?.type === "video" && (
+                <div className="w-full">
+                  <iframe
+                    className="w-full h-[500px] md:h-[600px] rounded-md shadow-md"
+                    src={mediaItem.url}
+                    allow="autoplay"
+                  ></iframe>
+                </div>
+              )}
               {mediaItem?.type === "slider" && (
                 <>
                   <h3 className="text-3xl font-semibold text-center mb-7 md:text-4xl text-black-shade-300 md:mb-10">
@@ -135,7 +143,10 @@ export default function PortfolioContent() {
       <section data-aos="fade-in" className="margin-t padding-y">
         <Testimonial />
       </section>
-      <section data-aos="fade-in" className="margin-t padding-y">
+      <section
+        data-aos="fade-in"
+        className="overflow-x-hidden margin-t padding-y"
+      >
         <RecommendPortfolio currentPortfolioSlug={portfolioSlug} />
       </section>
       <ContactModule />

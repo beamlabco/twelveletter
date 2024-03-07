@@ -128,6 +128,10 @@ const portfolioData = [
             type: "image",
             url: "/assets/Portfolio/Logo/Vesper/vesper-content.webp",
           },
+          {
+            type: "video",
+            url: "https://drive.google.com/file/d/15V9EFEJq2gGnFvNM52c4Gh9-FdSEuPex/preview",
+          },
         ],
       },
       {
@@ -268,6 +272,139 @@ const portfolioData = [
           {
             type: "image",
             url: "/assets/Portfolio/Digital_Post_Creatives/Vesper/vesper-week-offer.webp",
+          },
+        ],
+      },
+      // Add more items as needed
+    ],
+  },
+  {
+    id: 3,
+    category: "Animated Video Creatives",
+    categorySlug: "animated-video-creatives",
+    portfolioItems: [
+      {
+        id: "avc1",
+        title: "WE5 Animated Video",
+        slug: "we5-animated-video",
+        briefTitle: "WE5 animated video project",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Animated_Video_Creatives/We5/we5.webp",
+        media: [
+          {
+            type: "video",
+            url: "https://drive.google.com/file/d/1Xam7wzk5lFZa1RLHCQooSZXxg_HQSD8d/preview",
+          },
+        ],
+      },
+      {
+        id: "avc2",
+        title: "Vesper Valentines Offer",
+        slug: "vesper-valentines-offer",
+        briefTitle: "Vesper Valentines Offer animated video project",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Animated_Video_Creatives/Vesper_valentines/vesper-valentine.webp",
+        media: [
+          {
+            type: "video",
+            url: "https://drive.google.com/file/d/1x-ocSuMt4C8CTLKFOiMXtN5_Zzk-neLr/preview",
+          },
+        ],
+      },
+      {
+        id: "avc3",
+        title: "Celermart Offline vs Online",
+        slug: "celermart-offline-vs-online",
+        briefTitle: "Celermart Offline vs Online animated video project",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Animated_Video_Creatives/Celermart_online_vs_offline/celermart-offline-vs-offline.webp",
+        media: [
+          {
+            type: "video",
+            url: "https://drive.google.com/file/d/1wHvT143wLbqkfYF3cDKYhdBkRJ3rDj4R/preview",
+          },
+        ],
+      },
+      {
+        id: "avc4",
+        title: "Celermart Worldcup",
+        slug: "celermart-worldcup",
+        briefTitle: "Celermart Worldcup animated video project",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Animated_Video_Creatives/Celermart_worldcup/celermart-worldcup.webp",
+        media: [
+          {
+            type: "video",
+            url: "https://drive.google.com/file/d/12B1Gtae3I2Z_ImxpuTkrO3rWraCJWxUN/preview",
+          },
+        ],
+      },
+      {
+        id: "avc5",
+        title: "Celermart Bennevis collaboration",
+        slug: "celermart-bennevis-collaboration",
+        briefTitle: "Celermart bennvis collaboration animated video project",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Animated_Video_Creatives/Celermart_bennevis/celermart-bennevis.webp",
+        media: [
+          {
+            type: "video",
+            url: "https://drive.google.com/file/d/1M_0mlOPjw2K9ShCk1kkqyKxz9W289G8c/preview",
+          },
+        ],
+      },
+      {
+        id: "avc6",
+        title: "Celermart Eshop",
+        slug: "celermart-eshop",
+        briefTitle: "Celermart Eshop animated video project",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Animated_Video_Creatives/Celemart_eshop/celermart-eshop.webp",
+        media: [
+          {
+            type: "video",
+            url: "https://drive.google.com/file/d/1-fdAOCQbJ2sduy-9SYdV4jcpPkfdSLIc/preview",
+          },
+        ],
+      },
+      {
+        id: "avc7",
+        title: "Vesper Logo Animation",
+        slug: "vesper-logo-animation",
+        briefTitle: "Logo Animation for Vesper",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Animated_Video_Creatives/Vesper_logo_animation/vesper-logo-animation.webp",
+        media: [
+          {
+            type: "video",
+            url: "https://drive.google.com/file/d/15V9EFEJq2gGnFvNM52c4Gh9-FdSEuPex/preview",
           },
         ],
       },

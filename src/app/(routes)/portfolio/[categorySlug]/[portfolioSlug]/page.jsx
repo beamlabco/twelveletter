@@ -46,8 +46,8 @@ export async function generateMetadata({ params }) {
 
 export default function page() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <PortfolioContent />
-    </>
+    </div>
   );
 }
