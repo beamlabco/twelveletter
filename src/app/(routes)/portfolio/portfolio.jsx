@@ -104,7 +104,23 @@ export default function PortfolioPage(props) {
                           src={image}
                           alt={title}
                         />
-                        {/* Additional UI elements here */}
+                        <div className="absolute bottom-0 hidden w-full h-1/3 sm:flex group">
+                          <div
+                            style={{
+                              transition: "all 100ms",
+                            }}
+                            className="relative w-full h-full transition-transform ease-in transform translate-y-2 opacity-0 ease duration-400 bg-gradient-to-t from-[#111111bb] to-transparent group-hover:translate-y-0 group-hover:opacity-100"
+                          >
+                            <h2 className="absolute bottom-[5px] px-5 pt-4 pb-4 font-medium tracking-wider text-white transition-all duration-300 translate-y-4 opacity-0 text-over group-hover:translate-y-0 group-hover:opacity-100">
+                              {title}
+                            </h2>
+                          </div>
+                        </div>
+                        <div className="mt-1 sm:hidden">
+                          <h2 className="text-lg font-semibold tracking-wide transition-colors duration-200 text-black-shade-200 group-hover:text-primary-accent">
+                            {title}
+                          </h2>
+                        </div>
                       </Link>
                     </li>
                   )
