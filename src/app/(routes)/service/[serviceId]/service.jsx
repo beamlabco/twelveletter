@@ -13,6 +13,27 @@ import RecommendPortfolio from "@/app/components/recommendPortfolio/recommendPor
 import Aos from "aos";
 import "aos/dist/aos.css";
 
+export async function generateMetadata({ params }) {
+  // read route params
+  const serviceSlug = params.serviceId;
+  // Find the portfolio item based on the slug
+  const selectedServiceData = serviceData[0].services.find(
+    (service) => service.slug === serviceSlug
+  );
+
+  const description = selectedServiceData.brief;
+  const serviceType = selectedServiceData.serviceType;
+
+  return {
+    title: `${serviceType}`,
+    description: `${description}  Phone: +977 9802366500, Email: pranisha@twelveletter.co, Location: Kupondole, Lalitpur, Nepal`,
+    keywords: ["Twelveletter", "Portfolio", serviceType, serviceType],
+    alternates: {
+      canonical: `/service/${serviceId}`,
+    },
+  };
+}
+
 export default function Service() {
   const params = useParams();
   const serviceId = params.serviceId;

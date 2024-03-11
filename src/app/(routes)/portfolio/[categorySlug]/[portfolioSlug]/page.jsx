@@ -3,6 +3,18 @@ import PortfolioContent from "./portfolioContent";
 import portfolioData from "@/app/data/portfolioData";
 import NotFound from "@/app/not-found";
 
+export function generateStaticParams() {
+  // Flatten the structure to include both categorySlug and portfolioItem slugs
+  const slugs = portfolioData.flatMap((category) =>
+    category.portfolioItems.map((item) => ({
+      categorySlug: category.categorySlug,
+      portfolioSlug: item.slug,
+    }))
+  );
+
+  return slugs;
+}
+
 /* Dynamic SEO */
 export async function generateMetadata({ params }) {
   // read route params

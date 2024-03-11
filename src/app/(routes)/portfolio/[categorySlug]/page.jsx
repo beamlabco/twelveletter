@@ -1,9 +1,20 @@
 import React from "react";
 import PortfolioPage from "../portfolio";
+import portfolioData from "@/app/data/portfolioData";
+
+export function generateStaticParams() {
+  const categorySlugs = portfolioData.map((category) => ({
+    categorySlug: category.categorySlug,
+  }));
+
+  return categorySlugs;
+}
 
 /* Dynamic SEO */
 export async function generateMetadata({ params }) {
-  const category = params.categorySlug;
+  const { categorySlug } = params;
+
+  const category = categorySlug;
   const categoryName = category.charAt(0).toUpperCase() + category.slice(1);
 
   return {
