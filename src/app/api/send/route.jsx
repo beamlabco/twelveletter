@@ -23,7 +23,7 @@ export async function POST(request, response) {
     if (response.data.success) {
       await resend.emails.send({
         from: "onboarding@resend.dev",
-        to: "sharnam34@gmail.com",
+        to: "avanish@beamlab.co",
         subject: `Form submission from ${name} via TwelveLetter website`,
         react: (
           <EmailTemplate formData={{ name, email, message, organization }} />

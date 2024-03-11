@@ -66,7 +66,7 @@ const portfolioData = [
       // Add more items as needed
     ],
   },
-  {
+  /*  {
     id: 2,
     category: "Illustration",
     categorySlug: "illustration",
@@ -90,7 +90,7 @@ const portfolioData = [
       },
       // Add more items as needed
     ],
-  },
+  }, */
   {
     id: 3,
     category: "Logo Design",
@@ -412,6 +412,85 @@ const portfolioData = [
     ],
   },
   // Add more categories as needed
+  {
+    id: 4,
+    category: "3D Modeling",
+    categorySlug: "3d-modeling",
+    portfolioItems: [
+      {
+        id: "3d1",
+        title: "Vesper 3D Wine bottle models",
+        slug: "vesper-3d-bottles",
+        briefTitle: "Vesper Fine wines 3D bottle models",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/3D_design/vesper_3D/vesper-3d.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/3D_design/vesper_3D/vesper-content.webp",
+          },
+        ],
+      },
+      {
+        id: "3d2",
+        title: "Rack design",
+        slug: "rack",
+        briefTitle: "3D Rack design",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/3D_design/rack/rack.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/3D_design/rack/rack-content.webp",
+          },
+        ],
+      },
+      {
+        id: "3d3",
+        title: "Aromatic keratin",
+        slug: "aromatic-keratin",
+        briefTitle: "Armoatic Keratin bottle 3D model",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/3D_design/aromatic_keratin/aromatic-keratin.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/3D_design/aromatic_keratin/aromatic-keratin-content.webp",
+          },
+        ],
+      },
+      {
+        id: "3d4",
+        title: "Aromatic body lotion",
+        slug: "aromatic-body-lotion",
+        briefTitle: "Armoatic body lotion 3D model",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/3D_design/aromatic_body_lotion/aromatic-body-lotion.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/3D_design/aromatic_body_lotion/aromatic-body-lotion-content.webp",
+          },
+        ],
+      },
+
+      // Add more items as needed
+    ],
+  },
 ];
 
 export default portfolioData;
