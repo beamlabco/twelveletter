@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: 'dist',
   async headers() {
     return [
       {
@@ -21,6 +22,8 @@ const nextConfig = {
       },
     ];
   },
+  // reactStrictMode: true,
+  // output: 'export',
 };
 
 module.exports = nextConfig;
