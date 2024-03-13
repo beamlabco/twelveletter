@@ -10,7 +10,7 @@ export default function hero() {
       <PageTitle
         highlightTextEnd=" One Click at a Time."
         textSize="xl"
-        heading="Twelveletter- Empowering Your Digital Success,"
+        heading="TwelveLetter - Empowering Your Digital Success,"
         highlightGradient={true}
       />
       <p className="text-lg [word-spacing:2px] font-manrope leading-normal md:text-[20px] font-semibold md:leading-9 max-w-[1000px] mt-7 lg:mt-9 text-black-shade-200">
