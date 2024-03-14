@@ -31,6 +31,7 @@ export async function generateMetadata({ params }) {
       "Offline print creatives",
       "Packaging",
       "3D design",
+      "menu",
     ],
     alternates: {
       canonical: `/portfolio/${category}`,

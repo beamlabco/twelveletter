@@ -116,7 +116,7 @@ export default function PortfolioSlider() {
             },
           }}
         >
-          {simplifiedPortfolioData.slice(1, 8).map((portfolio, index) => {
+          {simplifiedPortfolioData.slice(6, 12).map((portfolio, index) => {
             return (
               <SwiperSlide key={index}>
                 <div

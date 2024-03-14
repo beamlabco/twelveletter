@@ -66,31 +66,6 @@ const portfolioData = [
       // Add more items as needed
     ],
   },
-  /*  {
-    id: 2,
-    category: "Illustration",
-    categorySlug: "illustration",
-    portfolioItems: [
-      {
-        id: "i1",
-        title: "Mockup Product Design",
-        slug: "mockup-product-designing",
-        briefTitle: "SAMI Web Design",
-        brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        image: "/assets/Portfolio/p2.png",
-        media: [
-          {
-            type: "image",
-            url: "/assets/Portfolio/pmain.png",
-          },
-        ],
-      },
-      // Add more items as needed
-    ],
-  }, */
   {
     id: 3,
     category: "Logo Design",
@@ -484,6 +459,158 @@ const portfolioData = [
           {
             type: "image",
             url: "/assets/Portfolio/3D_design/aromatic_body_lotion/aromatic-body-lotion-content.webp",
+          },
+        ],
+      },
+
+      // Add more items as needed
+    ],
+  },
+
+  {
+    id: 5,
+    category: "Food catalogue",
+    categorySlug: "food-catalogue",
+    portfolioItems: [
+      {
+        id: "m1",
+        title: "Colors karaoke menu",
+        slug: "colors-karaoke-menu",
+        briefTitle: "Colors karaoke menu design",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Menu/colors-karaoke-menu.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Menu/colors-karaoke-menu-print.webp",
+          },
+        ],
+      },
+      {
+        id: "m2",
+        title: "Litaliano wine menu",
+        slug: "litaliano-wine-menu",
+        briefTitle: "Litaliano wine menu design",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Menu/litaliano-wine-menu.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Menu/litaliano-wine-menu-content.webp",
+          },
+        ],
+      },
+      {
+        id: "m3",
+        title: "Lhakpas Chulo Food Catalogue",
+        slug: "lhakpas-chulo-catalogue",
+        briefTitle: "Lhakpas Chulo Food Catalogue Design",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Menu/lhakpas-chulo-menu.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Menu/lhakpas-chulo-menu-page.webp",
+          },
+        ],
+      },
+      {
+        id: "m4",
+        title: "Electric Pagoda Food Catalogue",
+        slug: "electric-pagoda-food-catalogue",
+        briefTitle: "Armoatic body lotion 3D model",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Menu/electric-pagoda-food-catalogue.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Menu/electric-pagoda-page-1.webp",
+          },
+          {
+            type: "image",
+            url: "/assets/Portfolio/Menu/electric-pagoda-page-2.webp",
+          },
+        ],
+      },
+      {
+        id: "m5",
+        title: "Litaliano Opening Catalogue",
+        slug: "litaliano-opening-menu",
+        briefTitle: "Litaliano Opening Catalogue Design",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Menu/litaliano-opening-menu.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Menu/litaliano-opening-menu.webp",
+          },
+        ],
+      },
+
+      {
+        id: "m6",
+        title: "Norchhok Wine Menu",
+        slug: "norchhok-wine-menu",
+        briefTitle: "Norchhok Wine Menu Design",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Menu/norchhok-wine-menu.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Menu/norchhok-wine-menu-page.webp",
+          },
+        ],
+      },
+      {
+        id: "m7",
+        title: "Masala Beads Cafe Menu",
+        slug: "masala-beads-menu",
+        briefTitle: "Litaliano Opening Catalogue Design",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Menu/masala-beads-menu.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Menu/masala-beads-menu-page.webp",
+          },
+        ],
+      },
+
+      {
+        id: "m8",
+        title: "Sams Acrylic Table Menu",
+        slug: "sams-acrylic-table-menu",
+        briefTitle: "Norchhok Wine Menu Design",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Menu/sams-acrylic-table-menu.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Menu/sams-acrylic-table-menu-content.webp",
           },
         ],
       },
