@@ -4,9 +4,13 @@ import Link from "next/link";
 import portfolioData from "@/app/data/portfolioData";
 import PageTitle from "../../components/pageTitle/pageTitle";
 import "aos/dist/aos.css";
+import { useParams } from "next/navigation";
 
 export default function RecommendPortfolio({ limit = 4 }) {
   const [shuffledPortfolioItems, setShuffledPortfolioItems] = useState([]);
+  const params = useParams();
+  const portfolioSlug = params.portfolioSlug || null;
+  const categorySlug = params.categorySlug || null;
 
   useEffect(() => {
     // Shuffling the portfolio items after the initial render
@@ -25,10 +29,19 @@ export default function RecommendPortfolio({ limit = 4 }) {
     return portfolioData.reduce(
       (accumulator, categoryItem) => [
         ...accumulator,
-        ...categoryItem.portfolioItems.map((portfolioItem) => ({
-          ...portfolioItem,
-          categorySlug: categoryItem.categorySlug,
-        })),
+        ...categoryItem.portfolioItems
+          .filter(
+            (portfolioItem) =>
+              // Ensure we're not including the currently shown portfolio item
+              !(
+                portfolioItem.slug === portfolioSlug &&
+                categoryItem.categorySlug === categorySlug
+              )
+          )
+          .map((portfolioItem) => ({
+            ...portfolioItem,
+            categorySlug: categoryItem.categorySlug,
+          })),
       ],
       []
     );

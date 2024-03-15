@@ -99,47 +99,49 @@ export default function PortfolioContent() {
           </p>
         </div>
       </section>
-      <section
-        data-aos="fade-in"
-        className="flex justify-center w-full padding-y margin-t"
-      >
-        <div className="w-full flex flex-col gap-14 md:gap-20 overflow-hidden lg:rounded-md md:px-5  max-w-[1000px]">
-          {portfolioItem?.media.map((mediaItem, index) => (
-            <div key={index} className="mb-10">
-              {mediaItem?.type === "image" && (
-                <img
-                  loading="lazy"
-                  title={title}
-                  alt={title}
-                  className="h-auto mx-auto rounded-md shadow-md w-fit"
-                  src={mediaItem.url}
-                />
-              )}
-              {mediaItem?.type === "video" && (
-                <div className="w-full">
-                  <iframe
-                    className="w-full h-[500px] md:h-[600px] rounded-md shadow-md"
+      {portfolioItem?.media ? (
+        <section
+          data-aos="fade-in"
+          className="flex justify-center w-full padding-y margin-t"
+        >
+          <div className="w-full flex flex-col gap-14 md:gap-20 overflow-hidden lg:rounded-md md:px-5  max-w-[1000px]">
+            {portfolioItem?.media.map((mediaItem, index) => (
+              <div key={index} className="mb-10">
+                {mediaItem?.type === "image" && (
+                  <img
+                    loading="lazy"
+                    title={title}
+                    alt={title}
+                    className="h-auto mx-auto rounded-md shadow-md w-fit"
                     src={mediaItem.url}
-                    allow="autoplay"
-                  ></iframe>
-                </div>
-              )}
-              {mediaItem?.type === "slider" && (
-                <>
-                  <h3 className="text-3xl font-semibold text-center mb-7 md:text-4xl text-black-shade-300 md:mb-10">
-                    <span className="text-primary-accent">Brand</span>{" "}
-                    Guidelines
-                  </h3>
-                  <PDFSlide
-                    url={mediaItem.url}
-                    numberOfImages={mediaItem.numberOfImages}
                   />
-                </>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
+                )}
+                {mediaItem?.type === "video" && (
+                  <div className="w-full">
+                    <iframe
+                      className="w-full h-[500px] md:h-[600px] rounded-md shadow-md"
+                      src={mediaItem.url}
+                      allow="autoplay"
+                    ></iframe>
+                  </div>
+                )}
+                {mediaItem?.type === "slider" && (
+                  <>
+                    <h3 className="text-3xl font-semibold text-center mb-7 md:text-4xl text-black-shade-300 md:mb-10">
+                      <span className="text-primary-accent">Brand</span>{" "}
+                      Guidelines
+                    </h3>
+                    <PDFSlide
+                      url={mediaItem.url}
+                      numberOfImages={mediaItem.numberOfImages}
+                    />
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
       <section data-aos="fade-in" className="margin-t padding-y">
         <Testimonial />
       </section>
