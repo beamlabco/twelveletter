@@ -571,15 +571,11 @@ const portfolioData = [
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         image:
-          "/assets/Portfolio/Offline_Print_Creative/aromatic-billboard-design.webp",
+          "/assets/Portfolio/Offline_Print_Creative/aromatic-billboard.webp",
         media: [
           {
             type: "image",
             url: "/assets/Portfolio/Offline_Print_Creative/aromatic-billboard-content.webp",
-          },
-          {
-            type: "image",
-            url: "/assets/Portfolio/Offline_Print_Creative/aromatic-billboard-live.webp",
           },
         ],
       },

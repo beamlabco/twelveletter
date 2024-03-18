@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "../homeModules/swiperoverride.css";
 import PageTitle from "../pageTitle/pageTitle";
+import "./swiper.css";
 
 export default function brandModule() {
   return (
@@ -30,7 +31,7 @@ export default function brandModule() {
           modules={[Autoplay]}
           loop={true}
           allowTouchMove={false}
-          spaceBetween={20}
+          spaceBetween={50}
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
@@ -42,24 +43,29 @@ export default function brandModule() {
           breakpoints={{
             540: {
               slidesPerView: 2,
+              spaceBetween: 50,
             },
             768: {
               slidesPerView: 4,
+              spaceBetween: 100,
             },
             1200: {
               slidesPerView: 5,
+              spaceBetween: 150,
             },
           }}
         >
           {brandData?.map((brand, index) => {
             return (
               <SwiperSlide key={index}>
-                <img
-                  title={brand?.name}
-                  className="pointer-events-none w-full max-w-40 sm:max-w-[270px]"
-                  src={brand?.icon}
-                  alt={brand?.name}
-                />
+                <div className="w-auto max-h-[100%] h-auto pointer-events-none">
+                  <img
+                    className="w-full max-h-[80px] sm:max-h-[120px] md:max-h-[130px] h-full"
+                    title={brand?.name}
+                    src={brand?.icon}
+                    alt={brand?.name}
+                  />
+                </div>
               </SwiperSlide>
             );
           })}

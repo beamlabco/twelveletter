@@ -18,7 +18,7 @@ export const brandData = [
   {
     id: 4,
     name: "CelerMart",
-    icon: "/assets/Brands/Celemart.webp",
+    icon: "/assets/Brands/Celermart.webp",
   },
   {
     id: 7,
@@ -48,6 +48,6 @@ export const brandData = [
   {
     id: 10,
     name: "We5 Apparels",
-    icon: "/assets/Brands/W5.webp",
+    icon: "/assets/Brands/WE5.webp",
   },
 ];

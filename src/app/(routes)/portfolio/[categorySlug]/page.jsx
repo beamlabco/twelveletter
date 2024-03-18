@@ -13,9 +13,15 @@ export function generateStaticParams() {
 /* Dynamic SEO */
 export async function generateMetadata({ params }) {
   const { categorySlug } = params;
+  const convertSlugToTitle = (slug) => {
+    return slug
+      .split("-") // Split the slug by hyphen
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize the first letter of each word
+      .join(" "); // Join the words with a space
+  };
 
   const category = categorySlug;
-  const categoryName = category.charAt(0).toUpperCase() + category.slice(1);
+  const categoryName = convertSlugToTitle(categorySlug);
 
   return {
     title: `${categoryName} Portfolio`,
@@ -31,7 +37,8 @@ export async function generateMetadata({ params }) {
       "Offline print creatives",
       "Packaging",
       "3D design",
-      "menu",
+      "Food Catalogue",
+      "Offline Print Creatives",
     ],
     alternates: {
       canonical: `/portfolio/${category}`,
