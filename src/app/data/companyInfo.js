@@ -16,12 +16,13 @@ export const contactInfo = [
     title: "Kupondole, Lalitpur, Nepal",
     link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
   },
-  { icon: faPhone, title: "+977 9802366500", link: "tel:+9779802366500" },
   {
     icon: faEnvelope,
-    title: "pranisha@twelveletter.co",
-    link: "mailto:pranisha@twelveletter.co",
+    title: "info@twelveletter.co",
+    link: "mailto:info@twelveletter.co",
   },
+  { icon: faPhone, title: "+977 9802366500", link: "tel:+9779802366500" },
+
   {
     icon: faLocationDot,
     title: "Florida, USA",

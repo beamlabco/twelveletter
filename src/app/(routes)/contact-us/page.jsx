@@ -5,7 +5,7 @@ const hcaptcha_site_key = process.env.HCAPTCHA_SITE_KEY;
 export const metadata = {
   title: "Contact Us and leave us a line",
   description:
-    "Get in touch: Reach out to us for inquiries, assistance, or collaborations. Phone: +977 9802366500, Email: pranisha@twelveletter.co, Location: Kupondole, Lalitpur, Nepal",
+    "Get in touch: Reach out to us for inquiries, assistance, or collaborations. Phone: +977 9802366500, Email: info@twelveletter.co, Location: Kupondole, Lalitpur, Nepal",
   keywords: [
     "Twelveletter",
     "digital experiences",

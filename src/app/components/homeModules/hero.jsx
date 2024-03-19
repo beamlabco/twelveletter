@@ -19,7 +19,7 @@ export default function hero() {
         Elevate Your Brand&apos;s Visibility, Drive Engagement, and Fuel
         Sustainable Growth in the Ever-Evolving Digital Landscape
       </p>
-      <div className="flex flex-wrap items-center md:gap-12 md:justify-between w-full gap-7 mt-10 md:max-w-[500px] sm:mt-12 lg:mt-14">
+      <div className="flex flex-wrap items-center md:gap-12 md:justify-between w-full gap-7 mt-10 md:max-w-[550px] sm:mt-12 lg:mt-14">
         <Link
           title="Quick message form"
           href="/contact-us"
@@ -36,12 +36,12 @@ export default function hero() {
           >
             <FontAwesomeIcon
               className="text-2xl lg:text-2xl text-primary-accent"
-              icon={contactInfo[2].icon}
+              icon={contactInfo[1].icon}
             />
             <p
               className={`text-lg  text-black-shade-200 tracking-wider font-semibold relative overflow-hidden lg:text-xl`}
             >
-              {contactInfo[2].title}
+              {contactInfo[1].title}
               <span className="underline"></span>
             </p>
           </a>

@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${title} Portfolio`,
-    description: `${description}  Phone: +977 9802366500, Email: pranisha@twelveletter.co, Location: Kupondole, Lalitpur, Nepal`,
+    description: `${description}  Phone: +977 9802366500, Email: info@twelveletter.co, Location: Kupondole, Lalitpur, Nepal`,
     keywords: ["Twelveletter", "Portfolio", category, title],
     alternates: {
       canonical: `/portfolio/showcase/${portfolioSlug}`,

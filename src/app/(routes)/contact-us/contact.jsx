@@ -106,7 +106,7 @@ export default function Contact(props) {
           tag={tag ? tag : "h1"}
         />
       </section>
-      <section className="margin-t">
+      <section className="mb-20 margin-t lg:mb-36">
         <div className="flex flex-col flex-wrap w-full gap-10 lg:gap-20 sm:flex-row md:flex-nowrap">
           <form onSubmit={handleSubmit} className="w-full max-w-[550px]">
             <div className="flex flex-col w-full gap-6">
@@ -233,27 +233,61 @@ export default function Contact(props) {
             </div>
           </form>
 
-          <div className="relative w-full">
+          <div className="relative flex flex-col w-full gap-10">
             {/* Skeleton element */}
             {skeletons ? (
               <div className="absolute max-w-[700px] md:min-w-[400px] top-0 left-0 w-full h-[480px] bg-gray-300 rounded-sm animate-pulse"></div>
             ) : null}
             {/* Iframe */}
+
             <iframe
               title="map"
-              src="https://www.google.com/maps/d/u/0/embed?mid=1BQL9p2tnGAJW3qAgNf1kOwkuA-j74eE&ehbc=2E312F&noprof=1"
+              src="https://www.google.com/maps/d/embed?mid=1BQL9p2tnGAJW3qAgNf1kOwkuA-j74eE&ehbc=2E312F&noprof=1"
               style={{ border: 0 }}
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="relative rounded-sm z-10 w-full h-[480px] max-w-[700px] md:min-w-[300px]"
+              className="relative rounded-md z-10 w-full h-[480px] max-w-[700px] md:min-w-[300px]"
             ></iframe>
+            <div className="space-y-8 ">
+              {contactInfo.slice(0, 2).map((info, index) => (
+                <a
+                  title={info.title}
+                  key={index}
+                  href={info.link}
+                  className="flex items-center space-x-4 cursor-pointer link w-fit "
+                >
+                  <FontAwesomeIcon
+                    className="text-xl lg:text-2xl text-primary-accent"
+                    icon={info.icon}
+                    width={20}
+                  />
+                  <p
+                    className={`text-lg sm:text-lg text-black-shade-300 tracking-wider font-semibold relative overflow-hidden lg:text-xl`}
+                  >
+                    {info.title}
+                    <span className="underline"></span>
+                  </p>
+                </a>
+              ))}
+              <div className="flex items-center col-span-2 gap-8 sm:gap-8">
+                {socialInfo.map((socialInfo, index) => (
+                  <a
+                    key={index}
+                    title={socialInfo.title}
+                    className="text-3xl transition-all duration-300 sm:text-3xl lg:text-[2rem] text-black-shade-200 hover:text-primary-accent"
+                    href={socialInfo.link}
+                  >
+                    <FontAwesomeIcon icon={socialInfo.icon} />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section className="mb-20 lg:mb-36 margin-t ">
+      {/* <section className="mb-20 lg:mb-36 margin-t ">
         <div className="grid grid-cols-2 gap-6 mt-8 sm:mt-12 lg:gap-x-0 lg:gap-y-10 lg:mt-20">
-          {/* Left side info */}
           <div className="col-span-2 space-y-8 sm:col-span-1">
             {contactInfo.slice(0, 3).map((info, index) => (
               <a
@@ -276,7 +310,7 @@ export default function Contact(props) {
               </a>
             ))}
           </div>
-          {/* Right side info */}
+
           <div className="col-span-2 space-y-8 sm:col-span-1">
             {contactInfo.slice(3, 5).map((info, index) => (
               <a
@@ -312,7 +346,7 @@ export default function Contact(props) {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

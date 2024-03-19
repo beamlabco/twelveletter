@@ -25,9 +25,9 @@ const socialInfo = [
 
 const contactInfo = [
   {
-    info: "pranisha@twelveletter.co",
+    info: "info@twelveletter.co",
     subHeading: "MAIL US",
-    link: "mailto:pranisha@twelveletter.co",
+    link: "mailto:info@twelveletter.co",
   },
   {
     info: "+977 9801020202",

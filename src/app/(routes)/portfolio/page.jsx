@@ -3,7 +3,7 @@ import PortfolioPage from "./portfolio";
 export const metadata = {
   title: "Our diverse portfolio",
   description:
-    "Explore Our Diverse Portfolio: A Showcase of Creativity, Innovation, and Success Stories. Phone: +977 9802366500, Email: pranisha@twelveletter.co, Location: Kupondole, Lalitpur, Nepal ",
+    "Explore Our Diverse Portfolio: A Showcase of Creativity, Innovation, and Success Stories. Phone: +977 9802366500, Email: info@twelveletter.co, Location: Kupondole, Lalitpur, Nepal ",
   keywords: [
     "Twelveletter",
     "portfolio",

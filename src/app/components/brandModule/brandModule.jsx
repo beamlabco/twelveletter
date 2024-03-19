@@ -31,6 +31,7 @@ export default function brandModule() {
           modules={[Autoplay]}
           loop={true}
           allowTouchMove={false}
+          preventClicks={false}
           spaceBetween={50}
           autoplay={{
             delay: 0,

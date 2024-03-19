@@ -68,7 +68,7 @@ export default function PortfolioSlider() {
               <SwiperSlide key={index}>
                 <div
                   key={index}
-                  className="flex items-center justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
+                  className="flex items-center justify-center px-3 md:px-5 lg:px-5 max-w-[350px] lg:max-w-[420px]"
                 >
                   <Link
                     scroll={true}
@@ -89,7 +89,7 @@ export default function PortfolioSlider() {
           })}
         </Swiper>
       </div>
-      <div className="mt-8 lg:mt-16 ">
+      <div className="mt-8 lg:mt-10 ">
         <Swiper
           className="sample-slider"
           modules={[Autoplay]}
@@ -121,7 +121,7 @@ export default function PortfolioSlider() {
               <SwiperSlide key={index}>
                 <div
                   key={index}
-                  className="flex items-center justify-center px-3 md:px-5 lg:px-6 max-w-[350px] lg:max-w-[420px]"
+                  className="flex items-center justify-center px-3 md:px-5 lg:px-5 max-w-[350px] lg:max-w-[420px]"
                 >
                   <Link
                     scroll={true}
