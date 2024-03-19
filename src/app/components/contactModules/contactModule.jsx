@@ -17,7 +17,7 @@ export default function ContactModule() {
         />
 
         <div className="grid grid-cols-2 gap-6 mt-8 sm:mt-12 lg:gap-x-0 lg:gap-y-10 lg:mt-14">
-          {contactInfo.slice(1, 3).map((info, index) => (
+          {contactInfo.slice(0, 2).map((info, index) => (
             <div key={index} className="col-span-2 sm:col-span-1">
               <a
                 title={info.title}

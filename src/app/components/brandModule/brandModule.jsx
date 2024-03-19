@@ -25,7 +25,7 @@ export default function brandModule() {
         </p>
       </div>
 
-      <div className="w-full mt-6 mb-4 md:mt-14 lg:mt-12 ">
+      <div className="w-full mt-6 mb-4 brand md:mt-14 lg:mt-12 ">
         <Swiper
           className="sample-slider"
           modules={[Autoplay]}
@@ -61,7 +61,7 @@ export default function brandModule() {
               <SwiperSlide key={index}>
                 <div className="w-auto max-h-[100%] h-auto pointer-events-none">
                   <img
-                    className="w-full max-h-[80px] sm:max-h-[120px] md:max-h-[130px] h-full"
+                    className="w-full max-h-[80px] sm:max-h-[120px] md:max-h-[120px] h-full"
                     title={brand?.name}
                     src={brand?.icon}
                     alt={brand?.name}
