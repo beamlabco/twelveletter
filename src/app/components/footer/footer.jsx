@@ -4,24 +4,8 @@ import Logo from "../brandLogo/brandLogo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import {
-  faFacebookF,
-  faInstagram,
-  faLinkedinIn,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { socialInfo } from "@/app/data/companyInfo";
 import FooterCSS from "./footer.module.css";
-
-const socialInfo = [
-  {
-    icon: faInstagram,
-    title: "Instagram",
-    link: "https://www.instagram.com/twelveletter.company/",
-  },
-  { icon: faLinkedinIn, title: "Linkedin", link: "#" },
-  { icon: faFacebookF, title: "Facebook", link: "#" },
-  { icon: faXTwitter, title: "X", link: "#" },
-];
 
 const contactInfo = [
   {
