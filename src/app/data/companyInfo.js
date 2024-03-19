@@ -21,12 +21,14 @@ export const contactInfo = [
     title: "info@twelveletter.co",
     link: "mailto:info@twelveletter.co",
   },
-  /*   {
+  { icon: faPhone, title: "+977 9802366500", link: "tel:+9779802366500" },
+
+  {
     icon: faLocationDot,
     title: "Florida, USA",
     link: "https://maps.app.goo.gl/sj9EsoNrJkjWph3x9",
   },
-  { icon: faPhone, title: "+01 9802366500", link: "tel:+9779802366500" }, */
+  { icon: faPhone, title: "+01 9802366500", link: "tel:+9779802366500" },
 ];
 
 export const socialInfo = [

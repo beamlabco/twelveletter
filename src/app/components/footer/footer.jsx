@@ -29,11 +29,7 @@ const contactInfo = [
     subHeading: "MAIL US",
     link: "mailto:info@twelveletter.co",
   },
-  {
-    info: "+977 9801020202",
-    subHeading: "CALL US",
-    link: "tel:+9779802366500",
-  },
+
   {
     info: "Kupondole, Lalitpur, Nepal",
     subHeading: "VISIT US",
