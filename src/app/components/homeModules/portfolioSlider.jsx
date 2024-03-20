@@ -50,7 +50,7 @@ export default function PortfolioSlider() {
             delay: 0,
           }}
           slidesPerView={2}
-          speed={10000}
+          speed={15000}
           breakpoints={{
             540: {
               slidesPerView: 2,
@@ -103,7 +103,7 @@ export default function PortfolioSlider() {
             reverseDirection: true,
           }}
           slidesPerView={2}
-          speed={10000}
+          speed={15000}
           breakpoints={{
             540: {
               slidesPerView: 2,

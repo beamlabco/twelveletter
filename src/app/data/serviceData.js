@@ -256,7 +256,7 @@ export const homeServiceData = [
     id: 2,
     title: "Web Design & Development",
     slug: "web-design-and-development",
-    image: "/assets/Service/Web-design.webp",
+    image: "/assets/Service/Web-Design.webp",
     brief:
       "Crafting dynamic websites: Our web design & development services enhance your online presence.",
   },

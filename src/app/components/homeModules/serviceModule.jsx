@@ -71,7 +71,7 @@ export default function ServiceModule() {
             data-aos="fade-right"
             className="relative md:max-w-[300px] lg:max-w-[350px] xl:max-w-full w-full h-fit"
           >
-            <ul className="flex flex-col md:gap-8 lg:gap-10">
+            <ul className="flex flex-col md:gap-5 lg:gap-10">
               {homeServiceData.map((item, index) => (
                 <li
                   key={item.id}
@@ -83,7 +83,7 @@ export default function ServiceModule() {
                   }`}
                 >
                   <FontAwesomeIcon
-                    className={`text-2xl transition-all duration-200 lg:text-[1.6rem] mr-3 ${
+                    className={`text-2xl transition-all duration-200 md:text-3xl lg:text-[1.6rem] mr-3 ${
                       index === currentItemIndex
                         ? "text-primary-accent"
                         : "text-transparent"
@@ -122,7 +122,7 @@ export default function ServiceModule() {
                   style={{
                     display: index === currentItemIndex ? "block" : "none",
                   }}
-                  className="text-base line-clamp-2 font-medium [word-spacing:1px] font-manrope text-black-shade-100"
+                  className="text-base line-clamp-2 md:max-w-[500px] lg:max-w-[550px]  font-medium [word-spacing:1px] font-manrope text-black-shade-100"
                 >
                   {item.brief}
                   <Link

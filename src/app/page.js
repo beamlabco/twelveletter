@@ -20,7 +20,7 @@ export default function Home() {
         <section className="margin-t  bg-gradient-to-t from-[#FFE9E8] padding-y-lg lg:pb-32">
           <PortfolioSlider />
         </section>
-        <section className="container-margin lg:max-w-[1250px] margin-t padding-y">
+        <section className="container-margin margin-t padding-y">
           <ServiceModule />
         </section>
         <section className="margin-t padding-y">
