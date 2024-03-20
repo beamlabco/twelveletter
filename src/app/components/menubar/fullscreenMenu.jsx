@@ -69,6 +69,7 @@ export default function FullscreenMenu() {
           <div className="flex items-center gap-10 mt-2 lg:mt-2">
             {socialInfo.map((socialInfo, index) => (
               <a
+                target="_blank"
                 key={index}
                 title={socialInfo.title}
                 className="text-3xl transition-all duration-300 text-zinc-50 hover:text-primary-accent"

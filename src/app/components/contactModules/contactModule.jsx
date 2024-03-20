@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { contactInfo, socialInfo } from "../../data/companyInfo.js";
 import PageTitle from "../pageTitle/pageTitle.jsx";
+import Link from "next/link.js";
 
 export default function ContactModule() {
   return (
@@ -38,17 +39,19 @@ export default function ContactModule() {
             </div>
           ))}
           <div className="col-span-2 my-4 sm:col-span-1 lg:my-2">
-            <a
+            <Link
               title="Quick message form"
+              href="/contact-us"
               className="px-4 py-3 whitespace-nowrap  sm:text-lg text-base font-manrope font-medium tracking-wider text-white rounded cursor-pointer transition-all ease duration-300  bg-primary-accent hover:bg-[#ff968f]"
             >
               Quick Message Form
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center col-span-2 gap-10 sm:gap-8 sm:col-span-1">
             {socialInfo.map((socialInfo, index) => (
               <a
+                target="_blank"
                 key={index}
                 title={socialInfo.title}
                 className="text-3xl transition-all duration-300 sm:text-3xl lg:text-[2rem] text-black-shade-200 hover:text-primary-accent"

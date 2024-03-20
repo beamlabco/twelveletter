@@ -78,6 +78,7 @@ export default function footer() {
               {socialInfo.map((socialInfo, index) => (
                 <li key={index}>
                   <a
+                    target="_blank"
                     title={socialInfo.title}
                     className="text-3xl transition-all duration-300 text-zinc-50 hover:text-primary-accent"
                     href={socialInfo.link}

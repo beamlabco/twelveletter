@@ -563,19 +563,19 @@ const portfolioData = [
     portfolioItems: [
       {
         id: "opc1",
-        title: "Aromatic Billboard Design",
-        slug: "aromatic-billboard-design",
-        briefTitle: "Billboard Design for Aromatic Products",
+        title: "Litaliano Pizzabox Design",
+        slug: "litaliano-pizza-box",
+        briefTitle: "Design of Pizza Box for Litaliano",
         brief:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         image:
-          "/assets/Portfolio/Offline_Print_Creative/aromatic-billboard.webp",
+          "/assets/Portfolio/Offline_Print_Creative/litaliano-pizza-box.webp",
         media: [
           {
             type: "image",
-            url: "/assets/Portfolio/Offline_Print_Creative/aromatic-billboard-content.webp",
+            url: "/assets/Portfolio/Offline_Print_Creative/litaliano-pizza-box-content.webp",
           },
         ],
       },
@@ -595,25 +595,63 @@ const portfolioData = [
 
       {
         id: "opc3",
-        title: "Bhaisipati Thakali Business Card",
-        slug: "bhaisipati-thakali-business-card",
-        briefTitle: "Business Card Design For Bhaisipati Thakali",
+        title: "Litaliano Brochure",
+        slug: "litaliano-brochure-implication",
+        briefTitle: "Design of Brochure for Litaliano",
         brief:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         image:
-          "/assets/Portfolio/Offline_Print_Creative/bhaisipati-thakali-business-card.webp",
+          "/assets/Portfolio/Offline_Print_Creative/litaliano-brochure-implication.webp",
         media: [
           {
             type: "image",
-            url: "/assets/Portfolio/Offline_Print_Creative/bhaisipati-thakali-card-content.webp",
+            url: "/assets/Portfolio/Offline_Print_Creative/litaliano-brochure-implication-content.webp",
           },
         ],
       },
 
       {
         id: "opc4",
+        title: "Litaliano Stationary",
+        slug: "litaliano-stationary",
+        briefTitle: "Design of Pen for EIEC",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Offline_Print_Creative/litaliano-stationary.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Offline_Print_Creative/litaliano-stationary-content.webp",
+          },
+        ],
+      },
+
+      {
+        id: "opc5",
+        title: "Aromatic Billboard Design",
+        slug: "aromatic-billboard-design",
+        briefTitle: "Billboard Design for Aromatic Products",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Offline_Print_Creative/aromatic-billboard.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Offline_Print_Creative/aromatic-billboard-content.webp",
+          },
+        ],
+      },
+
+      {
+        id: "opc6",
         title: "Celermart Business Card",
         slug: "celermart-business-card",
         briefTitle: "Business Card Design For Celermat",
@@ -624,22 +662,8 @@ const portfolioData = [
         image:
           "/assets/Portfolio/Offline_Print_Creative/celermart-business-card.webp",
       },
-
       {
-        id: "opc5",
-        title: "EIEC Business Card",
-        slug: "eiec-business-card",
-        briefTitle: "Business Card Design For EIEC",
-        brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        image:
-          "/assets/Portfolio/Offline_Print_Creative/eiec-business-card.webp",
-      },
-
-      {
-        id: "opc6",
+        id: "opc7",
         title: "EIEC ID Card",
         slug: "eiec-id-card",
         briefTitle: "Business Card Design For Bhaisipati Thakali",
@@ -655,9 +679,39 @@ const portfolioData = [
           },
         ],
       },
+      {
+        id: "opc8",
+        title: "EIEC Business Card",
+        slug: "eiec-business-card",
+        briefTitle: "Business Card Design For EIEC",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Offline_Print_Creative/eiec-business-card.webp",
+      },
 
       {
-        id: "opc7",
+        id: "opc9",
+        title: "Vesper Valentine Ad Design",
+        slug: "vesper-valentine",
+        briefTitle: "Design of valentine Ad for Vesper Fine Wines",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Offline_Print_Creative/vesper-valentine.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Offline_Print_Creative/vesper-valentine-content.webp",
+          },
+        ],
+      },
+
+      {
+        id: "opc10",
         title: "EIEC Pen Design",
         slug: "eiec-pen-design",
         briefTitle: "Design of Pen for EIEC",
@@ -675,7 +729,7 @@ const portfolioData = [
       },
 
       {
-        id: "opc8",
+        id: "opc11",
         title: "Vesper ID Card Holder",
         slug: "vesper-id-card-holder",
         briefTitle: "ID Card Holder Design",
@@ -687,7 +741,7 @@ const portfolioData = [
       },
 
       {
-        id: "opc8",
+        id: "opc12",
         title: "TwelveLetter Notebook Design",
         slug: "twelve-letter-notebook-design",
         briefTitle: "Notebook Design for TwelveLetter",
@@ -697,6 +751,112 @@ const portfolioData = [
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         image:
           "/assets/Portfolio/Offline_Print_Creative/twelveletter-notebook.webp",
+      },
+      {
+        id: "opc13",
+        title: "Lucaris",
+        slug: "lucaris",
+        briefTitle: "Lucaris",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Offline_Print_Creative/Lucaris/lucaris.webp",
+        media: [
+          {
+            type: "slider",
+            url: "/assets/Portfolio/Offline_Print_Creative/Lucaris/lucaris-page",
+            numberOfImages: 5,
+          },
+        ],
+      },
+
+      {
+        id: "opc14",
+        title: "Christian Martena Flex Design",
+        slug: "litaliano-christian-martena",
+        briefTitle: "Design of Christian Martena Flex",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Offline_Print_Creative/litaliano-christian-martena.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Offline_Print_Creative/litaliano-christian-martena-content.webp",
+          },
+        ],
+      },
+
+      {
+        id: "opc15",
+        title: "Vesper Flyer Designs",
+        slug: "vesper-flyers",
+        briefTitle: "Design of Paolo Nesi Flex for YPO Nepal",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Offline_Print_Creative/vesper-flyers.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Offline_Print_Creative/vesper-bogo.webp",
+          },
+          {
+            type: "image",
+            url: "/assets/Portfolio/Offline_Print_Creative/vesper-prosecco-treviso.webp",
+          },
+        ],
+      },
+
+      {
+        id: "opc16",
+        title: "Vesper Envelope Design",
+        slug: "vesper-envelope",
+        briefTitle: "Design of Envelope for Vesper Fine Wines",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Offline_Print_Creative/vesper-envelope.webp",
+      },
+      {
+        id: "opc13",
+        title: "Bhaisipati Thakali Business Card",
+        slug: "bhaisipati-thakali-business-card",
+        briefTitle: "Business Card Design For Bhaisipati Thakali",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image:
+          "/assets/Portfolio/Offline_Print_Creative/bhaisipati-thakali-business-card.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Offline_Print_Creative/bhaisipati-thakali-card-content.webp",
+          },
+        ],
+      },
+      {
+        id: "opc17",
+        title: "YPO Paolo Nesi Flex Design",
+        slug: "ypo-paolo-nesi",
+        briefTitle: "Design of Paolo Nesi Flex for YPO Nepal",
+        brief:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        description:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        image: "/assets/Portfolio/Offline_Print_Creative/ypo-Paolo-Nesi.webp",
+        media: [
+          {
+            type: "image",
+            url: "/assets/Portfolio/Offline_Print_Creative/ypo-content.webp",
+          },
+        ],
       },
       // Add more items as needed
     ],

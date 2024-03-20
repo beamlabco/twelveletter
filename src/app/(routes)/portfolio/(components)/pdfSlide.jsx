@@ -49,7 +49,7 @@ export default function PdfSlide(props) {
                 <img
                   title={`Slide ${index}`}
                   src={imageUrl}
-                  className="w-full max-w-[850px] h-auto m-auto rounded-sm"
+                  className="w-full max-h-[850px] h-auto m-auto rounded-sm"
                   alt={`Slide ${index + 1}`}
                 />
               </div>
