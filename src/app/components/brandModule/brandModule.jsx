@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "../homeModules/swiperoverride.css";
 import PageTitle from "../pageTitle/pageTitle";
-import "./swiper.css";
 
 export default function brandModule() {
   return (
@@ -40,7 +39,7 @@ export default function brandModule() {
             reverseDirection: false,
           }}
           slidesPerView={2}
-          speed={10000}
+          speed={9000}
           breakpoints={{
             540: {
               slidesPerView: 2,
@@ -59,9 +58,12 @@ export default function brandModule() {
           {brandData?.map((brand, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className="w-auto max-h-[100%] h-auto pointer-events-none">
+                <div
+                  className="flex items-center justify-center h-full max-h-[100%] pointer-events-none"
+                  style={{ height: "120px" }}
+                >
                   <img
-                    className="w-full max-h-[80px] sm:max-h-[120px] md:max-h-[120px] h-full"
+                    className="object-contain object-center h-full"
                     title={brand?.name}
                     src={brand?.icon}
                     alt={brand?.name}

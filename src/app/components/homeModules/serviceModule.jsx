@@ -122,7 +122,7 @@ export default function ServiceModule() {
                   style={{
                     display: index === currentItemIndex ? "block" : "none",
                   }}
-                  className="text-base line-clamp-2 md:max-w-[500px] lg:max-w-[550px]  font-medium [word-spacing:1px] font-manrope text-black-shade-100"
+                  className="text-base line-clamp-2 md:max-w-[500px] lg:max-w-[500px]  font-medium [word-spacing:1px] font-manrope text-black-shade-100"
                 >
                   {item.brief}
                   <Link

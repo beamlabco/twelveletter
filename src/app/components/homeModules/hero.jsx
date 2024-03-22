@@ -14,10 +14,10 @@ export default function hero() {
         highlightGradient={true}
       />
       <p className="text-lg [word-spacing:2px] font-manrope leading-normal md:text-[20px] font-semibold md:leading-9 max-w-[1000px] mt-7 lg:mt-9 text-black-shade-200">
-        Unlocking the Potential of Your Online Presence with Innovative
-        Solutions, Strategic Insights, and Tailored Strategies Designed to
-        Elevate Your Brand&apos;s Visibility, Drive Engagement, and Fuel
-        Sustainable Growth in the Ever-Evolving Digital Landscape
+        Unlocking the potential of your online presence with innovative
+        solutions, strategic insights, and tailored strategies designed to
+        elevate your brand&apos;s visibility, drive engagement, and fuel
+        sustainable growth in the ever-evolving digital landscape
       </p>
       <div className="flex flex-wrap items-center md:gap-12 md:justify-between w-full gap-7 mt-10 md:max-w-[550px] sm:mt-12 lg:mt-14">
         <Link

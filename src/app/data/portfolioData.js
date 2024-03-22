@@ -6,13 +6,13 @@ const portfolioData = [
     portfolioItems: [
       {
         id: "avc1",
-        title: "WE5 Animated Video",
+        title: "Look Your Best With WeFive’s New Collection",
         slug: "we5-animated-video",
-        briefTitle: "WE5 animated video project",
-        brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        briefTitle: "Look Your Best With WeFive’s New Collection",
+        brief:
+          "We have designed a video for social media marketing that shows different styles with eye catching colors and designs. The video not only shows the viewer’s about WeFive’s collection but also helps them to find their perfect WeFive look. To find more about WeFive visit their visit their social platforms like Instagram and facebook.",
         image: "/assets/Portfolio/Animated_Video_Creatives/We5/we5.webp",
         media: [
           {
@@ -23,13 +23,14 @@ const portfolioData = [
       },
       {
         id: "avc2",
-        title: "Vesper Valentines Offer",
+        title: "Vesper Valentine’s Offer",
         slug: "vesper-valentines-offer",
-        briefTitle: "Vesper Valentines Offer animated video project",
-        brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        briefTitle: "The best wine for your valentine",
+        brief:
+          "We have created a short video for social media marketing to spark romance and capture hearts. We have made the video short and visually appealing for social platforms like Instagram and Tiktok.",
+
         image:
           "/assets/Portfolio/Animated_Video_Creatives/Vesper_valentines/vesper-valentine.webp",
         media: [
@@ -43,11 +44,12 @@ const portfolioData = [
         id: "avc3",
         title: "Celermart Offline vs Online",
         slug: "celermart-offline-vs-online",
-        briefTitle: "Celermart Offline vs Online animated video project",
-        brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        briefTitle: "Engaging customers with e-commerce",
+        brief:
+          "We have created a video to show video marketing for Celer Mart, showcasing the ease of e- commerce platform compared to traditional in-store shopping. For online grocery shopping visit their website and app.",
+
         image:
           "/assets/Portfolio/Animated_Video_Creatives/Celermart_online_vs_offline/celermart-offline-vs-offline.webp",
         media: [
@@ -59,13 +61,13 @@ const portfolioData = [
       },
       {
         id: "avc4",
-        title: "Celermart Worldcup",
-        slug: "celermart-worldcup",
-        briefTitle: "Celermart Worldcup animated video project",
-        brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
+        title: "Celer Mart Delivery",
+        slug: "celermart-mart-delivery",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        briefTitle: "Don’t miss out your favorite team’s match for groceries",
+        brief:
+          "We made a short visual ad to promote Celer Mart’s online delivery service during the Fifa world cup 2022. It showcases the ease of online grocery shopping through their app and website without you missing out on the world cup.",
         image:
           "/assets/Portfolio/Animated_Video_Creatives/Celermart_worldcup/celermart-worldcup.webp",
         media: [
@@ -139,14 +141,13 @@ const portfolioData = [
     portfolioItems: [
       {
         id: "b1",
-        title: "Cafe Rupa",
+        title: "Café Rupa",
         slug: "cafe-rupa",
-
-        briefTitle: "Cafe Rupa Branding Project at Rupakot Resort",
-        brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        briefTitle: "Every bite is an experience",
+        brief:
+          "We have created this post to show media marketing of Café Rupa where they serve exquisite breakfast and lunch experience. To make yourselves a part of that experience visit their social media pages like Instagram, Facebook and Tiktok.",
         image:
           "/assets/Portfolio/Branding/Cafe_Rupa_Branding/cafe-rupa-cover.webp",
         media: [
@@ -159,13 +160,13 @@ const portfolioData = [
       },
       {
         id: "b2",
-        title: "Litaliano",
+        title: "L’ITALIANO",
         slug: "litaliano",
-        briefTitle: "Litaliano Restaurants Project",
-        brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        briefTitle: "Every bite tells a story of Italy",
+        brief:
+          "We made this post to promote the social marketing of L’ITALAINO, where they offer the best Italian cuisine. And if you are pizza lover this is the place to go. To taste authentic Italian food do visit their Instagram, Facebook and website.",
         image:
           "/assets/Portfolio/Branding/Litaliano_Branding/litaliano-cover.webp",
         media: [
@@ -180,11 +181,11 @@ const portfolioData = [
         id: "b3",
         title: "Lakhey Nepal",
         slug: "lakhey-nepal",
-        briefTitle: "Lakhey Nepal Project",
-        brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
         description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        briefTitle: "Unleash your style",
+        brief:
+          "We have created this post to promote Lakhey Nepal, a clothing brand that shows culture in every stitch. To unleash your style culturally, do visit their page on Instagram, Facebook and Tiktok.",
         image:
           "/assets/Portfolio/Branding/Lakhey_Nepal_Branding/lakhey-nepal-cover.webp",
         media: [
@@ -195,7 +196,6 @@ const portfolioData = [
           },
         ],
       },
-
       // Add more items as needed
     ],
   },
