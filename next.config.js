@@ -22,14 +22,7 @@ const nextConfig = {
       },
     ];
   },
-  async rewrites() {
-    return [
-      {
-        source: "/sitemap.xml",
-        destination: "/api/sitemap.xml.js", // Adjust based on your API route
-      },
-    ];
-  },
+
   // reactStrictMode: true,
   output: "export",
 };
