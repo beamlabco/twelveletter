@@ -32,9 +32,9 @@ export default function aboutUs() {
         <section className="flex flex-col items-center gap-6 sm:gap-7 lg:flex-row lg:gap-11">
           <img
             title="aboutUs"
-            alt="aboutUs"
+            alt="team"
             className="w-full lg:w-1/2"
-            src="/assets/AboutUs/AboutUsPic.png"
+            src="/assets/AboutUs/team.webp"
           ></img>
           <div>
             <h2 className="text-2xl font-bold tracking-wide md:text-4xl text-black-shade-300">
@@ -53,9 +53,9 @@ export default function aboutUs() {
         <section className="flex flex-col items-center gap-6 mb-6 sm:gap-7 lg:flex-row-reverse lg:gap-11">
           <img
             title="aboutUs"
-            alt="aboutUs"
+            alt="End goal"
             className="w-full lg:w-1/2"
-            src="/assets/AboutUs/AboutUsPic.png"
+            src="/assets/AboutUs/end-goal.webp"
           ></img>
           <div>
             <h2 className="text-2xl font-bold tracking-wide md:text-4xl text-black-shade-300">
