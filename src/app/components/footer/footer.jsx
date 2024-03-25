@@ -4,7 +4,7 @@ import Logo from "../brandLogo/brandLogo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightLong } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import { socialInfo } from "@/app/data/companyInfo";
+import { socialInfo, menuData } from "@/app/data/companyInfo";
 import FooterCSS from "./footer.module.css";
 
 const contactInfo = [
@@ -98,12 +98,12 @@ export default function footer() {
               </p>
 
               <ul className="mt-6 space-y-4 text-zinc-100">
-                {servicesInfo.map((service, index) => (
+                {menuData[0].items.map((service, index) => (
                   <li key={index}>
                     <Link
                       title={service.title}
                       href={service.link}
-                      className={`${FooterCSS.list} whitespace-nowrap w-fit flex items-center gap-3 text-base hover:text-primary-accent  transition-all duration-200 lg:text-lg`}
+                      className={`${FooterCSS.list}  w-fit flex items-center gap-3 text-base hover:text-primary-accent  transition-all duration-200 lg:text-lg`}
                     >
                       <FontAwesomeIcon
                         className={`${FooterCSS.arrow} text-base  lg:text-lg`}
