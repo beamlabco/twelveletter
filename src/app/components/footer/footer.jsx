@@ -23,8 +23,8 @@ const contactInfo = [
 
 const servicesInfo = [
   {
-    title: "Branding",
-    link: "/service/branding",
+    title: "In-House Photoshoot",
+    link: "/service/in-house-photoshoot",
   },
   {
     title: "Digital Marketing",

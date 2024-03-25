@@ -242,7 +242,7 @@ export default function Contact(props) {
 
             <iframe
               title="map"
-              src="https://www.google.com/maps/d/embed?mid=1BQL9p2tnGAJW3qAgNf1kOwkuA-j74eE&ehbc=2E312F&noprof=1"
+              src="https://www.google.com/maps/d/u/0/embed?mid=1BQL9p2tnGAJW3qAgNf1kOwkuA-j74eE&ehbc=2E312F&noprof=1"
               style={{ border: 0 }}
               allowFullScreen={true}
               loading="lazy"
