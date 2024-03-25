@@ -389,11 +389,12 @@ const portfolioData = [
         id: "m5",
         title: "Litaliano Opening Catalogue",
         slug: "litaliano-opening-menu",
+        description:
+          "Discover Litaliano's opening food catalogue which gives an elegant welcome to the guests",
         briefTitle: "Litaliano Opening Catalogue Design",
         brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "We have created this post for marketing to promote Litaliano's food catalogue where they have shown their diverse range of foods you can try out. To learn about their menu visit their website.",
+
         image: "/assets/Portfolio/Menu/litaliano-opening-menu.webp",
         media: [
           {
@@ -407,11 +408,12 @@ const portfolioData = [
         id: "m6",
         title: "Norchhok Wine Menu",
         slug: "norchhok-wine-menu",
+        description:
+          "Explore Norchhok's delectable wine selection in their food catalogue, showcasing a diverse array of wines to tantalize your taste buds.",
         briefTitle: "Norchhok Wine Menu Design",
         brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "We have created this post for marketing to promote Norchhoks's food catalogue where they have shown their diverse range of foods you can try out. To learn about their menu visit their website.",
+
         image: "/assets/Portfolio/Menu/norchhok-wine-menu.webp",
         media: [
           {
@@ -424,11 +426,11 @@ const portfolioData = [
         id: "m7",
         title: "Masala Beads Cafe Menu",
         slug: "masala-beads-menu",
-        briefTitle: "Litaliano Opening Catalogue Design",
-        brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
         description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "We have created this an elegant cafe menu design for Masala Beads.",
+        briefTitle: "Masala Bead's Elegant Cafe Menu",
+        brief:
+          "Masala Bead Café's menu is a curated blend of traditional and contemporary, designed to captivate a sophisticated audience with a penchant for gourmet and fusion cuisine.",
         image: "/assets/Portfolio/Menu/masala-beads-menu.webp",
         media: [
           {
@@ -442,11 +444,11 @@ const portfolioData = [
         id: "m8",
         title: "Sams Acrylic Table Menu",
         slug: "sams-acrylic-table-menu",
-        briefTitle: "Norchhok Wine Menu Design",
-        brief:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae urna eget lectus imperdiet vulputate. Sed sed velit quis sapien facilisis tincidunt. Nulla facilisi. Sed vitae nunc quis nisl aliquam aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec vitae purus euismod, finibus nisi non, aliquet mauris. Sed euismod, nisl vitae aliquet consectetur, metus augue bibendum justo, non ultrices magna lectus eget magna. Nulla facilisi. Donec euismod, diam et aliquam aliquet, nunc nunc aliquet odio, in aliquam eros eros vel nunc.",
         description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "This menu design is a testament to Sam's Restaurant's dedication to creating a memorable, visually appealing dining experience for every guest.",
+        briefTitle: "Acrylic Menu Design for Sams Restaurant",
+        brief:
+          "For Sam's Restaurant, the acrylic menu design combines elegance with durability, reflecting the establishment's commitment to quality and a great dining experience. The menu features clear, high-resolution printing of each dish and beverage, set against a sleek, transparent background that allows the vibrant colors of the underlying tablecloth or setting to shine through.",
         image: "/assets/Portfolio/Menu/sams-acrylic-table-menu.webp",
         media: [
           {
