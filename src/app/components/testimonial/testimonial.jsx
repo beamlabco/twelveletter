@@ -17,8 +17,8 @@ export default function testimonial() {
           communication was exceptional, making us feel connected at every step.
           The designs they delivered not only wowed us but also perfectly
           aligned with our brand, receiving rave reviews from our customers.
-          They've redefined excellence for us, and we're excited for what's next
-          in our partnership.&quot;
+          They&quot;ve redefined excellence for us, and we&quot;re excited for
+          what&quot;s next in our partnership.&quot;
         </p>
         <p className="mt-5 text-lg font-medium font-manrope text-black-shade-100">
           Shaya Bajracharya
