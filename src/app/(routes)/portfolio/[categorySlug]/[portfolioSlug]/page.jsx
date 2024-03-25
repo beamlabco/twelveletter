@@ -46,9 +46,15 @@ export async function generateMetadata({ params }) {
 
   const { title, description, category } = portfolioItem;
 
+  const optimizedDescription =
+    description.length < 230
+      ? description +
+        "Phone: +977 9802366500, Email: info@twelveletter.co, Location: Kupondole, Lalitpur, Nepal"
+      : description;
+
   return {
     title: `${title} Portfolio`,
-    description: `${description}`,
+    description: `${optimizedDescription}`,
     keywords: ["Twelveletter", "Portfolio", category, title],
     alternates: {
       canonical: `/portfolio/showcase/${portfolioSlug}`,
