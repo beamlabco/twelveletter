@@ -197,7 +197,7 @@ export const serviceData = [
         title:
           "Lens Innovations: Amplifying Impact with In-House Photoshoot Solutions",
         brief:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "Our agency offers comprehensive in-house photoshoot and editing services tailored to showcase your unique offerings in the best light. We manage everything from concept to completion, ensuring a seamless experience. Our skilled team of photographers and editors work closely with you to understand your vision and objectives, employing state-of-the-art equipment and advanced editing techniques to create stunning visual content.",
 
         features: [
           {
