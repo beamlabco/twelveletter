@@ -18,10 +18,6 @@ export default function brandModule() {
           extraClass="text-center lg:text-[2.7rem]"
           tag="h2"
         />
-        <p className="text-center max-w-[600px] paragraph lg:text-lg">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </p>
       </div>
 
       <div className="w-full mt-6 mb-4 brand md:mt-14 lg:mt-12 ">
@@ -60,7 +56,7 @@ export default function brandModule() {
               <SwiperSlide key={index}>
                 <div
                   className="flex items-center justify-center h-full max-h-[100%] pointer-events-none"
-                  style={{ height: "120px" }}
+                  style={{ height: "150px" }}
                 >
                   <img
                     className="object-contain object-center h-full"

@@ -31,7 +31,7 @@ export default function hero() {
         <div>
           <a
             title="Email"
-            href={contactInfo[2].link}
+            href="mailto:info@twelveletter.co"
             className="flex items-center space-x-4 cursor-pointer link w-fit "
           >
             <FontAwesomeIcon
