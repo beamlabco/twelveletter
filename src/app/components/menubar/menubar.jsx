@@ -63,7 +63,7 @@ export default function Menubar() {
           : "none",
         zIndex: 1000,
       }}
-      className={`flex sticky justify-center transition-all duration-100 items-center top-0 w-full h-20 lg:h-24`}
+      className={`flex sticky justify-center transition-all duration-0 items-center top-0 w-full h-20 lg:h-24`}
     >
       <div className="flex items-center justify-between w-full h-full container-margin">
         <a title="Logo" href="/">
