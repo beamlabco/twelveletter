@@ -1,0 +1,41 @@
+import React from "react";
+import { teamData } from "../../data/team";
+
+export default function team() {
+  return (
+    <section className="padding-y-lg margin-t container-margin">
+      <div>
+        <h3 className="text-3xl font-semibold text-center sm:text-3xl md:text-4xl xl:text-5xl">
+          Meet our <span className="gradient">dynamic</span> team
+        </h3>
+        <div className="grid grid-cols-1 gap-4 min[420px]:gap-2 w-full min-[420px]:grid-cols-2 sm:gap-6 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 md:gap-8 lg:gap-12 xl:gap-14 margin-t">
+          {teamData.map((team, index) => (
+            <div
+              key={index}
+              className="flex flex-col col-span-1 gap-4 margin-b w-fit"
+            >
+              <figure className="relative">
+                <img
+                  src={team.image}
+                  className="relative z-10 w-full"
+                  alt={team.name}
+                ></img>
+                <div
+                  className={`absolute bottom-0 w-full h-3/4 bg-gradient-to-t ${team.backgroundColor}`}
+                ></div>
+              </figure>
+              <div>
+                <h4 className="font-semibold text-center sm:text-left text-xl min[420px]:text-xl capitalize lg:text-xl text-secondary-accent">
+                  {team.name}
+                </h4>
+                <p className="min[420px]:text-sm text-center sm:text-left font-medium capitalize md:text-base xl:text-lg text-primary-accent">
+                  {team.role}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

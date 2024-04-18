@@ -1,6 +1,7 @@
 import React from "react";
 import PageTitle from "../../components/pageTitle/pageTitle";
 import ContactModule from "@/app/components/contactModules/contactModule";
+import Team from "./team.jsx";
 
 export const metadata = {
   title: "Discover Our Visions",
@@ -71,7 +72,7 @@ export default function aboutUs() {
           </div>
         </section>
       </div>
-
+      <Team />
       <ContactModule />
     </>
   );
