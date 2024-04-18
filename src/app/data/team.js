@@ -4,6 +4,7 @@ export const teamData = [
     name: "John Dena",
     role: "Business analyst",
     image: "/assets/AboutUs/team/pic1.webp",
+    hoverImage: "/assets/AboutUs/team/pic-11.webp",
     backgroundColor: "from-[#616D99] to-[#A1B6FF]",
   },
 

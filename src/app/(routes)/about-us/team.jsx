@@ -1,7 +1,21 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { teamData } from "../../data/team";
 
-export default function team() {
+export default function Team() {
+  // Initialize hover states as an empty object
+  const [hoverStates, setHoverStates] = useState({});
+
+  // Function to handle mouse enter
+  const handleMouseEnter = (index) => {
+    setHoverStates((prev) => ({ ...prev, [index]: true }));
+  };
+
+  // Function to handle mouse leave
+  const handleMouseLeave = (index) => {
+    setHoverStates((prev) => ({ ...prev, [index]: false }));
+  };
+
   return (
     <section className="padding-y-lg margin-t container-margin">
       <div>
@@ -12,14 +26,22 @@ export default function team() {
           {teamData.map((team, index) => (
             <div
               key={index}
-              className="flex flex-col col-span-1 gap-4 margin-b w-fit"
+              className="flex flex-col col-span-1 gap-4 cursor-pointer margin-b w-fit"
             >
               <figure className="relative">
                 <img
-                  src={team.image}
-                  className="relative z-10 w-full"
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={() => handleMouseLeave(index)}
+                  src={
+                    hoverStates[index]
+                      ? team.hoverImage
+                        ? team.hoverImage
+                        : team.image
+                      : team.image
+                  }
+                  className="relative z-10 w-full transition-all duration-200"
                   alt={team.name}
-                ></img>
+                />
                 <div
                   className={`absolute bottom-0 w-full h-3/4 bg-gradient-to-t ${team.backgroundColor}`}
                 ></div>
