@@ -34,3 +34,6 @@ jobs:
     
     - name: Build the application
       run: npm run build
+
+    - name: Start the application
+      run: pm2 restart twelveletter #pm2 start npm --name "twelveletter" -- start
