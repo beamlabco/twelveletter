@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: "dist",
+  // distDir: "dist",
   async headers() {
     return [
       {
@@ -24,7 +24,7 @@ const nextConfig = {
   },
 
   // reactStrictMode: true,
-  output: "export",
+  // output: "export",
 };
 
 module.exports = nextConfig;
