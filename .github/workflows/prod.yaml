@@ -12,7 +12,7 @@ jobs:
     runs-on: self-hosted
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [22.x]
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -36,4 +36,9 @@ jobs:
       run: npm run build
 
     - name: Start the application
-      run: pm2 restart twelveletter #pm2 start npm --name "twelveletter" -- start
+      run: |
+        if pm2 list | grep -q "twelveletter"; then
+          pm2 restart twelveletter
+        else
+          pm2 start npm --name "twelveletter" -- start
+        fi
